@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://secops-tools.github.io/threat-intelligence-tools/sitemap.xml

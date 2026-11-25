@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="google-site-verification" content="HqgfQrEQATXaycciOAu8GzuJP8BSRHtaR1JrgBtnApU" />
+  <title>Best Threat Intelligence Tools, Platforms &amp; Feeds (Free &amp; Open Source)</title>
+  <meta name="description" content="A curated and automatically updated directory of 56 threat intelligence tools, 18 platforms, and 52 live-checked threat intelligence feeds with Python CLI utilities." />
+  <link rel="canonical" href="https://secops-tools.github.io/threat-intelligence-tools/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Best Threat Intelligence Tools, Platforms &amp; Feeds" />
+  <meta property="og:description" content="Compare 56 threat intelligence tools, 18 TIP platforms, and 52 threat feeds with daily status checks and Python CLI scripts." />
+  <meta property="og:url" content="https://secops-tools.github.io/threat-intelligence-tools/" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Best Threat Intelligence Tools, Platforms & Feeds",
+  "description": "A curated and automatically updated directory of threat intelligence tools, platforms, APIs, and feeds for cybersecurity professionals.",
+  "url": "https://secops-tools.github.io/threat-intelligence-tools/",
+  "isPartOf": {
+    "@type": "SoftwareSourceCode",
+    "name": "threat-intelligence-tools",
+    "codeRepository": "https://github.com/secops-tools/threat-intelligence-tools",
+    "programmingLanguage": "Python",
+    "license": "https://opensource.org/licenses/MIT"
+  }
+}
+  </script>
+  <style>
+    :root {
+      --bg: #0b1017;
+      --surface: #121923;
+      --surface-alt: #161f2c;
+      --border: #243042;
+      --text: #e6edf3;
+      --muted: #93a3b8;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.14);
+      --green: #34d399;
+      --amber: #fbbf24;
+      --red: #f87171;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1240px; margin: 0 auto; padding: 32px 20px 64px; }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 24px;
+      margin-bottom: 28px;
+    }
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .eyebrow {
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .nav {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(28px, 4vw, 38px);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+    .lead {
+      margin: 0 0 20px;
+      max-width: 820px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+    .stat {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+    .stat-val {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .stat-lbl {
+      font-size: 13px;
+      color: var(--muted);
+    }
+    section { margin-top: 40px; }
+    h2 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      letter-spacing: -0.01em;
+    }
+    .section-note {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 14px;
+      max-width: 820px;
+    }
+    .controls {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+    input[type="search"], select {
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 9px 12px;
+      font-size: 14px;
+    }
+    input[type="search"] { min-width: 260px; flex: 1; max-width: 420px; }
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--surface);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+    th, td {
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface-alt);
+      color: var(--muted);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: rgba(255, 255, 255, 0.02); }
+    .sub {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12.5px;
+      background: rgba(255, 255, 255, 0.06);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .badge-online { background: rgba(52, 211, 153, 0.15); color: var(--green); }
+    .badge-auth { background: rgba(251, 191, 36, 0.15); color: var(--amber); }
+    .badge-offline { background: rgba(248, 113, 113, 0.15); color: var(--red); }
+    .cli-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 12px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+    }
+    .card h3 { margin: 0 0 6px; font-size: 15px; }
+    .card p { margin: 0 0 10px; font-size: 13.5px; color: var(--muted); }
+    footer {
+      margin-top: 56px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="top-bar">
+        <div class="eyebrow">secops-tools / threat-intelligence-tools</div>
+        <nav class="nav">
+          <a href="#feeds">Live feed status</a>
+          <a href="#platforms">Platforms</a>
+          <a href="#tools">Tools</a>
+          <a href="#cli">CLI utilities</a>
+          <a href="https://github.com/secops-tools/threat-intelligence-tools" target="_blank" rel="noopener noreferrer">GitHub repository</a>
+        </nav>
+      </div>
+      <h1>Best Threat Intelligence Tools, Platforms &amp; Feeds</h1>
+      <p class="lead">
+        A directory of threat intelligence tools, platforms, APIs, and public feeds for security engineers, SOC analysts, and system administrators. Feed reachability, response latency, and <code>Last-Modified</code> headers update daily via GitHub Actions.
+      </p>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-val">56</div>
+          <div class="stat-lbl">Threat intelligence tools</div>
+        </div>
+        <div class="stat">
+          <div class="stat-val">18</div>
+          <div class="stat-lbl">Threat intelligence platforms</div>
+        </div>
+        <div class="stat">
+          <div class="stat-val">51 / 52</div>
+          <div class="stat-lbl">Feeds reachable (2026-11-25 16:58 UTC)</div>
+        </div>
+        <div class="stat">
+          <div class="stat-val">7</div>
+          <div class="stat-lbl">Python stdlib CLI utilities</div>
+        </div>
+      </div>
+    </header>
+
+    <section id="feeds">
+      <h2>Threat intelligence feed status</h2>
+      <p class="section-note">
+        Checked daily by <code>scripts/check-feeds.py</code>. Endpoint reachability does not prove that indicators inside a feed are fresh or low in false positives; review <code>Last-Modified</code> headers and your allowlist before blocking traffic.
+      </p>
+      <div class="controls">
+        <input id="feed-search" type="search" placeholder="Filter feeds by name, IOC type, format, or license..." />
+        <select id="feed-cat">
+          <option value="">All feed categories</option>
+          <option value="Botnet &amp; C2 IPs">Botnet &amp; C2 IPs</option>
+<option value="IP Reputation &amp; Blocklists">IP Reputation &amp; Blocklists</option>
+<option value="Malicious URLs &amp; Domains">Malicious URLs &amp; Domains</option>
+<option value="Malware Hashes">Malware Hashes</option>
+<option value="Multi-IOC &amp; C2">Multi-IOC &amp; C2</option>
+<option value="Phishing &amp; Brand Abuse">Phishing &amp; Brand Abuse</option>
+<option value="Ransomware &amp; Threat Actors">Ransomware &amp; Threat Actors</option>
+<option value="Vulnerability &amp; Exploit Feeds">Vulnerability &amp; Exploit Feeds</option>
+        </select>
+      </div>
+      <div class="table-wrap">
+        <table id="feeds-table">
+          <thead>
+            <tr>
+              <th>Feed</th>
+              <th>Status</th>
+              <th>Response</th>
+              <th>Last-Modified</th>
+              <th>Format check</th>
+              <th>IOC types</th>
+              <th>Formats</th>
+              <th>API key</th>
+              <th>Commercial use</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-category="Multi-IOC &amp; C2" data-search="threatfox (abuse.ch) multi-ioc &amp; c2 ip domain url hash json csv stix misp rpz cc0 1.0 yes online"><td><a href="https://threatfox.abuse.ch/" target="_blank" rel="noopener noreferrer">ThreatFox (abuse.ch)</a><div class="sub">Multi-IOC &amp; C2</div></td><td><span class="badge badge-online">Online</span></td><td><code>435 ms</code></td><td>-</td><td>HTML page</td><td>IP, Domain, URL, Hash</td><td>JSON, CSV, STIX</td><td>None (exports) / Free key (API)</td><td>Yes</td></tr>
+<tr data-category="Malicious URLs &amp; Domains" data-search="urlhaus (abuse.ch) malicious urls &amp; domains url domain hash csv txt rpz json cc0 1.0 yes online"><td><a href="https://urlhaus.abuse.ch/" target="_blank" rel="noopener noreferrer">URLhaus (abuse.ch)</a><div class="sub">Malicious URLs &amp; Domains</div></td><td><span class="badge badge-online">Online</span></td><td><code>382 ms</code></td><td>-</td><td>HTML page</td><td>URL, Domain, Hash</td><td>CSV, TXT, RPZ</td><td>None (exports) / Free key (API)</td><td>Yes</td></tr>
+<tr data-category="Malware Hashes" data-search="malwarebazaar recent (abuse.ch) malware hashes sha256 md5 sha1 csv json txt cc0 1.0 yes online"><td><a href="https://bazaar.abuse.ch/" target="_blank" rel="noopener noreferrer">MalwareBazaar Recent (abuse.ch)</a><div class="sub">Malware Hashes</div></td><td><span class="badge badge-online">Online</span></td><td><code>410 ms</code></td><td>-</td><td>HTML page</td><td>SHA256, MD5, SHA1</td><td>CSV, JSON, TXT</td><td>None (exports) / Free key (API)</td><td>Yes</td></tr>
+<tr data-category="Botnet &amp; C2 IPs" data-search="feodo tracker ip blocklist (abuse.ch) botnet &amp; c2 ips ip txt csv json cc0 1.0 yes online"><td><a href="https://feodotracker.abuse.ch/" target="_blank" rel="noopener noreferrer">Feodo Tracker IP Blocklist (abuse.ch)</a><div class="sub">Botnet &amp; C2 IPs</div></td><td><span class="badge badge-online">Online</span></td><td><code>318 ms</code></td><td>2026-06-30 04:53 UTC</td><td>OK (1+ rows)</td><td>IP</td><td>TXT, CSV, JSON</td><td>None</td><td>Yes</td></tr>
+<tr data-category="Botnet &amp; C2 IPs" data-search="ssl blacklist (abuse.ch) botnet &amp; c2 ips ip ssl sha1 ja3 txt csv suricata cc0 1.0 yes online"><td><a href="https://sslbl.abuse.ch/" target="_blank" rel="noopener noreferrer">SSL Blacklist (abuse.ch)</a><div class="sub">Botnet &amp; C2 IPs</div></td><td><span class="badge badge-online">Online</span></td><td><code>342 ms</code></td><td>2026-06-30 04:53 UTC</td><td>Header only</td><td>IP, SSL SHA1, JA3</td><td>TXT, CSV, Suricata</td><td>None</td><td>Yes</td></tr>
+<tr data-category="Multi-IOC &amp; C2" data-search="alienvault otx multi-ioc &amp; c2 ip domain url hash cve json csv stix taxii proprietary (free community) yes (terms apply) online (auth/rate-limit)"><td><a href="https://otx.alienvault.com/" target="_blank" rel="noopener noreferrer">AlienVault OTX</a><div class="sub">Multi-IOC &amp; C2</div></td><td><span class="badge badge-auth">Online (Auth/Rate-Limit)</span></td><td><code>475 ms</code></td><td>-</td><td>HTTP 403</td><td>IP, Domain, URL, Hash, CVE</td><td>JSON, CSV, STIX</td><td>Required (free)</td><td>Yes (terms apply)</td></tr>
+<tr data-category="IP Reputation &amp; Blocklists" data-search="abuseipdb blacklist ip reputation &amp; blocklists ip json txt proprietary paid for commercial use online (auth/rate-limit)"><td><a href="https://www.abuseipdb.com/" target="_blank" rel="noopener noreferrer">AbuseIPDB Blacklist</a><div class="sub">IP Reputation &amp; Blocklists</div></td><td><span class="badge badge-auth">Online (Auth/Rate-Limit)</span></td><td><code>193 ms</code></td><td>-</td><td>HTTP 403</td><td>IP</td><td>JSON, TXT</td><td>Required (free tier)</td><td>Paid for commercial use</td></tr>
+<tr data-category="IP Reputation &amp; Blocklists" data-search="spamhaus drop ip reputation &amp; blocklists cidr txt json free for non-resale use yes (internal protection) online"><td><a href="https://www.spamhaus.org/blocklists/do-not-route-or-peer/" target="_blank" rel="noopener noreferrer">Spamhaus DROP</a><div class="sub">IP Reputation &amp; Blocklists</div></td><td><span class="badge badge-online">Online</span></td><td><code>312 ms</code></td><td>2026-11-25 13:24 UTC</td><td>OK (1737+ rows)</td><td>CIDR</td><td>TXT, JSON</td><td>None</td><td>Yes (internal protection)</td></tr>
+<tr data-category="IP Reputation &amp; Blocklists" data-search="spamhaus dropv6 ip reputation &amp; blocklists ipv6 cidr txt json free for non-resale use yes (internal protection) online"><td><a href="https://www.spamhaus.org/blocklists/do-not-route-or-peer/" target="_blank" rel="noopener noreferrer">Spamhaus DROPv6</a><div class="sub">IP Reputation &amp; Blocklists</div></td><td><span class="badge badge-online">Online</span></td><td><code>232 ms</code></td><td>2026-11-20 09:32 UTC</td><td>OK (90+ rows)</td><td>IPv6 CIDR</td><td>TXT, JSON</td><td>None</td><td>Yes (internal protection)</td></tr>
+<tr data-category="IP Reputation &amp; Blocklists" data-search="emerging threats compromised ips ip reputation &amp; blocklists ip txt bsd-3-clause yes online"><td><a href="https://rules.emergingthreats.net/" target="_blank" rel="noopener noreferrer">Emerging Threats Compromised IPs</a><div class="sub">IP Reputation &amp; Blocklists</div></td><td><span class="badge badge-online">Online</span></td><td><code>646 ms</code></td><td>2026-11-24 21:00 UTC</td><td>OK (575+ rows)</td><td>IP</td><td>TXT</td><td>None</td><td>Yes</td></tr>
+<tr data-category="IP Reputation &amp; Blocklists" data-search="cinsscore ci army badguys ip reputation &amp; blocklists ip txt free for internal use yes (non-resale) online"><td><a href="https://cinsscore.com/" target="_blank" rel="noopener noreferrer">CINSscore CI Army Badguys</a><div class="sub">IP Reputation &amp; Blocklists</div></td><td><span class="badge badge-online">Online</span></td><td><code>1158 ms</code></td><td>2026-11-25 16:04 UTC</td><td>OK (4829+ rows)</td><td>IP</td><td>TXT</td><td>None</td><td>Yes (non-resale)</td></tr>
+<tr data-category="IP Reputation &amp; Blocklists" data-search="blocklist.de all attackers ip reputation &amp; blocklists ip txt free community feed yes online"><td><a href="https://www.blocklist.de/en/export.html" target="_blank" rel="noopener noreferrer">Blocklist.de All Attackers</a><div class="sub">IP Reputation &amp; Blocklists</div></td><td><span class="badge badge-online">Online</span></td><td><code>259 ms</code></td><td>2026-11-25 16:36 UTC</td><td>OK (4492+ rows)</td><td>IP</td><td>TXT</td><td>None</td><td>Yes</td></tr>
+<tr data-category="IP Reputation &amp; Blocklists" data-search="blocklist.de ssh brute force ip reputation &amp; blocklists ip txt free community feed yes online"><td><a href="https://www.blocklist.de/en/export.html" target="_blank" rel="noopener noreferrer">Blocklist.de SSH Brute Force</a><div class="sub">IP Reputation &amp; Blocklists</div></td><td><span class="badge badge-online">Online</span></td><td><code>274 ms</code></td><td>2026-11-25 16:56 UTC</td><td>OK (4552+ rows)</td><td>IP</td><td>TXT</td><td>None</td><td>Yes</td></tr>
+<tr data-category="IP Reputation &amp; Blocklists" data-search="blocklist.de apache / web attackers ip reputation &amp; blocklists ip txt free community feed yes online"><td><a href="https://www.blocklist.de/en/export.html" target="_blank" rel="noopener noreferrer">Blocklist.de Apache / Web Attackers</a><div class="sub">IP Reputation &amp; Blocklists</div></td><td><span class="badge badge-online">Online</span></td><td><code>251 ms</code></td><td>2026-11-25 16:36 UTC</td><td>OK (4487+ rows)</td><td>IP</td><td>TXT</td><td>None</td><td>Yes</td></tr>
+<tr data-category="IP Reputation &amp; Blocklists" data-search="firehol level 1 ip reputation &amp; blocklists ip cidr txt (netset) gpl-2.0 / aggregated check upstream feeds online"><td><a href="https://iplists.firehol.org/" target="_blank" rel="noopener noreferrer">FireHOL Level 1</a><div class="sub">IP Reputation &amp; Blocklists</div></td><td><span class="badge badge-online">Online</span></td><td><code>357 ms</code></td><td>-</td><td>OK (4115+ rows)</td><td>IP, CIDR</td><td>TXT (netset)</td><td>None</td><td>Check upstream feeds</td></tr>
+<tr data-category="IP Reputation &amp; Blocklists" data-search="firehol level 2 ip reputation &amp; blocklists ip cidr txt (netset) gpl-2.0 / aggregated check upstream feeds online"><td><a href="https://iplists.firehol.org/" target="_blank" rel="noopener noreferrer">FireHOL Level 2</a><div class="sub">IP Reputation &amp; Blocklists</div></td><td><span class="badge badge-online">Online</span></td><td><code>309 ms</code></td><td>-</td><td>OK (4693+ rows)</td><td>IP, CIDR</td><td>TXT (netset)</td><td>None</td><td>Check upstream feeds</td></tr>
+<tr data-category="IP Reputation &amp; Blocklists" data-search="firehol level 3 ip reputation &amp; blocklists ip cidr txt (netset) gpl-2.0 / aggregated check upstream feeds online"><td><a href="https://iplists.firehol.org/" target="_blank" rel="noopener noreferrer">FireHOL Level 3</a><div class="sub">IP Reputation &amp; Blocklists</div></td><td><span class="badge badge-online">Online</span></td><td><code>247 ms</code></td><td>-</td><td>OK (4725+ rows)</td><td>IP, CIDR</td><td>TXT (netset)</td><td>None</td><td>Check upstream feeds</td></tr>
+<tr data-category="IP Reputation &amp; Blocklists" data-search="sans isc dshield top attackers ip reputation &amp; blocklists cidr txt cc-by-nc-sa 4.0 non-commercial online"><td><a href="https://www.dshield.org/" target="_blank" rel="noopener noreferrer">SANS ISC DShield Top Attackers</a><div class="sub">IP Reputation &amp; Blocklists</div></td><td><span class="badge badge-online">Online</span></td><td><code>106 ms</code></td><td>2026-11-25 15:44 UTC</td><td>OK (20+ rows)</td><td>CIDR</td><td>TXT</td><td>None</td><td>Non-commercial</td></tr>
+<tr data-category="IP Reputation &amp; Blocklists" data-search="greensnow ip blocklist ip reputation &amp; blocklists ip txt free community feed yes (internal) online"><td><a href="https://greensnow.co/" target="_blank" rel="noopener noreferrer">GreenSnow IP Blocklist</a><div class="sub">IP Reputation &amp; Blocklists</div></td><td><span class="badge badge-online">Online</span></td><td><code>3184 ms</code></td><td>2026-11-25 16:57 UTC</td><td>OK (2174+ rows)</td><td>IP</td><td>TXT</td><td>None</td><td>Yes (internal)</td></tr>
+<tr data-category="IP Reputation &amp; Blocklists" data-search="binary defense artillery banlist ip reputation &amp; blocklists ip txt free for non-commercial / internal internal use only online"><td><a href="https://www.binarydefense.com/" target="_blank" rel="noopener noreferrer">Binary Defense Artillery Banlist</a><div class="sub">IP Reputation &amp; Blocklists</div></td><td><span class="badge badge-online">Online</span></td><td><code>2449 ms</code></td><td>2026-11-24 23:57 UTC</td><td>OK (462+ rows)</td><td>IP</td><td>TXT</td><td>None</td><td>Internal use only</td></tr>
+<tr data-category="IP Reputation &amp; Blocklists" data-search="ipsum (level 3+ aggregated) ip reputation &amp; blocklists ip txt unlicense yes online"><td><a href="https://github.com/stamparm/ipsum" target="_blank" rel="noopener noreferrer">IPsum (Level 3+ Aggregated)</a><div class="sub">IP Reputation &amp; Blocklists</div></td><td><span class="badge badge-online">Online</span></td><td><code>392 ms</code></td><td>-</td><td>OK (4657+ rows)</td><td>IP</td><td>TXT</td><td>None</td><td>Yes</td></tr>
+<tr data-category="IP Reputation &amp; Blocklists" data-search="tor project bulk exit list ip reputation &amp; blocklists ip txt bsd-3-clause yes offline"><td><a href="https://check.torproject.org/" target="_blank" rel="noopener noreferrer">Tor Project Bulk Exit List</a><div class="sub">IP Reputation &amp; Blocklists</div></td><td><span class="badge badge-offline">Offline</span></td><td><code>10034 ms</code></td><td>-</td><td>Timeout</td><td>IP</td><td>TXT</td><td>None</td><td>Yes</td></tr>
+<tr data-category="IP Reputation &amp; Blocklists" data-search="cisco talos ip blacklist ip reputation &amp; blocklists ip txt cisco talos terms internal use online (auth/rate-limit)"><td><a href="https://talosintelligence.com/" target="_blank" rel="noopener noreferrer">Cisco Talos IP Blacklist</a><div class="sub">IP Reputation &amp; Blocklists</div></td><td><span class="badge badge-auth">Online (Auth/Rate-Limit)</span></td><td><code>171 ms</code></td><td>-</td><td>HTTP 403</td><td>IP</td><td>TXT</td><td>None</td><td>Internal use</td></tr>
+<tr data-category="IP Reputation &amp; Blocklists" data-search="stopforumspam toxic ips (7d) ip reputation &amp; blocklists ip txt free community feed yes online"><td><a href="https://www.stopforumspam.com/" target="_blank" rel="noopener noreferrer">StopForumSpam Toxic IPs (7d)</a><div class="sub">IP Reputation &amp; Blocklists</div></td><td><span class="badge badge-online">Online</span></td><td><code>356 ms</code></td><td>-</td><td>OK (4776+ rows)</td><td>IP</td><td>TXT</td><td>None</td><td>Yes</td></tr>
+<tr data-category="IP Reputation &amp; Blocklists" data-search="digitalside threat-intel ips ip reputation &amp; blocklists ip txt csv misp stix mit yes online"><td><a href="https://osint.digitalside.it/" target="_blank" rel="noopener noreferrer">DigitalSide Threat-Intel IPs</a><div class="sub">IP Reputation &amp; Blocklists</div></td><td><span class="badge badge-online">Online</span></td><td><code>355 ms</code></td><td>-</td><td>OK (4398+ rows)</td><td>IP</td><td>TXT, CSV, MISP</td><td>None</td><td>Yes</td></tr>
+<tr data-category="Malicious URLs &amp; Domains" data-search="digitalside threat-intel domains malicious urls &amp; domains domain txt csv misp stix mit yes online"><td><a href="https://osint.digitalside.it/" target="_blank" rel="noopener noreferrer">DigitalSide Threat-Intel Domains</a><div class="sub">Malicious URLs &amp; Domains</div></td><td><span class="badge badge-online">Online</span></td><td><code>290 ms</code></td><td>-</td><td>OK (133+ rows)</td><td>Domain</td><td>TXT, CSV, MISP</td><td>None</td><td>Yes</td></tr>
+<tr data-category="Malicious URLs &amp; Domains" data-search="digitalside threat-intel urls malicious urls &amp; domains url txt csv misp mit yes online"><td><a href="https://osint.digitalside.it/" target="_blank" rel="noopener noreferrer">DigitalSide Threat-Intel URLs</a><div class="sub">Malicious URLs &amp; Domains</div></td><td><span class="badge badge-online">Online</span></td><td><code>416 ms</code></td><td>-</td><td>OK (1968+ rows)</td><td>URL</td><td>TXT, CSV, MISP</td><td>None</td><td>Yes</td></tr>
+<tr data-category="Phishing &amp; Brand Abuse" data-search="openphish community feed phishing &amp; brand abuse url txt non-commercial free tier paid for commercial online"><td><a href="https://openphish.com/" target="_blank" rel="noopener noreferrer">OpenPhish Community Feed</a><div class="sub">Phishing &amp; Brand Abuse</div></td><td><span class="badge badge-online">Online</span></td><td><code>570 ms</code></td><td>-</td><td>OK (300+ rows)</td><td>URL</td><td>TXT</td><td>None</td><td>Paid for commercial</td></tr>
+<tr data-category="Phishing &amp; Brand Abuse" data-search="phishtank verified phishing phishing &amp; brand abuse url json csv xml free community data yes (attribution) online (auth/rate-limit)"><td><a href="https://phishtank.org/" target="_blank" rel="noopener noreferrer">PhishTank Verified Phishing</a><div class="sub">Phishing &amp; Brand Abuse</div></td><td><span class="badge badge-auth">Online (Auth/Rate-Limit)</span></td><td><code>238 ms</code></td><td>-</td><td>HTTP 403</td><td>URL</td><td>JSON, CSV, XML</td><td>Optional (free key recommended)</td><td>Yes (attribution)</td></tr>
+<tr data-category="Phishing &amp; Brand Abuse" data-search="cert.pl phishing warning list phishing &amp; brand abuse domain txt json csv rpz public domain / open data yes online"><td><a href="https://cert.pl/en/warning-list/" target="_blank" rel="noopener noreferrer">CERT.pl Phishing Warning List</a><div class="sub">Phishing &amp; Brand Abuse</div></td><td><span class="badge badge-online">Online</span></td><td><code>548 ms</code></td><td>2026-11-25 16:55 UTC</td><td>OK (3097+ rows)</td><td>Domain</td><td>TXT, JSON, CSV</td><td>None</td><td>Yes</td></tr>
+<tr data-category="Phishing &amp; Brand Abuse" data-search="phishing.database active domains phishing &amp; brand abuse domain txt mit yes online"><td><a href="https://github.com/Phishing-Database/Phishing.Database" target="_blank" rel="noopener noreferrer">Phishing.Database Active Domains</a><div class="sub">Phishing &amp; Brand Abuse</div></td><td><span class="badge badge-online">Online</span></td><td><code>380 ms</code></td><td>-</td><td>OK (2325+ rows)</td><td>Domain</td><td>TXT</td><td>None</td><td>Yes</td></tr>
+<tr data-category="Phishing &amp; Brand Abuse" data-search="phishing army blocklist phishing &amp; brand abuse domain txt cc-by-nc 4.0 non-commercial online"><td><a href="https://phishing.army/" target="_blank" rel="noopener noreferrer">Phishing Army Blocklist</a><div class="sub">Phishing &amp; Brand Abuse</div></td><td><span class="badge badge-online">Online</span></td><td><code>317 ms</code></td><td>2026-11-25 14:00 UTC</td><td>OK (2958+ rows)</td><td>Domain</td><td>TXT</td><td>None</td><td>Non-commercial</td></tr>
+<tr data-category="Malicious URLs &amp; Domains" data-search="hagezi threat intelligence feeds (mini) malicious urls &amp; domains domain txt rpz hosts gpl-3.0 yes online"><td><a href="https://github.com/hagezi/dns-blocklists" target="_blank" rel="noopener noreferrer">HaGeZi Threat Intelligence Feeds (Mini)</a><div class="sub">Malicious URLs &amp; Domains</div></td><td><span class="badge badge-online">Online</span></td><td><code>383 ms</code></td><td>-</td><td>OK (2222+ rows)</td><td>Domain</td><td>TXT, RPZ, Hosts</td><td>None</td><td>Yes</td></tr>
+<tr data-category="Malicious URLs &amp; Domains" data-search="stevenblack malware &amp; adware hosts malicious urls &amp; domains domain hosts txt mit yes online"><td><a href="https://github.com/StevenBlack/hosts" target="_blank" rel="noopener noreferrer">StevenBlack Malware &amp; Adware Hosts</a><div class="sub">Malicious URLs &amp; Domains</div></td><td><span class="badge badge-online">Online</span></td><td><code>309 ms</code></td><td>-</td><td>OK (2116+ rows)</td><td>Domain</td><td>Hosts, TXT</td><td>None</td><td>Yes</td></tr>
+<tr data-category="Malicious URLs &amp; Domains" data-search="threatview.io malicious domains malicious urls &amp; domains domain txt free community feed yes online"><td><a href="https://threatview.io/" target="_blank" rel="noopener noreferrer">ThreatView.io Malicious Domains</a><div class="sub">Malicious URLs &amp; Domains</div></td><td><span class="badge badge-online">Online</span></td><td><code>519 ms</code></td><td>2026-11-25 03:06 UTC</td><td>OK (4017+ rows)</td><td>Domain</td><td>TXT</td><td>None</td><td>Yes</td></tr>
+<tr data-category="IP Reputation &amp; Blocklists" data-search="threatview.io high-confidence ips ip reputation &amp; blocklists ip txt free community feed yes online"><td><a href="https://threatview.io/" target="_blank" rel="noopener noreferrer">ThreatView.io High-Confidence IPs</a><div class="sub">IP Reputation &amp; Blocklists</div></td><td><span class="badge badge-online">Online</span></td><td><code>369 ms</code></td><td>2026-11-25 03:06 UTC</td><td>OK (4497+ rows)</td><td>IP</td><td>TXT</td><td>None</td><td>Yes</td></tr>
+<tr data-category="Malware Hashes" data-search="threatview.io malware md5 hashes malware hashes md5 txt free community feed yes online"><td><a href="https://threatview.io/" target="_blank" rel="noopener noreferrer">ThreatView.io Malware MD5 Hashes</a><div class="sub">Malware Hashes</div></td><td><span class="badge badge-online">Online</span></td><td><code>525 ms</code></td><td>2026-11-25 03:06 UTC</td><td>OK (1986+ rows)</td><td>MD5</td><td>TXT</td><td>None</td><td>Yes</td></tr>
+<tr data-category="Botnet &amp; C2 IPs" data-search="malicious ip (romainmarcoux 40k) botnet &amp; c2 ips ip txt mit yes online"><td><a href="https://github.com/romainmarcoux/malicious-ip" target="_blank" rel="noopener noreferrer">Malicious IP (romainmarcoux 40k)</a><div class="sub">Botnet &amp; C2 IPs</div></td><td><span class="badge badge-online">Online</span></td><td><code>268 ms</code></td><td>-</td><td>OK (4468+ rows)</td><td>IP</td><td>TXT</td><td>None</td><td>Yes</td></tr>
+<tr data-category="Multi-IOC &amp; C2" data-search="circl osint misp feed multi-ioc &amp; c2 ip domain url hash misp json cc0 1.0 yes online"><td><a href="https://www.circl.lu/doc/misp/feed-osint/" target="_blank" rel="noopener noreferrer">CIRCL OSINT MISP Feed</a><div class="sub">Multi-IOC &amp; C2</div></td><td><span class="badge badge-online">Online</span></td><td><code>504 ms</code></td><td>2026-11-25 10:18 UTC</td><td>JSON stream</td><td>IP, Domain, URL, Hash</td><td>MISP JSON</td><td>None</td><td>Yes</td></tr>
+<tr data-category="Multi-IOC &amp; C2" data-search="botvrij.eu ioc lists multi-ioc &amp; c2 ip domain hash txt misp json open community feed yes online"><td><a href="https://www.botvrij.eu/" target="_blank" rel="noopener noreferrer">Botvrij.eu IOC Lists</a><div class="sub">Multi-IOC &amp; C2</div></td><td><span class="badge badge-online">Online</span></td><td><code>171 ms</code></td><td>2026-02-03 07:58 UTC</td><td>OK (4+ rows)</td><td>IP, Domain, Hash</td><td>TXT, MISP JSON</td><td>None</td><td>Yes</td></tr>
+<tr data-category="Multi-IOC &amp; C2" data-search="tweetfeed live iocs multi-ioc &amp; c2 ip domain url hash json csv free community feed yes online"><td><a href="https://tweetfeed.live/" target="_blank" rel="noopener noreferrer">TweetFeed Live IOCs</a><div class="sub">Multi-IOC &amp; C2</div></td><td><span class="badge badge-online">Online</span></td><td><code>210 ms</code></td><td>2026-11-25 16:45 UTC</td><td>JSON stream</td><td>IP, Domain, URL, Hash</td><td>JSON, CSV</td><td>None</td><td>Yes</td></tr>
+<tr data-category="Vulnerability &amp; Exploit Feeds" data-search="cisa known exploited vulnerabilities vulnerability &amp; exploit feeds cve json csv public domain (us gov) yes online"><td><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener noreferrer">CISA Known Exploited Vulnerabilities</a><div class="sub">Vulnerability &amp; Exploit Feeds</div></td><td><span class="badge badge-online">Online</span></td><td><code>316 ms</code></td><td>2026-11-25 14:22 UTC</td><td>JSON stream</td><td>CVE</td><td>JSON, CSV</td><td>None</td><td>Yes</td></tr>
+<tr data-category="Vulnerability &amp; Exploit Feeds" data-search="first epss probability feed vulnerability &amp; exploit feeds cve json csv open data (first) yes online"><td><a href="https://www.first.org/epss/" target="_blank" rel="noopener noreferrer">FIRST EPSS Probability Feed</a><div class="sub">Vulnerability &amp; Exploit Feeds</div></td><td><span class="badge badge-online">Online</span></td><td><code>284 ms</code></td><td>-</td><td>Valid JSON</td><td>CVE</td><td>JSON, CSV</td><td>None</td><td>Yes</td></tr>
+<tr data-category="Vulnerability &amp; Exploit Feeds" data-search="nist nvd cve api 2.0 vulnerability &amp; exploit feeds cve cpe json public domain (us gov) yes online"><td><a href="https://nvd.nist.gov/developers/vulnerabilities" target="_blank" rel="noopener noreferrer">NIST NVD CVE API 2.0</a><div class="sub">Vulnerability &amp; Exploit Feeds</div></td><td><span class="badge badge-online">Online</span></td><td><code>563 ms</code></td><td>-</td><td>Valid JSON</td><td>CVE, CPE</td><td>JSON</td><td>Optional (higher quota)</td><td>Yes</td></tr>
+<tr data-category="Vulnerability &amp; Exploit Feeds" data-search="osv.dev vulnerability api vulnerability &amp; exploit feeds cve ghsa package json cc-by-4.0 yes online"><td><a href="https://osv.dev/" target="_blank" rel="noopener noreferrer">OSV.dev Vulnerability API</a><div class="sub">Vulnerability &amp; Exploit Feeds</div></td><td><span class="badge badge-online">Online</span></td><td><code>599 ms</code></td><td>-</td><td>Valid JSON</td><td>CVE, GHSA, Package</td><td>JSON</td><td>None</td><td>Yes</td></tr>
+<tr data-category="IP Reputation &amp; Blocklists" data-search="shodan internetdb api ip reputation &amp; blocklists ip ports cve json free non-commercial / research contact shodan for high-volume online"><td><a href="https://internetdb.shodan.io/" target="_blank" rel="noopener noreferrer">Shodan InternetDB API</a><div class="sub">IP Reputation &amp; Blocklists</div></td><td><span class="badge badge-online">Online</span></td><td><code>397 ms</code></td><td>2026-11-25 12:32 UTC</td><td>Valid JSON</td><td>IP, Ports, CVE</td><td>JSON</td><td>None</td><td>Contact Shodan for high-volume</td></tr>
+<tr data-category="IP Reputation &amp; Blocklists" data-search="greynoise community api ip reputation &amp; blocklists ip json proprietary (free community) paid only online (auth/rate-limit)"><td><a href="https://docs.greynoise.io/reference/get_v3-community-ip" target="_blank" rel="noopener noreferrer">GreyNoise Community API</a><div class="sub">IP Reputation &amp; Blocklists</div></td><td><span class="badge badge-auth">Online (Auth/Rate-Limit)</span></td><td><code>587 ms</code></td><td>-</td><td>HTTP 401</td><td>IP</td><td>JSON</td><td>Optional (free key for 50/wk)</td><td>Paid only</td></tr>
+<tr data-category="Ransomware &amp; Threat Actors" data-search="ransomware.live victims api ransomware &amp; threat actors threat actor victim domain json rss cc-by-sa 4.0 yes (attribution) online"><td><a href="https://www.ransomware.live/" target="_blank" rel="noopener noreferrer">Ransomware.live Victims API</a><div class="sub">Ransomware &amp; Threat Actors</div></td><td><span class="badge badge-online">Online</span></td><td><code>430 ms</code></td><td>-</td><td>JSON stream</td><td>Threat Actor, Victim, Domain</td><td>JSON, RSS</td><td>None (public endpoints)</td><td>Yes (attribution)</td></tr>
+<tr data-category="Ransomware &amp; Threat Actors" data-search="mitre att&amp;ck enterprise stix ransomware &amp; threat actors ttp threat actor malware stix json apache-2.0 yes online"><td><a href="https://attack.mitre.org/" target="_blank" rel="noopener noreferrer">MITRE ATT&amp;CK Enterprise STIX</a><div class="sub">Ransomware &amp; Threat Actors</div></td><td><span class="badge badge-online">Online</span></td><td><code>367 ms</code></td><td>-</td><td>Valid JSON</td><td>TTP, Threat Actor, Malware</td><td>STIX, JSON</td><td>None</td><td>Yes</td></tr>
+<tr data-category="Malware Hashes" data-search="malpedia public api malware hashes malware family yara actor json yara research / mixed metadata yes online"><td><a href="https://malpedia.caad.fkie.fraunhofer.de/" target="_blank" rel="noopener noreferrer">Malpedia Public API</a><div class="sub">Malware Hashes</div></td><td><span class="badge badge-online">Online</span></td><td><code>483 ms</code></td><td>-</td><td>Valid JSON</td><td>Malware Family, YARA, Actor</td><td>JSON, YARA</td><td>None (metadata) / Vetted (samples)</td><td>Metadata yes</td></tr>
+<tr data-category="Malware Hashes" data-search="yaraify (abuse.ch) malware hashes sha256 yara json yara cc0 1.0 yes online"><td><a href="https://yaraify.abuse.ch/" target="_blank" rel="noopener noreferrer">YARAify (abuse.ch)</a><div class="sub">Malware Hashes</div></td><td><span class="badge badge-online">Online</span></td><td><code>272 ms</code></td><td>-</td><td>HTML page</td><td>SHA256, YARA</td><td>JSON, YARA</td><td>Free Auth-Key for API</td><td>Yes</td></tr>
+<tr data-category="Multi-IOC &amp; C2" data-search="proofpoint emerging threats open rules multi-ioc &amp; c2 suricata rules ip domain suricata snort bsd-3-clause yes online"><td><a href="https://rules.emergingthreats.net/open/" target="_blank" rel="noopener noreferrer">Proofpoint Emerging Threats Open Rules</a><div class="sub">Multi-IOC &amp; C2</div></td><td><span class="badge badge-online">Online</span></td><td><code>548 ms</code></td><td>2026-11-24 21:01 UTC</td><td>OK (1+ rows)</td><td>Suricata Rules, IP, Domain</td><td>Suricata, Snort</td><td>None</td><td>Yes</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="platforms">
+      <h2>Threat intelligence platforms</h2>
+      <p class="section-note">
+        Open-source threat intelligence platforms handle local IOC storage and correlation without per-seat licensing. Commercial platforms add closed-source collection, analyst reporting, and vendor SLAs.
+      </p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Platform</th>
+              <th>Type</th>
+              <th>Purpose</th>
+              <th>Formats</th>
+              <th>License</th>
+              <th>Commercial use</th>
+              <th>Self-hosted</th>
+              <th>Integrations</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><a href="https://www.misp-project.org/" target="_blank" rel="noopener noreferrer">MISP</a></td><td>Open source</td><td>IOC storage, automated correlation, and threat sharing across SOC teams and ISACs</td><td>JSON, CSV, STIX, TAXII</td><td>AGPL-3.0</td><td>Yes</td><td>Yes</td><td>OpenCTI, TheHive, Splunk, Elastic</td></tr>
+<tr><td><a href="https://www.opencti.io/" target="_blank" rel="noopener noreferrer">OpenCTI</a></td><td>Open source</td><td>STIX 2.1 knowledge graph connecting indicators, threat actors, campaigns, and MITRE ATT&amp;CK</td><td>STIX, TAXII, JSON, CSV</td><td>Apache-2.0 (EE modules commercial)</td><td>Yes</td><td>Yes</td><td>MISP, Splunk, Elastic, Sentinel</td></tr>
+<tr><td><a href="https://yeti-platform.io/" target="_blank" rel="noopener noreferrer">Yeti</a></td><td>Open source</td><td>Lightweight observable and threat intelligence repository built for fast enrichment and analytics</td><td>JSON, CSV, STIX, MISP</td><td>Apache-2.0</td><td>Yes</td><td>Yes</td><td>MISP, Timesketch, DFIR-IRIS, VirusTotal</td></tr>
+<tr><td><a href="https://github.com/csirtgadgets/bearded-avenger" target="_blank" rel="noopener noreferrer">Collective Intelligence Framework (CIFv4)</a></td><td>Open source</td><td>High-speed IOC ingestion, deduplication, and firewall/DNS blocklist generation</td><td>JSON, CSV, STIX, Bind</td><td>MPL-2.0</td><td>Yes</td><td>Yes</td><td>Snort, Suricata, Bro/Zeek, BIND</td></tr>
+<tr><td><a href="https://github.com/InQuest/ThreatIngestor" target="_blank" rel="noopener noreferrer">ThreatIngestor</a></td><td>Open source</td><td>Modular pipeline that pulls IOCs from RSS, GitHub, and feeds into MISP, CSV, or SIEMs</td><td>CSV, JSON, MISP</td><td>GPL-2.0</td><td>Yes</td><td>Yes</td><td>MISP, ThreatKB, SQLite, SQS</td></tr>
+<tr><td><a href="https://github.com/eclecticiq/OpenTAXII" target="_blank" rel="noopener noreferrer">OpenTAXII</a></td><td>Open source</td><td>Python TAXII 1.x server implementation for hosting and sharing STIX feeds</td><td>STIX, TAXII</td><td>BSD-3-Clause</td><td>Yes</td><td>Yes</td><td>MISP, Splunk, QRadar, TAXII clients</td></tr>
+<tr><td><a href="https://github.com/oasis-open/cti-taxii-server" target="_blank" rel="noopener noreferrer">OASIS Medallion</a></td><td>Open source</td><td>Reference TAXII 2.1 server backed by MongoDB or memory for distributing STIX 2.1 bundles</td><td>STIX, TAXII, JSON</td><td>BSD-3-Clause</td><td>Yes</td><td>Yes</td><td>OpenCTI, TAXII 2.1 clients, Sentinel</td></tr>
+<tr><td><a href="https://www.recordedfuture.com/" target="_blank" rel="noopener noreferrer">Recorded Future</a></td><td>Enterprise</td><td>Real-time intelligence graph combining open web, dark web, technical feeds, and analyst reports</td><td>JSON, CSV, STIX, TAXII</td><td>Proprietary</td><td>Paid only</td><td>No</td><td>Splunk, Sentinel, QRadar, CrowdStrike</td></tr>
+<tr><td><a href="https://cloud.google.com/security/products/threat-intelligence" target="_blank" rel="noopener noreferrer">Google Threat Intelligence (Mandiant)</a></td><td>Enterprise</td><td>Frontline incident response intelligence paired with VirusTotal telemetry and actor tracking</td><td>JSON, STIX, TAXII</td><td>Proprietary</td><td>Paid only</td><td>No</td><td>Google SecOps, Splunk, Sentinel, OpenCTI</td></tr>
+<tr><td><a href="https://www.crowdstrike.com/products/threat-intelligence/" target="_blank" rel="noopener noreferrer">CrowdStrike Falcon Intelligence</a></td><td>Enterprise</td><td>Automated EDR-linked indicator feeds, malware sandbox, and nation-state adversary profiles</td><td>JSON, STIX, TAXII, CSV</td><td>Proprietary</td><td>Paid only</td><td>No</td><td>CrowdStrike Falcon, Splunk, Sentinel, OpenCTI</td></tr>
+<tr><td><a href="https://threatconnect.com/" target="_blank" rel="noopener noreferrer">ThreatConnect</a></td><td>Enterprise</td><td>Combined TIP and SOAR platform with CAL telemetry scoring and risk quantification</td><td>JSON, CSV, STIX, TAXII</td><td>Proprietary</td><td>Paid only</td><td>Yes</td><td>Splunk, QRadar, Sentinel, CrowdStrike</td></tr>
+<tr><td><a href="https://www.anomali.com/products/threatstream" target="_blank" rel="noopener noreferrer">Anomali ThreatStream</a></td><td>Enterprise</td><td>High-volume feed aggregation, IOC lifecycle management, and SIEM/firewall distribution</td><td>JSON, CSV, STIX, TAXII</td><td>Proprietary</td><td>Paid only</td><td>Yes</td><td>Splunk, QRadar, Sentinel, Elastic</td></tr>
+<tr><td><a href="https://www.eclecticiq.com/" target="_blank" rel="noopener noreferrer">EclecticIQ Intelligence Center</a></td><td>Enterprise</td><td>STIX-native analyst workbench built for government CERTs, ISACs, and mature CTI teams</td><td>STIX, TAXII, JSON, CSV</td><td>Proprietary</td><td>Paid only</td><td>Yes</td><td>Splunk, QRadar, Sentinel, MISP</td></tr>
+<tr><td><a href="https://www.threatq.com/" target="_blank" rel="noopener noreferrer">ThreatQ (ThreatQuotient)</a></td><td>Enterprise</td><td>Data-driven TIP with custom scoring policies and bidirectional orchestration</td><td>JSON, CSV, STIX, TAXII</td><td>Proprietary</td><td>Paid only</td><td>Yes</td><td>Splunk, QRadar, CrowdStrike, ServiceNow</td></tr>
+<tr><td><a href="https://flashpoint.io/" target="_blank" rel="noopener noreferrer">Flashpoint Ignite</a></td><td>Enterprise</td><td>Closed-source cybercrime forums, illicit messaging channels, and vulnerability intelligence</td><td>JSON, CSV, STIX, TAXII</td><td>Proprietary</td><td>Paid only</td><td>No</td><td>Splunk, Sentinel, OpenCTI, MISP</td></tr>
+<tr><td><a href="https://intel471.com/" target="_blank" rel="noopener noreferrer">Intel 471 TITAN</a></td><td>Enterprise</td><td>Adversary-focused cybercrime, malware tracker, and underground intelligence</td><td>JSON, STIX, TAXII, YARA</td><td>Proprietary</td><td>Paid only</td><td>No</td><td>OpenCTI, MISP, Splunk, Sentinel</td></tr>
+<tr><td><a href="https://socradar.io/" target="_blank" rel="noopener noreferrer">SOCRadar</a></td><td>Enterprise / Freemium</td><td>External attack surface monitoring, brand protection, and dark web threat feeds</td><td>JSON, CSV, STIX, TAXII</td><td>Proprietary</td><td>Paid for enterprise</td><td>No</td><td>Splunk, Sentinel, QRadar, Wazuh</td></tr>
+<tr><td><a href="https://www.cyware.com/" target="_blank" rel="noopener noreferrer">Cyware Intel Exchange</a></td><td>Enterprise</td><td>Automated STIX/TAXII threat sharing, confidence scoring, and ISAC/ISAO collaboration</td><td>STIX, TAXII, JSON, CSV</td><td>Proprietary</td><td>Paid only</td><td>Yes</td><td>Splunk, QRadar, Sentinel, CrowdStrike</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="tools">
+      <h2>Threat intelligence tools</h2>
+      <p class="section-note">
+        Filter by category, self-hosting support, or keyword. Commercial use reflects the license or terms of the free tier.
+      </p>
+      <div class="controls">
+        <input id="tool-search" type="search" placeholder="Filter tools by name, purpose, format, or integration..." />
+        <select id="tool-cat">
+          <option value="">All tool categories</option>
+          <option value="Credential &amp; Leak Intelligence">Credential &amp; Leak Intelligence</option>
+<option value="IOC Enrichment &amp; Automation">IOC Enrichment &amp; Automation</option>
+<option value="IP, Domain &amp; URL Reputation">IP, Domain &amp; URL Reputation</option>
+<option value="Malware Analysis &amp; Sandboxes">Malware Analysis &amp; Sandboxes</option>
+<option value="Network &amp; Detection Engineering">Network &amp; Detection Engineering</option>
+<option value="OSINT &amp; Infrastructure Pivot">OSINT &amp; Infrastructure Pivot</option>
+<option value="Vulnerability &amp; Exploit Intelligence">Vulnerability &amp; Exploit Intelligence</option>
+        </select>
+        <select id="tool-selfhosted">
+          <option value="">Any hosting model</option>
+          <option value="yes">Self-hosted only</option>
+          <option value="no">SaaS / API only</option>
+        </select>
+      </div>
+      <div class="table-wrap">
+        <table id="tools-table">
+          <thead>
+            <tr>
+              <th>Tool</th>
+              <th>Type</th>
+              <th>Purpose</th>
+              <th>Formats</th>
+              <th>API key</th>
+              <th>Free limits</th>
+              <th>Commercial use</th>
+              <th>Self-hosted</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-category="IP, Domain &amp; URL Reputation" data-selfhosted="no" data-search="virustotal ip, domain &amp; url reputation inspect files, urls, domains, and ips across 70+ antivirus engines and blocklists api / saas json paid only misp opencti cortex splunk elastic"><td><a href="https://www.virustotal.com/" target="_blank" rel="noopener noreferrer">VirusTotal</a><div class="sub">IP, Domain &amp; URL Reputation</div></td><td>API / SaaS</td><td>Inspect files, URLs, domains, and IPs across 70+ antivirus engines and blocklists</td><td>JSON</td><td>Required</td><td>4 req/min, 500 req/day</td><td>Paid only</td><td>No</td></tr>
+<tr data-category="IP, Domain &amp; URL Reputation" data-selfhosted="no" data-search="abuseipdb ip, domain &amp; url reputation crowdsourced ip abuse reports, confidence scoring, and blocklist exports api / saas json csv txt paid for commercial use misp cortex fail2ban splunk wazuh"><td><a href="https://www.abuseipdb.com/" target="_blank" rel="noopener noreferrer">AbuseIPDB</a><div class="sub">IP, Domain &amp; URL Reputation</div></td><td>API / SaaS</td><td>Crowdsourced IP abuse reports, confidence scoring, and blocklist exports</td><td>JSON, CSV, TXT</td><td>Required</td><td>1,000 checks/day</td><td>Paid for commercial use</td><td>No</td></tr>
+<tr data-category="IP, Domain &amp; URL Reputation" data-selfhosted="no" data-search="greynoise ip, domain &amp; url reputation separate internet background scanners from targeted attacks api / saas json csv paid only splunk sentinel opencti cortex crowdstrike"><td><a href="https://www.greynoise.io/" target="_blank" rel="noopener noreferrer">GreyNoise</a><div class="sub">IP, Domain &amp; URL Reputation</div></td><td>API / SaaS</td><td>Separate internet background scanners from targeted attacks</td><td>JSON, CSV</td><td>Optional (Community)</td><td>50 req/week (Community API)</td><td>Paid only</td><td>No</td></tr>
+<tr data-category="IP, Domain &amp; URL Reputation" data-selfhosted="no" data-search="urlscan.io ip, domain &amp; url reputation render suspicious urls in a headless browser and inspect dom, network calls, and screenshots api / saas json paid for private scans misp opencti cortex thehive soar"><td><a href="https://urlscan.io/" target="_blank" rel="noopener noreferrer">urlscan.io</a><div class="sub">IP, Domain &amp; URL Reputation</div></td><td>API / SaaS</td><td>Render suspicious URLs in a headless browser and inspect DOM, network calls, and screenshots</td><td>JSON</td><td>Required for submissions</td><td>5,000 public scans/day</td><td>Paid for private scans</td><td>No</td></tr>
+<tr data-category="IP, Domain &amp; URL Reputation" data-selfhosted="no" data-search="shodan ip, domain &amp; url reputation internet-wide banner search for open ports, services, ssl certificates, and cves api / saas json csv paid only misp opencti maltego cortex splunk"><td><a href="https://www.shodan.io/" target="_blank" rel="noopener noreferrer">Shodan</a><div class="sub">IP, Domain &amp; URL Reputation</div></td><td>API / SaaS</td><td>Internet-wide banner search for open ports, services, SSL certificates, and CVEs</td><td>JSON, CSV</td><td>Required (InternetDB is keyless)</td><td>Limited web queries; InternetDB free</td><td>Paid only</td><td>No</td></tr>
+<tr data-category="IP, Domain &amp; URL Reputation" data-selfhosted="no" data-search="censys ip, domain &amp; url reputation host and certificate search for tracking c2 infrastructure and exposed assets api / saas json paid only opencti misp splunk sentinel maltego"><td><a href="https://search.censys.io/" target="_blank" rel="noopener noreferrer">Censys</a><div class="sub">IP, Domain &amp; URL Reputation</div></td><td>API / SaaS</td><td>Host and certificate search for tracking C2 infrastructure and exposed assets</td><td>JSON</td><td>Required</td><td>250 queries/month</td><td>Paid only</td><td>No</td></tr>
+<tr data-category="IP, Domain &amp; URL Reputation" data-selfhosted="no" data-search="cisco talos intelligence ip, domain &amp; url reputation check ip, domain, email sender reputation, and file sha-256 verdicts web / saas web txt reference only snort clamav cisco xdr"><td><a href="https://talosintelligence.com/" target="_blank" rel="noopener noreferrer">Cisco Talos Intelligence</a><div class="sub">IP, Domain &amp; URL Reputation</div></td><td>Web / SaaS</td><td>Check IP, domain, email sender reputation, and file SHA-256 verdicts</td><td>Web, TXT</td><td>None (web)</td><td>Web lookup free; API via Cisco SecureX</td><td>Reference only</td><td>No</td></tr>
+<tr data-category="IP, Domain &amp; URL Reputation" data-selfhosted="no" data-search="ibm x-force exchange ip, domain &amp; url reputation ip, url, malware hash, and vulnerability lookup with stix/taxii collections api / saas json stix taxii paid for commercial api qradar misp opencti taxii clients"><td><a href="https://exchange.xforce.ibmcloud.com/" target="_blank" rel="noopener noreferrer">IBM X-Force Exchange</a><div class="sub">IP, Domain &amp; URL Reputation</div></td><td>API / SaaS</td><td>IP, URL, malware hash, and vulnerability lookup with STIX/TAXII collections</td><td>JSON, STIX, TAXII</td><td>Required for API</td><td>5,000 records/month</td><td>Paid for commercial API</td><td>No</td></tr>
+<tr data-category="IP, Domain &amp; URL Reputation" data-selfhosted="no" data-search="pulsedive ip, domain &amp; url reputation enrich ips, domains, and urls with risk scores, linked feeds, and active scans api / saas json csv stix paid for commercial feeds misp opencti splunk elastic maltego"><td><a href="https://pulsedive.com/" target="_blank" rel="noopener noreferrer">Pulsedive</a><div class="sub">IP, Domain &amp; URL Reputation</div></td><td>API / SaaS</td><td>Enrich IPs, domains, and URLs with risk scores, linked feeds, and active scans</td><td>JSON, CSV, STIX</td><td>Required for API</td><td>30 req/min (Community)</td><td>Paid for commercial feeds</td><td>No</td></tr>
+<tr data-category="IP, Domain &amp; URL Reputation" data-selfhosted="no" data-search="spur ip, domain &amp; url reputation identify residential proxies, vpns, tor exits, and anonymization infrastructure api / saas json paid only splunk sentinel opencti rest api"><td><a href="https://spur.us/" target="_blank" rel="noopener noreferrer">Spur</a><div class="sub">IP, Domain &amp; URL Reputation</div></td><td>API / SaaS</td><td>Identify residential proxies, VPNs, Tor exits, and anonymization infrastructure</td><td>JSON</td><td>Required</td><td>Limited web lookups</td><td>Paid only</td><td>No</td></tr>
+<tr data-category="IP, Domain &amp; URL Reputation" data-selfhosted="no" data-search="criminal ip ip, domain &amp; url reputation ip scoring, domain phishing detection, and exposed banner search api / saas json paid only virustotal splunk cortex maltego"><td><a href="https://www.criminalip.io/" target="_blank" rel="noopener noreferrer">Criminal IP</a><div class="sub">IP, Domain &amp; URL Reputation</div></td><td>API / SaaS</td><td>IP scoring, domain phishing detection, and exposed banner search</td><td>JSON</td><td>Required</td><td>50 credits/month</td><td>Paid only</td><td>No</td></tr>
+<tr data-category="IP, Domain &amp; URL Reputation" data-selfhosted="no" data-search="ipqualityscore ip, domain &amp; url reputation proxy, vpn, botnet, and malicious url reputation scoring api / saas json csv yes (tier limits) rest api siem waf"><td><a href="https://www.ipqualityscore.com/" target="_blank" rel="noopener noreferrer">IPQualityScore</a><div class="sub">IP, Domain &amp; URL Reputation</div></td><td>API / SaaS</td><td>Proxy, VPN, botnet, and malicious URL reputation scoring</td><td>JSON, CSV</td><td>Required</td><td>5,000 lookups/month</td><td>Yes (tier limits)</td><td>No</td></tr>
+<tr data-category="Malware Analysis &amp; Sandboxes" data-selfhosted="no" data-search="malwarebazaar malware analysis &amp; sandboxes community malware sample repository with hashes, yara rules, and family tags feed / api json csv txt yes misp opencti cortex intelowl yara"><td><a href="https://bazaar.abuse.ch/" target="_blank" rel="noopener noreferrer">MalwareBazaar</a><div class="sub">Malware Analysis &amp; Sandboxes</div></td><td>Feed / API</td><td>Community malware sample repository with hashes, YARA rules, and family tags</td><td>JSON, CSV, TXT</td><td>Required for API (free Auth-Key)</td><td>Generous free community access</td><td>Yes</td><td>No</td></tr>
+<tr data-category="Malware Analysis &amp; Sandboxes" data-selfhosted="no" data-search="any.run malware analysis &amp; sandboxes interactive cloud malware sandbox with live process trees, pcaps, and ioc extraction saas / api json stix misp pcap paid only misp opencti splunk sentinel thehive"><td><a href="https://any.run/" target="_blank" rel="noopener noreferrer">ANY.RUN</a><div class="sub">Malware Analysis &amp; Sandboxes</div></td><td>SaaS / API</td><td>Interactive cloud malware sandbox with live process trees, PCAPs, and IOC extraction</td><td>JSON, STIX, MISP</td><td>Required for API</td><td>Public Windows VM analyses</td><td>Paid only</td><td>No</td></tr>
+<tr data-category="Malware Analysis &amp; Sandboxes" data-selfhosted="no" data-search="hybrid analysis malware analysis &amp; sandboxes automated falcon sandbox malware detonation, behavioral scoring, and ioc reports api / saas json stix csv paid for private api misp cortex opencti intelowl"><td><a href="https://www.hybrid-analysis.com/" target="_blank" rel="noopener noreferrer">Hybrid Analysis</a><div class="sub">Malware Analysis &amp; Sandboxes</div></td><td>API / SaaS</td><td>Automated Falcon Sandbox malware detonation, behavioral scoring, and IOC reports</td><td>JSON, STIX, CSV</td><td>Required</td><td>200 req/min public queries</td><td>Paid for private API</td><td>No</td></tr>
+<tr data-category="Malware Analysis &amp; Sandboxes" data-selfhosted="no" data-search="hatching tria.ge malware analysis &amp; sandboxes high-throughput malware sandbox extracting c2 configs, signatures, and memory dumps api / saas json pcap paid only misp opencti recorded future rest api"><td><a href="https://tria.ge/" target="_blank" rel="noopener noreferrer">Hatching Tria.ge</a><div class="sub">Malware Analysis &amp; Sandboxes</div></td><td>API / SaaS</td><td>High-throughput malware sandbox extracting C2 configs, signatures, and memory dumps</td><td>JSON, PCAP</td><td>Required</td><td>Public researcher tier</td><td>Paid only</td><td>No</td></tr>
+<tr data-category="Malware Analysis &amp; Sandboxes" data-selfhosted="yes" data-search="joe sandbox malware analysis &amp; sandboxes deep malware analysis across windows, linux, macos, and android with mitre mapping saas / on-prem json stix misp yara csv paid only misp opencti splunk cortex qradar"><td><a href="https://www.joesandbox.com/" target="_blank" rel="noopener noreferrer">Joe Sandbox</a><div class="sub">Malware Analysis &amp; Sandboxes</div></td><td>SaaS / On-prem</td><td>Deep malware analysis across Windows, Linux, macOS, and Android with MITRE mapping</td><td>JSON, STIX, MISP</td><td>Required</td><td>Limited public community submissions</td><td>Paid only</td><td>Yes</td></tr>
+<tr data-category="Malware Analysis &amp; Sandboxes" data-selfhosted="yes" data-search="cape sandbox malware analysis &amp; sandboxes open-source automated malware detonation, payload unpacking, and c2 config extraction open source json misp pcap yes misp yara suricata cortex intelowl"><td><a href="https://github.com/kevoreilly/CAPEv2" target="_blank" rel="noopener noreferrer">CAPE Sandbox</a><div class="sub">Malware Analysis &amp; Sandboxes</div></td><td>Open source</td><td>Open-source automated malware detonation, payload unpacking, and C2 config extraction</td><td>JSON, MISP, PCAP</td><td>Self-managed</td><td>Unlimited (self-hosted)</td><td>Yes</td><td>Yes</td></tr>
+<tr data-category="Malware Analysis &amp; Sandboxes" data-selfhosted="yes" data-search="yara malware analysis &amp; sandboxes pattern-matching engine for classifying malware binaries, memory dumps, and files open source yara rules json yes virustotal misp cape velociraptor osquery"><td><a href="https://virustotal.github.io/yara/" target="_blank" rel="noopener noreferrer">YARA</a><div class="sub">Malware Analysis &amp; Sandboxes</div></td><td>Open source</td><td>Pattern-matching engine for classifying malware binaries, memory dumps, and files</td><td>YARA rules, JSON</td><td>None</td><td>Unlimited (local)</td><td>Yes</td><td>Yes</td></tr>
+<tr data-category="Malware Analysis &amp; Sandboxes" data-selfhosted="no" data-search="malpedia malware analysis &amp; sandboxes curated malware family encyclopedia, unpacked samples, yara rules, and actor links research / api json yara bibtex metadata yes; samples restricted misp opencti yara"><td><a href="https://malpedia.caad.fkie.fraunhofer.de/" target="_blank" rel="noopener noreferrer">Malpedia</a><div class="sub">Malware Analysis &amp; Sandboxes</div></td><td>Research / API</td><td>Curated malware family encyclopedia, unpacked samples, YARA rules, and actor links</td><td>JSON, YARA, BibTeX</td><td>Required (vetted accounts for samples)</td><td>Public metadata and API free</td><td>Metadata yes; samples restricted</td><td>No</td></tr>
+<tr data-category="Malware Analysis &amp; Sandboxes" data-selfhosted="no" data-search="unpacme malware analysis &amp; sandboxes automated malware unpacking service returning decrypted payloads and yara hits api / saas json paid only rest api cortex python sdk"><td><a href="https://www.unpac.me/" target="_blank" rel="noopener noreferrer">UnpacMe</a><div class="sub">Malware Analysis &amp; Sandboxes</div></td><td>API / SaaS</td><td>Automated malware unpacking service returning decrypted payloads and YARA hits</td><td>JSON</td><td>Required for API</td><td>Limited public uploads</td><td>Paid only</td><td>No</td></tr>
+<tr data-category="Malware Analysis &amp; Sandboxes" data-selfhosted="no" data-search="intezer analyze malware analysis &amp; sandboxes genetic code-reuse analysis to attribute malware binaries to known families api / saas json paid only sentinel splunk crowdstrike cortex"><td><a href="https://analyze.intezer.com/" target="_blank" rel="noopener noreferrer">Intezer Analyze</a><div class="sub">Malware Analysis &amp; Sandboxes</div></td><td>API / SaaS</td><td>Genetic code-reuse analysis to attribute malware binaries to known families</td><td>JSON</td><td>Required</td><td>Community tier with daily cap</td><td>Paid only</td><td>No</td></tr>
+<tr data-category="OSINT &amp; Infrastructure Pivot" data-selfhosted="yes" data-search="spiderfoot osint &amp; infrastructure pivot automated osint reconnaissance across 200+ threat intel and dns data sources open source json csv gexf yes shodan virustotal abuseipdb otx misp"><td><a href="https://github.com/smicallef/spiderfoot" target="_blank" rel="noopener noreferrer">SpiderFoot</a><div class="sub">OSINT &amp; Infrastructure Pivot</div></td><td>Open source</td><td>Automated OSINT reconnaissance across 200+ threat intel and DNS data sources</td><td>JSON, CSV, GEXF</td><td>Optional per module</td><td>Unlimited (self-hosted)</td><td>Yes</td><td>Yes</td></tr>
+<tr data-category="OSINT &amp; Infrastructure Pivot" data-selfhosted="yes" data-search="maltego osint &amp; infrastructure pivot link-analysis graph workspace for pivoting across domains, ips, certs, and actors desktop / enterprise csv graphml stix paid only misp opencti shodan virustotal recorded future"><td><a href="https://www.maltego.com/" target="_blank" rel="noopener noreferrer">Maltego</a><div class="sub">OSINT &amp; Infrastructure Pivot</div></td><td>Desktop / Enterprise</td><td>Link-analysis graph workspace for pivoting across domains, IPs, certs, and actors</td><td>CSV, GraphML, STIX</td><td>Required per transform</td><td>Community Edition (limited entities)</td><td>Paid only</td><td>Yes</td></tr>
+<tr data-category="OSINT &amp; Infrastructure Pivot" data-selfhosted="yes" data-search="owasp amass osint &amp; infrastructure pivot attack surface mapping and passive/active subdomain and asn enumeration open source json txt yes virustotal securitytrails shodan censys"><td><a href="https://github.com/owasp-amass/amass" target="_blank" rel="noopener noreferrer">OWASP Amass</a><div class="sub">OSINT &amp; Infrastructure Pivot</div></td><td>Open source</td><td>Attack surface mapping and passive/active subdomain and ASN enumeration</td><td>JSON, TXT</td><td>Optional per data source</td><td>Unlimited (local)</td><td>Yes</td><td>Yes</td></tr>
+<tr data-category="OSINT &amp; Infrastructure Pivot" data-selfhosted="no" data-search="securitytrails osint &amp; infrastructure pivot historical dns, whois, and associated domain lookups for infrastructure tracking api / saas json paid only splunk opencti maltego cortex"><td><a href="https://securitytrails.com/" target="_blank" rel="noopener noreferrer">SecurityTrails</a><div class="sub">OSINT &amp; Infrastructure Pivot</div></td><td>API / SaaS</td><td>Historical DNS, WHOIS, and associated domain lookups for infrastructure tracking</td><td>JSON</td><td>Required</td><td>50 API queries/month</td><td>Paid only</td><td>No</td></tr>
+<tr data-category="OSINT &amp; Infrastructure Pivot" data-selfhosted="no" data-search="domaintools iris osint &amp; infrastructure pivot domain risk scoring, passive dns, and whois pivoting for adversary infrastructure enterprise / api json csv paid only splunk sentinel misp opencti xsoar"><td><a href="https://www.domaintools.com/products/iris-investigate/" target="_blank" rel="noopener noreferrer">DomainTools Iris</a><div class="sub">OSINT &amp; Infrastructure Pivot</div></td><td>Enterprise / API</td><td>Domain risk scoring, passive DNS, and WHOIS pivoting for adversary infrastructure</td><td>JSON, CSV</td><td>Required</td><td>No free API tier</td><td>Paid only</td><td>No</td></tr>
+<tr data-category="OSINT &amp; Infrastructure Pivot" data-selfhosted="no" data-search="microsoft defender threat intelligence osint &amp; infrastructure pivot passive dns, ssl certificates, trackers, and host pairs (formerly riskiq passivetotal) api / saas json paid for api microsoft sentinel opencti misp graph api"><td><a href="https://ti.defender.microsoft.com/" target="_blank" rel="noopener noreferrer">Microsoft Defender Threat Intelligence</a><div class="sub">OSINT &amp; Infrastructure Pivot</div></td><td>API / SaaS</td><td>Passive DNS, SSL certificates, trackers, and host pairs (formerly RiskIQ PassiveTotal)</td><td>JSON</td><td>Required for API</td><td>Free community web access</td><td>Paid for API</td><td>No</td></tr>
+<tr data-category="OSINT &amp; Infrastructure Pivot" data-selfhosted="no" data-search="silent push osint &amp; infrastructure pivot pre-attack infrastructure fingerprinting using dns, web content, and asn patterns api / saas json stix paid only opencti splunk sentinel xsoar"><td><a href="https://www.silentpush.com/" target="_blank" rel="noopener noreferrer">Silent Push</a><div class="sub">OSINT &amp; Infrastructure Pivot</div></td><td>API / SaaS</td><td>Pre-attack infrastructure fingerprinting using DNS, web content, and ASN patterns</td><td>JSON, STIX</td><td>Required</td><td>Community Edition available</td><td>Paid only</td><td>No</td></tr>
+<tr data-category="OSINT &amp; Infrastructure Pivot" data-selfhosted="no" data-search="validin osint &amp; infrastructure pivot passive dns, virtual host, and http response pivoting for threat hunting api / saas json csv paid for commercial api opencti misp maltego rest api"><td><a href="https://www.validin.com/" target="_blank" rel="noopener noreferrer">Validin</a><div class="sub">OSINT &amp; Infrastructure Pivot</div></td><td>API / SaaS</td><td>Passive DNS, virtual host, and HTTP response pivoting for threat hunting</td><td>JSON, CSV</td><td>Required for API</td><td>Free community tier</td><td>Paid for commercial API</td><td>No</td></tr>
+<tr data-category="OSINT &amp; Infrastructure Pivot" data-selfhosted="no" data-search="crt.sh osint &amp; infrastructure pivot certificate transparency log search for discovering newly issued phishing domains web / api json atom postgresql yes amass spiderfoot custom scripts"><td><a href="https://crt.sh/" target="_blank" rel="noopener noreferrer">crt.sh</a><div class="sub">OSINT &amp; Infrastructure Pivot</div></td><td>Web / API</td><td>Certificate Transparency log search for discovering newly issued phishing domains</td><td>JSON, Atom, PostgreSQL</td><td>None</td><td>Rate-limited public access</td><td>Yes</td><td>No</td></tr>
+<tr data-category="OSINT &amp; Infrastructure Pivot" data-selfhosted="yes" data-search="theharvester osint &amp; infrastructure pivot cli tool for gathering emails, subdomains, ips, and urls from public sources open source json xml yes shodan censys virustotal securitytrails"><td><a href="https://github.com/laramies/theHarvester" target="_blank" rel="noopener noreferrer">theHarvester</a><div class="sub">OSINT &amp; Infrastructure Pivot</div></td><td>Open source</td><td>CLI tool for gathering emails, subdomains, IPs, and URLs from public sources</td><td>JSON, XML</td><td>Optional per source</td><td>Unlimited (local)</td><td>Yes</td><td>Yes</td></tr>
+<tr data-category="OSINT &amp; Infrastructure Pivot" data-selfhosted="yes" data-search="recon-ng osint &amp; infrastructure pivot modular python reconnaissance framework with marketplace data modules open source json csv xml yes shodan virustotal hibp builtwith"><td><a href="https://github.com/lanmaster53/recon-ng" target="_blank" rel="noopener noreferrer">Recon-ng</a><div class="sub">OSINT &amp; Infrastructure Pivot</div></td><td>Open source</td><td>Modular Python reconnaissance framework with marketplace data modules</td><td>JSON, CSV, XML</td><td>Optional per module</td><td>Unlimited (local)</td><td>Yes</td><td>Yes</td></tr>
+<tr data-category="Network &amp; Detection Engineering" data-selfhosted="yes" data-search="suricata network &amp; detection engineering high-speed ids/ips and network security monitor with native ioc and rule matching open source eve json pcap suricata rules yes misp elastic splunk emerging threats wazuh"><td><a href="https://suricata.io/" target="_blank" rel="noopener noreferrer">Suricata</a><div class="sub">Network &amp; Detection Engineering</div></td><td>Open source</td><td>High-speed IDS/IPS and network security monitor with native IOC and rule matching</td><td>EVE JSON, PCAP, Suricata rules</td><td>None</td><td>Unlimited (self-hosted)</td><td>Yes</td><td>Yes</td></tr>
+<tr data-category="Network &amp; Detection Engineering" data-selfhosted="yes" data-search="zeek network &amp; detection engineering network traffic analyzer with a built-in intel framework for real-time ioc matching open source tsv json zeek intel yes misp opencti elastic splunk arkime"><td><a href="https://zeek.org/" target="_blank" rel="noopener noreferrer">Zeek</a><div class="sub">Network &amp; Detection Engineering</div></td><td>Open source</td><td>Network traffic analyzer with a built-in Intel Framework for real-time IOC matching</td><td>TSV, JSON, Zeek Intel</td><td>None</td><td>Unlimited (self-hosted)</td><td>Yes</td><td>Yes</td></tr>
+<tr data-category="Network &amp; Detection Engineering" data-selfhosted="yes" data-search="arkime network &amp; detection engineering large-scale full-packet capture indexing and search for retrospective ioc hunts open source pcap json csv yes elasticsearch opensearch wise (misp/vt/otx)"><td><a href="https://arkime.com/" target="_blank" rel="noopener noreferrer">Arkime</a><div class="sub">Network &amp; Detection Engineering</div></td><td>Open source</td><td>Large-scale full-packet capture indexing and search for retrospective IOC hunts</td><td>PCAP, JSON, CSV</td><td>None</td><td>Unlimited (self-hosted)</td><td>Yes</td><td>Yes</td></tr>
+<tr data-category="Network &amp; Detection Engineering" data-selfhosted="yes" data-search="sigma network &amp; detection engineering generic siem detection rule format translatable to splunk, elastic, sentinel, and qradar open source yaml yes splunk elastic sentinel qradar opencti"><td><a href="https://github.com/SigmaHQ/sigma" target="_blank" rel="noopener noreferrer">Sigma</a><div class="sub">Network &amp; Detection Engineering</div></td><td>Open source</td><td>Generic SIEM detection rule format translatable to Splunk, Elastic, Sentinel, and QRadar</td><td>YAML</td><td>None</td><td>Unlimited</td><td>Yes</td><td>Yes</td></tr>
+<tr data-category="Network &amp; Detection Engineering" data-selfhosted="no" data-search="netlas network &amp; detection engineering internet scan search engine covering http responses, dns, whois, and tls certs api / saas json csv paid only maltego python sdk rest api"><td><a href="https://netlas.io/" target="_blank" rel="noopener noreferrer">Netlas</a><div class="sub">Network &amp; Detection Engineering</div></td><td>API / SaaS</td><td>Internet scan search engine covering HTTP responses, DNS, WHOIS, and TLS certs</td><td>JSON, CSV</td><td>Required</td><td>50 req/day</td><td>Paid only</td><td>No</td></tr>
+<tr data-category="Network &amp; Detection Engineering" data-selfhosted="no" data-search="fofa network &amp; detection engineering cyberspace asset search engine useful for mapping c2 panels and exposed services api / saas json csv paid only rest api nuclei custom scripts"><td><a href="https://en.fofa.info/" target="_blank" rel="noopener noreferrer">FOFA</a><div class="sub">Network &amp; Detection Engineering</div></td><td>API / SaaS</td><td>Cyberspace asset search engine useful for mapping C2 panels and exposed services</td><td>JSON, CSV</td><td>Required for API</td><td>Limited web search</td><td>Paid only</td><td>No</td></tr>
+<tr data-category="Network &amp; Detection Engineering" data-selfhosted="no" data-search="zoomeye network &amp; detection engineering host and web component search engine for tracking exposed infrastructure api / saas json paid only rest api python sdk nuclei"><td><a href="https://www.zoomeye.ai/" target="_blank" rel="noopener noreferrer">ZoomEye</a><div class="sub">Network &amp; Detection Engineering</div></td><td>API / SaaS</td><td>Host and web component search engine for tracking exposed infrastructure</td><td>JSON</td><td>Required</td><td>10,000 results/month (registered)</td><td>Paid only</td><td>No</td></tr>
+<tr data-category="Vulnerability &amp; Exploit Intelligence" data-selfhosted="no" data-search="cisa kev catalog vulnerability &amp; exploit intelligence authoritative list of cves actively exploited in the wild with remediation due dates open data / feed json csv yes opencti misp nuclei qualys tenable"><td><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener noreferrer">CISA KEV Catalog</a><div class="sub">Vulnerability &amp; Exploit Intelligence</div></td><td>Open Data / Feed</td><td>Authoritative list of CVEs actively exploited in the wild with remediation due dates</td><td>JSON, CSV</td><td>None</td><td>Unlimited</td><td>Yes</td><td>No</td></tr>
+<tr data-category="Vulnerability &amp; Exploit Intelligence" data-selfhosted="no" data-search="nist nvd vulnerability &amp; exploit intelligence us government cve repository with cvss scores, cpe matches, and cwe tags open data / api json yes opencve opencti dependency-track trivy"><td><a href="https://nvd.nist.gov/" target="_blank" rel="noopener noreferrer">NIST NVD</a><div class="sub">Vulnerability &amp; Exploit Intelligence</div></td><td>Open Data / API</td><td>US government CVE repository with CVSS scores, CPE matches, and CWE tags</td><td>JSON</td><td>Optional (higher rate limit)</td><td>5 req/30s (no key), 50 req/30s (free key)</td><td>Yes</td><td>No</td></tr>
+<tr data-category="Vulnerability &amp; Exploit Intelligence" data-selfhosted="no" data-search="first epss vulnerability &amp; exploit intelligence daily probability scores predicting whether a cve will be exploited in the next 30 days open data / api json csv yes opencti defectdojo trivy nuclei"><td><a href="https://www.first.org/epss/" target="_blank" rel="noopener noreferrer">FIRST EPSS</a><div class="sub">Vulnerability &amp; Exploit Intelligence</div></td><td>Open Data / API</td><td>Daily probability scores predicting whether a CVE will be exploited in the next 30 days</td><td>JSON, CSV</td><td>None</td><td>Unlimited</td><td>Yes</td><td>No</td></tr>
+<tr data-category="Vulnerability &amp; Exploit Intelligence" data-selfhosted="yes" data-search="osv.dev vulnerability &amp; exploit intelligence distributed open-source vulnerability database across pypi, npm, go, maven, and linux open source / api json (osv schema) yes osv-scanner github actions ci/cd"><td><a href="https://osv.dev/" target="_blank" rel="noopener noreferrer">OSV.dev</a><div class="sub">Vulnerability &amp; Exploit Intelligence</div></td><td>Open source / API</td><td>Distributed open-source vulnerability database across PyPI, npm, Go, Maven, and Linux</td><td>JSON (OSV schema)</td><td>None</td><td>Unlimited</td><td>Yes</td><td>Yes</td></tr>
+<tr data-category="Vulnerability &amp; Exploit Intelligence" data-selfhosted="yes" data-search="opencve vulnerability &amp; exploit intelligence self-hosted cve alerting platform tracking vendor and product subscriptions open source json webhooks yes slack email rest api nvd"><td><a href="https://www.opencve.io/" target="_blank" rel="noopener noreferrer">OpenCVE</a><div class="sub">Vulnerability &amp; Exploit Intelligence</div></td><td>Open source</td><td>Self-hosted CVE alerting platform tracking vendor and product subscriptions</td><td>JSON, Webhooks</td><td>Self-managed</td><td>Unlimited (self-hosted)</td><td>Yes</td><td>Yes</td></tr>
+<tr data-category="Vulnerability &amp; Exploit Intelligence" data-selfhosted="no" data-search="vulncheck vulnerability &amp; exploit intelligence exploit intelligence, initial access telemetry, and expanded kev tracking api / saas json paid for commercial feeds opencti splunk sentinel rest api"><td><a href="https://vulncheck.com/" target="_blank" rel="noopener noreferrer">VulnCheck</a><div class="sub">Vulnerability &amp; Exploit Intelligence</div></td><td>API / SaaS</td><td>Exploit intelligence, initial access telemetry, and expanded KEV tracking</td><td>JSON</td><td>Required</td><td>Free Community tier (NVD++, KEV)</td><td>Paid for commercial feeds</td><td>No</td></tr>
+<tr data-category="Vulnerability &amp; Exploit Intelligence" data-selfhosted="yes" data-search="exploit-db vulnerability &amp; exploit intelligence public archive of proof-of-concept exploits and vulnerable software papers open data / cli csv git yes searchsploit metasploit misp"><td><a href="https://www.exploit-db.com/" target="_blank" rel="noopener noreferrer">Exploit-DB</a><div class="sub">Vulnerability &amp; Exploit Intelligence</div></td><td>Open Data / CLI</td><td>Public archive of proof-of-concept exploits and vulnerable software papers</td><td>CSV, Git</td><td>None</td><td>Unlimited</td><td>Yes</td><td>Yes</td></tr>
+<tr data-category="Vulnerability &amp; Exploit Intelligence" data-selfhosted="yes" data-search="nuclei templates vulnerability &amp; exploit intelligence community yaml templates for detecting cves, misconfigurations, and exposed panels open source yaml json yes nuclei github actions defectdojo ci/cd"><td><a href="https://github.com/projectdiscovery/nuclei-templates" target="_blank" rel="noopener noreferrer">Nuclei Templates</a><div class="sub">Vulnerability &amp; Exploit Intelligence</div></td><td>Open source</td><td>Community YAML templates for detecting CVEs, misconfigurations, and exposed panels</td><td>YAML, JSON</td><td>None</td><td>Unlimited</td><td>Yes</td><td>Yes</td></tr>
+<tr data-category="IOC Enrichment &amp; Automation" data-selfhosted="yes" data-search="cortex ioc enrichment &amp; automation observable analysis and active response engine with 150+ threat intel analyzers open source json yes thehive misp virustotal abuseipdb greynoise"><td><a href="https://github.com/TheHive-Project/Cortex" target="_blank" rel="noopener noreferrer">Cortex</a><div class="sub">IOC Enrichment &amp; Automation</div></td><td>Open source</td><td>Observable analysis and active response engine with 150+ threat intel analyzers</td><td>JSON</td><td>Self-managed</td><td>Unlimited (self-hosted)</td><td>Yes</td><td>Yes</td></tr>
+<tr data-category="IOC Enrichment &amp; Automation" data-selfhosted="yes" data-search="intelowl ioc enrichment &amp; automation open-source orchestration platform querying 150+ malware and threat intel analyzers at once open source json stix misp yes misp opencti thehive virustotal shodan"><td><a href="https://github.com/intelowlproject/IntelOwl" target="_blank" rel="noopener noreferrer">IntelOwl</a><div class="sub">IOC Enrichment &amp; Automation</div></td><td>Open source</td><td>Open-source orchestration platform querying 150+ malware and threat intel analyzers at once</td><td>JSON, STIX, MISP</td><td>Self-managed</td><td>Unlimited (self-hosted)</td><td>Yes</td><td>Yes</td></tr>
+<tr data-category="IOC Enrichment &amp; Automation" data-selfhosted="yes" data-search="mitre att&amp;ck navigator ioc enrichment &amp; automation interactive matrix for mapping adversary ttps, detection coverage, and threat profiles open source json stix svg xlsx yes opencti misp sigma sentinel"><td><a href="https://mitre-attack.github.io/attack-navigator/" target="_blank" rel="noopener noreferrer">MITRE ATT&amp;CK Navigator</a><div class="sub">IOC Enrichment &amp; Automation</div></td><td>Open source</td><td>Interactive matrix for mapping adversary TTPs, detection coverage, and threat profiles</td><td>JSON, STIX, SVG</td><td>None</td><td>Unlimited</td><td>Yes</td><td>Yes</td></tr>
+<tr data-category="IOC Enrichment &amp; Automation" data-selfhosted="yes" data-search="cyberchef ioc enrichment &amp; automation browser-based toolkit for decoding payloads, defanging iocs, and extracting indicators open source txt json hex base64 yes browser docker node.js"><td><a href="https://gchq.github.io/CyberChef/" target="_blank" rel="noopener noreferrer">CyberChef</a><div class="sub">IOC Enrichment &amp; Automation</div></td><td>Open source</td><td>Browser-based toolkit for decoding payloads, defanging IOCs, and extracting indicators</td><td>TXT, JSON, Hex</td><td>None</td><td>Unlimited (runs client-side)</td><td>Yes</td><td>Yes</td></tr>
+<tr data-category="IOC Enrichment &amp; Automation" data-selfhosted="yes" data-search="iocextract ioc enrichment &amp; automation python library and cli for extracting and refanging defanged ips, urls, and hashes from reports open source txt json yes python cli misp"><td><a href="https://github.com/InQuest/iocextract" target="_blank" rel="noopener noreferrer">iocextract</a><div class="sub">IOC Enrichment &amp; Automation</div></td><td>Open source</td><td>Python library and CLI for extracting and refanging defanged IPs, URLs, and hashes from reports</td><td>TXT, JSON</td><td>None</td><td>Unlimited (local)</td><td>Yes</td><td>Yes</td></tr>
+<tr data-category="Credential &amp; Leak Intelligence" data-selfhosted="no" data-search="have i been pwned credential &amp; leak intelligence check exposed corporate domains, email addresses, and stealer-log credentials api / saas json paid api splunk cortex spiderfoot rest api"><td><a href="https://haveibeenpwned.com/" target="_blank" rel="noopener noreferrer">Have I Been Pwned</a><div class="sub">Credential &amp; Leak Intelligence</div></td><td>API / SaaS</td><td>Check exposed corporate domains, email addresses, and stealer-log credentials</td><td>JSON</td><td>Required for API</td><td>Free web checks; paid API</td><td>Paid API</td><td>No</td></tr>
+<tr data-category="Credential &amp; Leak Intelligence" data-selfhosted="no" data-search="hudson rock cavalier credential &amp; leak intelligence infostealer telemetry identifying compromised employee and customer endpoints api / saas json paid for full telemetry opencti splunk sentinel rest api"><td><a href="https://www.hudsonrock.com/" target="_blank" rel="noopener noreferrer">Hudson Rock Cavalier</a><div class="sub">Credential &amp; Leak Intelligence</div></td><td>API / SaaS</td><td>Infostealer telemetry identifying compromised employee and customer endpoints</td><td>JSON</td><td>Optional (free domain check)</td><td>Free domain exposure lookup API</td><td>Paid for full telemetry</td><td>No</td></tr>
+<tr data-category="Credential &amp; Leak Intelligence" data-selfhosted="yes" data-search="ail project credential &amp; leak intelligence open-source framework for analyzing leaks from pastes, telegram, tor, and dark web crawls open source json misp yes misp tor yara thehive"><td><a href="https://github.com/ail-project/ail-framework" target="_blank" rel="noopener noreferrer">AIL Project</a><div class="sub">Credential &amp; Leak Intelligence</div></td><td>Open source</td><td>Open-source framework for analyzing leaks from pastes, Telegram, Tor, and dark web crawls</td><td>JSON, MISP</td><td>Self-managed</td><td>Unlimited (self-hosted)</td><td>Yes</td><td>Yes</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="cli">
+      <h2>Included CLI utilities</h2>
+      <p class="section-note">
+        Every script in <code>scripts/</code> runs on Python 3.9+ with standard library modules only.
+      </p>
+      <div class="cli-grid">
+        <div class="card">
+          <h3><a href="https://github.com/secops-tools/threat-intelligence-tools/blob/main/scripts/check-ip.py">check-ip.py</a></h3>
+          <p>Query IP reputation across Shodan InternetDB, GreyNoise, AlienVault OTX, AbuseIPDB, and VirusTotal.</p>
+          <code>python3 scripts/check-ip.py 1.1.1.1</code>
+        </div>
+        <div class="card">
+          <h3><a href="https://github.com/secops-tools/threat-intelligence-tools/blob/main/scripts/check-feeds.py">check-feeds.py</a></h3>
+          <p>Measure feed HTTP status, latency, Last-Modified headers, and payload structure.</p>
+          <code>python3 scripts/check-feeds.py</code>
+        </div>
+        <div class="card">
+          <h3><a href="https://github.com/secops-tools/threat-intelligence-tools/blob/main/scripts/check-logs.py">check-logs.py</a></h3>
+          <p>Scan Nginx, Apache, or Linux auth logs against public or local IP blocklists.</p>
+          <code>python3 scripts/check-logs.py /var/log/nginx/access.log</code>
+        </div>
+        <div class="card">
+          <h3><a href="https://github.com/secops-tools/threat-intelligence-tools/blob/main/scripts/convert-feed.py">convert-feed.py</a></h3>
+          <p>Convert indicator lists between JSON, CSV, plain text, and STIX 2.1 bundles.</p>
+          <code>python3 scripts/convert-feed.py iocs.txt out.json --to stix</code>
+        </div>
+        <div class="card">
+          <h3><a href="https://github.com/secops-tools/threat-intelligence-tools/blob/main/scripts/dedupe-iocs.py">dedupe-iocs.py</a></h3>
+          <p>Refang, classify, and deduplicate mixed IPs, domains, URLs, and file hashes.</p>
+          <code>python3 scripts/dedupe-iocs.py raw.txt -o clean.txt</code>
+        </div>
+        <div class="card">
+          <h3><a href="https://github.com/secops-tools/threat-intelligence-tools/blob/main/scripts/cve-monitor.py">cve-monitor.py</a></h3>
+          <p>Check CISA KEV and NIST NVD 2.0 for recent CVEs matching your software stack.</p>
+          <code>python3 scripts/cve-monitor.py nginx openssh --days 30</code>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>MIT License. Data and automation scripts maintained at <a href="https://github.com/secops-tools/threat-intelligence-tools">secops-tools/threat-intelligence-tools</a>.</div>
+      <div>Last feed sync: 2026-11-25 16:58 UTC</div>
+    </footer>
+  </div>
+
+  <script>
+    function wireFilter(searchId, catId, selfHostedId, tableId) {
+      const searchEl = document.getElementById(searchId);
+      const catEl = document.getElementById(catId);
+      const hostEl = selfHostedId ? document.getElementById(selfHostedId) : null;
+      const rows = Array.from(document.querySelectorAll("#" + tableId + " tbody tr"));
+      function apply() {
+        const q = (searchEl.value || "").trim().toLowerCase();
+        const cat = catEl.value;
+        const host = hostEl ? hostEl.value : "";
+        for (const row of rows) {
+          const okSearch = !q || row.dataset.search.includes(q);
+          const okCat = !cat || row.dataset.category === cat;
+          const okHost = !host || row.dataset.selfhosted === host;
+          row.style.display = (okSearch && okCat && okHost) ? "" : "none";
+        }
+      }
+      searchEl.addEventListener("input", apply);
+      catEl.addEventListener("change", apply);
+      if (hostEl) hostEl.addEventListener("change", apply);
+    }
+    wireFilter("feed-search", "feed-cat", null, "feeds-table");
+    wireFilter("tool-search", "tool-cat", "tool-selfhosted", "tools-table");
+  </script>
+</body>
+</html>
