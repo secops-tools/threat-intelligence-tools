@@ -5,12 +5,20 @@
     "category": "IP, Domain & URL Reputation",
     "purpose": "Inspect files, URLs, domains, and IPs across 70+ antivirus engines and blocklists",
     "product_type": "API / SaaS",
-    "formats": ["JSON"],
+    "formats": [
+      "JSON"
+    ],
     "api_key": "Required",
     "free_limits": "4 req/min, 500 req/day",
     "license": "Proprietary",
     "commercial_use": "Paid only",
-    "integrations": ["MISP", "OpenCTI", "Cortex", "Splunk", "Elastic"],
+    "integrations": [
+      "MISP",
+      "OpenCTI",
+      "Cortex",
+      "Splunk",
+      "Elastic"
+    ],
     "self_hosted": false,
     "featured": true
   },
@@ -20,12 +28,22 @@
     "category": "IP, Domain & URL Reputation",
     "purpose": "Crowdsourced IP abuse reports, confidence scoring, and blocklist exports",
     "product_type": "API / SaaS",
-    "formats": ["JSON", "CSV", "TXT"],
+    "formats": [
+      "JSON",
+      "CSV",
+      "TXT"
+    ],
     "api_key": "Required",
     "free_limits": "1,000 checks/day",
     "license": "Proprietary",
     "commercial_use": "Paid for commercial use",
-    "integrations": ["MISP", "Cortex", "Fail2ban", "Splunk", "Wazuh"],
+    "integrations": [
+      "MISP",
+      "Cortex",
+      "Fail2ban",
+      "Splunk",
+      "Wazuh"
+    ],
     "self_hosted": false,
     "featured": true
   },
@@ -35,12 +53,21 @@
     "category": "IP, Domain & URL Reputation",
     "purpose": "Separate internet background scanners from targeted attacks",
     "product_type": "API / SaaS",
-    "formats": ["JSON", "CSV"],
+    "formats": [
+      "JSON",
+      "CSV"
+    ],
     "api_key": "Optional (Community)",
     "free_limits": "50 req/week (Community API)",
     "license": "Proprietary",
     "commercial_use": "Paid only",
-    "integrations": ["Splunk", "Sentinel", "OpenCTI", "Cortex", "CrowdStrike"],
+    "integrations": [
+      "Splunk",
+      "Sentinel",
+      "OpenCTI",
+      "Cortex",
+      "CrowdStrike"
+    ],
     "self_hosted": false,
     "featured": true
   },
@@ -50,12 +77,20 @@
     "category": "IP, Domain & URL Reputation",
     "purpose": "Render suspicious URLs in a headless browser and inspect DOM, network calls, and screenshots",
     "product_type": "API / SaaS",
-    "formats": ["JSON"],
+    "formats": [
+      "JSON"
+    ],
     "api_key": "Required for submissions",
     "free_limits": "5,000 public scans/day",
     "license": "Proprietary",
     "commercial_use": "Paid for private scans",
-    "integrations": ["MISP", "OpenCTI", "Cortex", "TheHive", "SOAR"],
+    "integrations": [
+      "MISP",
+      "OpenCTI",
+      "Cortex",
+      "TheHive",
+      "SOAR"
+    ],
     "self_hosted": false,
     "featured": true
   },
@@ -65,12 +100,21 @@
     "category": "IP, Domain & URL Reputation",
     "purpose": "Internet-wide banner search for open ports, services, SSL certificates, and CVEs",
     "product_type": "API / SaaS",
-    "formats": ["JSON", "CSV"],
+    "formats": [
+      "JSON",
+      "CSV"
+    ],
     "api_key": "Required (InternetDB is keyless)",
     "free_limits": "Limited web queries; InternetDB free",
     "license": "Proprietary",
     "commercial_use": "Paid only",
-    "integrations": ["MISP", "OpenCTI", "Maltego", "Cortex", "Splunk"],
+    "integrations": [
+      "MISP",
+      "OpenCTI",
+      "Maltego",
+      "Cortex",
+      "Splunk"
+    ],
     "self_hosted": false,
     "featured": true
   },
@@ -80,12 +124,20 @@
     "category": "IP, Domain & URL Reputation",
     "purpose": "Host and certificate search for tracking C2 infrastructure and exposed assets",
     "product_type": "API / SaaS",
-    "formats": ["JSON"],
+    "formats": [
+      "JSON"
+    ],
     "api_key": "Required",
     "free_limits": "250 queries/month",
     "license": "Proprietary",
     "commercial_use": "Paid only",
-    "integrations": ["OpenCTI", "MISP", "Splunk", "Sentinel", "Maltego"],
+    "integrations": [
+      "OpenCTI",
+      "MISP",
+      "Splunk",
+      "Sentinel",
+      "Maltego"
+    ],
     "self_hosted": false,
     "featured": false
   },
@@ -95,12 +147,19 @@
     "category": "IP, Domain & URL Reputation",
     "purpose": "Check IP, domain, email sender reputation, and file SHA-256 verdicts",
     "product_type": "Web / SaaS",
-    "formats": ["Web", "TXT"],
+    "formats": [
+      "Web",
+      "TXT"
+    ],
     "api_key": "None (web)",
     "free_limits": "Web lookup free; API via Cisco SecureX",
     "license": "Proprietary",
     "commercial_use": "Reference only",
-    "integrations": ["Snort", "ClamAV", "Cisco XDR"],
+    "integrations": [
+      "Snort",
+      "ClamAV",
+      "Cisco XDR"
+    ],
     "self_hosted": false,
     "featured": false
   },
@@ -110,12 +169,21 @@
     "category": "IP, Domain & URL Reputation",
     "purpose": "IP, URL, malware hash, and vulnerability lookup with STIX/TAXII collections",
     "product_type": "API / SaaS",
-    "formats": ["JSON", "STIX", "TAXII"],
+    "formats": [
+      "JSON",
+      "STIX",
+      "TAXII"
+    ],
     "api_key": "Required for API",
     "free_limits": "5,000 records/month",
     "license": "Proprietary",
     "commercial_use": "Paid for commercial API",
-    "integrations": ["QRadar", "MISP", "OpenCTI", "TAXII clients"],
+    "integrations": [
+      "QRadar",
+      "MISP",
+      "OpenCTI",
+      "TAXII clients"
+    ],
     "self_hosted": false,
     "featured": false
   },
@@ -125,12 +193,22 @@
     "category": "IP, Domain & URL Reputation",
     "purpose": "Enrich IPs, domains, and URLs with risk scores, linked feeds, and active scans",
     "product_type": "API / SaaS",
-    "formats": ["JSON", "CSV", "STIX"],
+    "formats": [
+      "JSON",
+      "CSV",
+      "STIX"
+    ],
     "api_key": "Required for API",
     "free_limits": "30 req/min (Community)",
     "license": "Proprietary",
     "commercial_use": "Paid for commercial feeds",
-    "integrations": ["MISP", "OpenCTI", "Splunk", "Elastic", "Maltego"],
+    "integrations": [
+      "MISP",
+      "OpenCTI",
+      "Splunk",
+      "Elastic",
+      "Maltego"
+    ],
     "self_hosted": false,
     "featured": false
   },
@@ -140,12 +218,19 @@
     "category": "IP, Domain & URL Reputation",
     "purpose": "Identify residential proxies, VPNs, Tor exits, and anonymization infrastructure",
     "product_type": "API / SaaS",
-    "formats": ["JSON"],
+    "formats": [
+      "JSON"
+    ],
     "api_key": "Required",
     "free_limits": "Limited web lookups",
     "license": "Proprietary",
     "commercial_use": "Paid only",
-    "integrations": ["Splunk", "Sentinel", "OpenCTI", "REST API"],
+    "integrations": [
+      "Splunk",
+      "Sentinel",
+      "OpenCTI",
+      "REST API"
+    ],
     "self_hosted": false,
     "featured": false
   },
@@ -155,12 +240,19 @@
     "category": "IP, Domain & URL Reputation",
     "purpose": "IP scoring, domain phishing detection, and exposed banner search",
     "product_type": "API / SaaS",
-    "formats": ["JSON"],
+    "formats": [
+      "JSON"
+    ],
     "api_key": "Required",
     "free_limits": "50 credits/month",
     "license": "Proprietary",
     "commercial_use": "Paid only",
-    "integrations": ["VirusTotal", "Splunk", "Cortex", "Maltego"],
+    "integrations": [
+      "VirusTotal",
+      "Splunk",
+      "Cortex",
+      "Maltego"
+    ],
     "self_hosted": false,
     "featured": false
   },
@@ -170,12 +262,245 @@
     "category": "IP, Domain & URL Reputation",
     "purpose": "Proxy, VPN, botnet, and malicious URL reputation scoring",
     "product_type": "API / SaaS",
-    "formats": ["JSON", "CSV"],
+    "formats": [
+      "JSON",
+      "CSV"
+    ],
     "api_key": "Required",
     "free_limits": "5,000 lookups/month",
     "license": "Proprietary",
     "commercial_use": "Yes (tier limits)",
-    "integrations": ["REST API", "SIEM", "WAF"],
+    "integrations": [
+      "REST API",
+      "SIEM",
+      "WAF"
+    ],
+    "self_hosted": false,
+    "featured": false
+  },
+  {
+    "name": "CrowdSec CTI",
+    "url": "https://www.crowdsec.net/cyber-threat-intelligence",
+    "category": "IP, Domain & URL Reputation",
+    "purpose": "Crowdsourced IP behavior intelligence gathered from global CrowdSec sensors",
+    "product_type": "API / SaaS",
+    "formats": [
+      "JSON"
+    ],
+    "api_key": "Required",
+    "free_limits": "50 queries/day (Community)",
+    "license": "Proprietary (engine MIT)",
+    "commercial_use": "Paid for commercial API",
+    "integrations": [
+      "CrowdSec",
+      "MISP",
+      "OpenCTI",
+      "Splunk",
+      "TheHive"
+    ],
+    "self_hosted": false,
+    "featured": false
+  },
+  {
+    "name": "Maltiverse",
+    "url": "https://maltiverse.com/",
+    "category": "IP, Domain & URL Reputation",
+    "purpose": "Open IOC search engine scoring IPs, hostnames, URLs, and file hashes",
+    "product_type": "API / SaaS",
+    "formats": [
+      "JSON",
+      "STIX",
+      "MISP"
+    ],
+    "api_key": "Required for API",
+    "free_limits": "100 req/day (Community)",
+    "license": "Proprietary",
+    "commercial_use": "Paid for commercial API",
+    "integrations": [
+      "MISP",
+      "OpenCTI",
+      "Cortex",
+      "Splunk"
+    ],
+    "self_hosted": false,
+    "featured": false
+  },
+  {
+    "name": "IPinfo",
+    "url": "https://ipinfo.io/",
+    "category": "IP, Domain & URL Reputation",
+    "purpose": "IP geolocation, ASN ownership, privacy/VPN detection, and abuse contacts",
+    "product_type": "API / SaaS",
+    "formats": [
+      "JSON",
+      "CSV",
+      "MMDB"
+    ],
+    "api_key": "Required",
+    "free_limits": "50,000 req/month",
+    "license": "Proprietary (Lite DB CC-BY-SA)",
+    "commercial_use": "Yes (tier limits)",
+    "integrations": [
+      "Splunk",
+      "Elastic",
+      "Snowflake",
+      "REST API"
+    ],
+    "self_hosted": false,
+    "featured": false
+  },
+  {
+    "name": "Team Cymru Scout",
+    "url": "https://www.team-cymru.com/pure-signal-scout",
+    "category": "IP, Domain & URL Reputation",
+    "purpose": "NetFlow-backed IP, ASN, and passive DNS context for threat hunting",
+    "product_type": "Enterprise / API",
+    "formats": [
+      "JSON"
+    ],
+    "api_key": "Required",
+    "free_limits": "Free IP-to-ASN DNS/WHOIS; Scout paid",
+    "license": "Proprietary",
+    "commercial_use": "Paid only",
+    "integrations": [
+      "OpenCTI",
+      "Splunk",
+      "Sentinel",
+      "Maltego"
+    ],
+    "self_hosted": false,
+    "featured": false
+  },
+  {
+    "name": "Onyphe",
+    "url": "https://www.onyphe.io/",
+    "category": "IP, Domain & URL Reputation",
+    "purpose": "Cyber defense search engine correlating internet scans with threat lists",
+    "product_type": "API / SaaS",
+    "formats": [
+      "JSON",
+      "CSV"
+    ],
+    "api_key": "Required",
+    "free_limits": "Limited web lookups",
+    "license": "Proprietary",
+    "commercial_use": "Paid only",
+    "integrations": [
+      "Cortex",
+      "MISP",
+      "Maltego",
+      "Splunk"
+    ],
+    "self_hosted": false,
+    "featured": false
+  },
+  {
+    "name": "LeakIX",
+    "url": "https://leakix.net/",
+    "category": "IP, Domain & URL Reputation",
+    "purpose": "Index exposed databases, open services, and leaked configs across IPv4",
+    "product_type": "API / SaaS",
+    "formats": [
+      "JSON"
+    ],
+    "api_key": "Optional (higher limits with key)",
+    "free_limits": "Rate-limited community API",
+    "license": "Proprietary",
+    "commercial_use": "Paid for commercial API",
+    "integrations": [
+      "REST API",
+      "Cortex",
+      "Nuclei"
+    ],
+    "self_hosted": false,
+    "featured": false
+  },
+  {
+    "name": "RIPEstat",
+    "url": "https://stat.ripe.net/",
+    "category": "IP, Domain & URL Reputation",
+    "purpose": "BGP routing, RPKI, ASN prefix, and abuse contact lookups from RIPE NCC",
+    "product_type": "Open Data / API",
+    "formats": [
+      "JSON"
+    ],
+    "api_key": "None",
+    "free_limits": "Unlimited (fair use)",
+    "license": "Open Data (RIPE NCC)",
+    "commercial_use": "Yes",
+    "integrations": [
+      "Python",
+      "MISP",
+      "SOAR",
+      "Custom scripts"
+    ],
+    "self_hosted": false,
+    "featured": false
+  },
+  {
+    "name": "Spamhaus Lookup",
+    "url": "https://check.spamhaus.org/",
+    "category": "IP, Domain & URL Reputation",
+    "purpose": "Check IP and domain listings across SBL, XBL, PBL, DBL, and ZRD zones",
+    "product_type": "DNSBL / API",
+    "formats": [
+      "DNS",
+      "JSON"
+    ],
+    "api_key": "Optional (DQS free key)",
+    "free_limits": "Free for non-commercial low volume",
+    "license": "Proprietary",
+    "commercial_use": "Paid (DQS commercial)",
+    "integrations": [
+      "Postfix",
+      "Rspamd",
+      "BIND",
+      "Unbound"
+    ],
+    "self_hosted": false,
+    "featured": false
+  },
+  {
+    "name": "Scamalytics",
+    "url": "https://scamalytics.com/ip",
+    "category": "IP, Domain & URL Reputation",
+    "purpose": "IP fraud scoring for proxy, datacenter, and residential abuse detection",
+    "product_type": "API / SaaS",
+    "formats": [
+      "JSON"
+    ],
+    "api_key": "Required for API",
+    "free_limits": "5,000 queries/month",
+    "license": "Proprietary",
+    "commercial_use": "Yes (tier limits)",
+    "integrations": [
+      "REST API",
+      "WAF",
+      "SIEM"
+    ],
+    "self_hosted": false,
+    "featured": false
+  },
+  {
+    "name": "CyberGordon",
+    "url": "https://cybergordon.com/",
+    "category": "IP, Domain & URL Reputation",
+    "purpose": "Bulk enrichment of up to 100 IPs, domains, or hashes across 15+ public engines",
+    "product_type": "Web / SaaS",
+    "formats": [
+      "CSV",
+      "Web"
+    ],
+    "api_key": "None (web)",
+    "free_limits": "Free web queries",
+    "license": "Proprietary",
+    "commercial_use": "Yes (web tier)",
+    "integrations": [
+      "VirusTotal",
+      "AbuseIPDB",
+      "GreyNoise",
+      "Shodan"
+    ],
     "self_hosted": false,
     "featured": false
   },
@@ -185,12 +510,22 @@
     "category": "Malware Analysis & Sandboxes",
     "purpose": "Community malware sample repository with hashes, YARA rules, and family tags",
     "product_type": "Feed / API",
-    "formats": ["JSON", "CSV", "TXT"],
+    "formats": [
+      "JSON",
+      "CSV",
+      "TXT"
+    ],
     "api_key": "Required for API (free Auth-Key)",
     "free_limits": "Generous free community access",
     "license": "CC0 1.0",
     "commercial_use": "Yes",
-    "integrations": ["MISP", "OpenCTI", "Cortex", "IntelOwl", "YARA"],
+    "integrations": [
+      "MISP",
+      "OpenCTI",
+      "Cortex",
+      "IntelOwl",
+      "YARA"
+    ],
     "self_hosted": false,
     "featured": true
   },
@@ -200,12 +535,23 @@
     "category": "Malware Analysis & Sandboxes",
     "purpose": "Interactive cloud malware sandbox with live process trees, PCAPs, and IOC extraction",
     "product_type": "SaaS / API",
-    "formats": ["JSON", "STIX", "MISP", "PCAP"],
+    "formats": [
+      "JSON",
+      "STIX",
+      "MISP",
+      "PCAP"
+    ],
     "api_key": "Required for API",
     "free_limits": "Public Windows VM analyses",
     "license": "Proprietary",
     "commercial_use": "Paid only",
-    "integrations": ["MISP", "OpenCTI", "Splunk", "Sentinel", "TheHive"],
+    "integrations": [
+      "MISP",
+      "OpenCTI",
+      "Splunk",
+      "Sentinel",
+      "TheHive"
+    ],
     "self_hosted": false,
     "featured": false
   },
@@ -215,12 +561,21 @@
     "category": "Malware Analysis & Sandboxes",
     "purpose": "Automated Falcon Sandbox malware detonation, behavioral scoring, and IOC reports",
     "product_type": "API / SaaS",
-    "formats": ["JSON", "STIX", "CSV"],
+    "formats": [
+      "JSON",
+      "STIX",
+      "CSV"
+    ],
     "api_key": "Required",
     "free_limits": "200 req/min public queries",
     "license": "Proprietary",
     "commercial_use": "Paid for private API",
-    "integrations": ["MISP", "Cortex", "OpenCTI", "IntelOwl"],
+    "integrations": [
+      "MISP",
+      "Cortex",
+      "OpenCTI",
+      "IntelOwl"
+    ],
     "self_hosted": false,
     "featured": false
   },
@@ -230,12 +585,20 @@
     "category": "Malware Analysis & Sandboxes",
     "purpose": "High-throughput malware sandbox extracting C2 configs, signatures, and memory dumps",
     "product_type": "API / SaaS",
-    "formats": ["JSON", "PCAP"],
+    "formats": [
+      "JSON",
+      "PCAP"
+    ],
     "api_key": "Required",
     "free_limits": "Public researcher tier",
     "license": "Proprietary",
     "commercial_use": "Paid only",
-    "integrations": ["MISP", "OpenCTI", "Recorded Future", "REST API"],
+    "integrations": [
+      "MISP",
+      "OpenCTI",
+      "Recorded Future",
+      "REST API"
+    ],
     "self_hosted": false,
     "featured": false
   },
@@ -245,12 +608,24 @@
     "category": "Malware Analysis & Sandboxes",
     "purpose": "Deep malware analysis across Windows, Linux, macOS, and Android with MITRE mapping",
     "product_type": "SaaS / On-prem",
-    "formats": ["JSON", "STIX", "MISP", "YARA", "CSV"],
+    "formats": [
+      "JSON",
+      "STIX",
+      "MISP",
+      "YARA",
+      "CSV"
+    ],
     "api_key": "Required",
     "free_limits": "Limited public community submissions",
     "license": "Proprietary",
     "commercial_use": "Paid only",
-    "integrations": ["MISP", "OpenCTI", "Splunk", "Cortex", "QRadar"],
+    "integrations": [
+      "MISP",
+      "OpenCTI",
+      "Splunk",
+      "Cortex",
+      "QRadar"
+    ],
     "self_hosted": true,
     "featured": false
   },
@@ -260,12 +635,22 @@
     "category": "Malware Analysis & Sandboxes",
     "purpose": "Open-source automated malware detonation, payload unpacking, and C2 config extraction",
     "product_type": "Open source",
-    "formats": ["JSON", "MISP", "PCAP"],
+    "formats": [
+      "JSON",
+      "MISP",
+      "PCAP"
+    ],
     "api_key": "Self-managed",
     "free_limits": "Unlimited (self-hosted)",
     "license": "GPL-3.0",
     "commercial_use": "Yes",
-    "integrations": ["MISP", "YARA", "Suricata", "Cortex", "IntelOwl"],
+    "integrations": [
+      "MISP",
+      "YARA",
+      "Suricata",
+      "Cortex",
+      "IntelOwl"
+    ],
     "self_hosted": true,
     "featured": false
   },
@@ -275,12 +660,21 @@
     "category": "Malware Analysis & Sandboxes",
     "purpose": "Pattern-matching engine for classifying malware binaries, memory dumps, and files",
     "product_type": "Open source",
-    "formats": ["YARA rules", "JSON"],
+    "formats": [
+      "YARA rules",
+      "JSON"
+    ],
     "api_key": "None",
     "free_limits": "Unlimited (local)",
     "license": "BSD-3-Clause",
     "commercial_use": "Yes",
-    "integrations": ["VirusTotal", "MISP", "CAPE", "Velociraptor", "osquery"],
+    "integrations": [
+      "VirusTotal",
+      "MISP",
+      "CAPE",
+      "Velociraptor",
+      "osquery"
+    ],
     "self_hosted": true,
     "featured": false
   },
@@ -290,12 +684,20 @@
     "category": "Malware Analysis & Sandboxes",
     "purpose": "Curated malware family encyclopedia, unpacked samples, YARA rules, and actor links",
     "product_type": "Research / API",
-    "formats": ["JSON", "YARA", "BibTeX"],
+    "formats": [
+      "JSON",
+      "YARA",
+      "BibTeX"
+    ],
     "api_key": "Required (vetted accounts for samples)",
     "free_limits": "Public metadata and API free",
     "license": "Research / Mixed",
     "commercial_use": "Metadata yes; samples restricted",
-    "integrations": ["MISP", "OpenCTI", "YARA"],
+    "integrations": [
+      "MISP",
+      "OpenCTI",
+      "YARA"
+    ],
     "self_hosted": false,
     "featured": false
   },
@@ -305,12 +707,18 @@
     "category": "Malware Analysis & Sandboxes",
     "purpose": "Automated malware unpacking service returning decrypted payloads and YARA hits",
     "product_type": "API / SaaS",
-    "formats": ["JSON"],
+    "formats": [
+      "JSON"
+    ],
     "api_key": "Required for API",
     "free_limits": "Limited public uploads",
     "license": "Proprietary",
     "commercial_use": "Paid only",
-    "integrations": ["REST API", "Cortex", "Python SDK"],
+    "integrations": [
+      "REST API",
+      "Cortex",
+      "Python SDK"
+    ],
     "self_hosted": false,
     "featured": false
   },
@@ -320,13 +728,245 @@
     "category": "Malware Analysis & Sandboxes",
     "purpose": "Genetic code-reuse analysis to attribute malware binaries to known families",
     "product_type": "API / SaaS",
-    "formats": ["JSON"],
+    "formats": [
+      "JSON"
+    ],
     "api_key": "Required",
     "free_limits": "Community tier with daily cap",
     "license": "Proprietary",
     "commercial_use": "Paid only",
-    "integrations": ["Sentinel", "Splunk", "CrowdStrike", "Cortex"],
+    "integrations": [
+      "Sentinel",
+      "Splunk",
+      "CrowdStrike",
+      "Cortex"
+    ],
     "self_hosted": false,
+    "featured": false
+  },
+  {
+    "name": "Mandiant Capa",
+    "url": "https://github.com/mandiant/capa",
+    "category": "Malware Analysis & Sandboxes",
+    "purpose": "Identify malware capabilities in PE, ELF, and .NET binaries mapped to MITRE ATT&CK",
+    "product_type": "Open source",
+    "formats": [
+      "JSON",
+      "YAML rules"
+    ],
+    "api_key": "None",
+    "free_limits": "Unlimited (local)",
+    "license": "Apache-2.0",
+    "commercial_use": "Yes",
+    "integrations": [
+      "Ghidra",
+      "IDA Pro",
+      "Binary Ninja",
+      "CAPE"
+    ],
+    "self_hosted": true,
+    "featured": false
+  },
+  {
+    "name": "Mandiant FLOSS",
+    "url": "https://github.com/mandiant/flare-floss",
+    "category": "Malware Analysis & Sandboxes",
+    "purpose": "Automatically deobfuscate stack strings and encoded C2 strings from malware binaries",
+    "product_type": "Open source",
+    "formats": [
+      "JSON",
+      "TXT"
+    ],
+    "api_key": "None",
+    "free_limits": "Unlimited (local)",
+    "license": "Apache-2.0",
+    "commercial_use": "Yes",
+    "integrations": [
+      "CLI",
+      "Python",
+      "CAPE"
+    ],
+    "self_hosted": true,
+    "featured": false
+  },
+  {
+    "name": "Ghidra",
+    "url": "https://ghidra-sre.org/",
+    "category": "Malware Analysis & Sandboxes",
+    "purpose": "Open-source reverse engineering suite with decompiler for static malware analysis",
+    "product_type": "Open source",
+    "formats": [
+      "Binaries",
+      "JSON",
+      "Python/Java scripts"
+    ],
+    "api_key": "None",
+    "free_limits": "Unlimited (local)",
+    "license": "Apache-2.0",
+    "commercial_use": "Yes",
+    "integrations": [
+      "Capa",
+      "YARA",
+      "Headless Analyzer"
+    ],
+    "self_hosted": true,
+    "featured": false
+  },
+  {
+    "name": "Rizin",
+    "url": "https://rizin.re/",
+    "category": "Malware Analysis & Sandboxes",
+    "purpose": "Scriptable reverse engineering and binary analysis framework (with Cutter GUI)",
+    "product_type": "Open source",
+    "formats": [
+      "JSON",
+      "Binaries"
+    ],
+    "api_key": "None",
+    "free_limits": "Unlimited (local)",
+    "license": "LGPL-3.0",
+    "commercial_use": "Yes",
+    "integrations": [
+      "Cutter",
+      "Python",
+      "YARA"
+    ],
+    "self_hosted": true,
+    "featured": false
+  },
+  {
+    "name": "DRAKVUF Sandbox",
+    "url": "https://github.com/CERT-Polska/drakvuf-sandbox",
+    "category": "Malware Analysis & Sandboxes",
+    "purpose": "Agentless Xen-based malware sandbox resistant to VM-evasion techniques",
+    "product_type": "Open source",
+    "formats": [
+      "JSON",
+      "PCAP"
+    ],
+    "api_key": "Self-managed",
+    "free_limits": "Unlimited (self-hosted)",
+    "license": "GPL-3.0",
+    "commercial_use": "Yes",
+    "integrations": [
+      "Karton",
+      "MWDB",
+      "MISP"
+    ],
+    "self_hosted": true,
+    "featured": false
+  },
+  {
+    "name": "MWDB (CERT.pl)",
+    "url": "https://github.com/CERT-Polska/mwdb-core",
+    "category": "Malware Analysis & Sandboxes",
+    "purpose": "Self-hosted malware repository for tracking samples, static configs, and family relationships",
+    "product_type": "Open source",
+    "formats": [
+      "JSON",
+      "MISP"
+    ],
+    "api_key": "Self-managed",
+    "free_limits": "Unlimited (self-hosted)",
+    "license": "BSD-3-Clause",
+    "commercial_use": "Yes",
+    "integrations": [
+      "Karton",
+      "MISP",
+      "OpenCTI",
+      "DRAKVUF"
+    ],
+    "self_hosted": true,
+    "featured": false
+  },
+  {
+    "name": "Detect It Easy (DIE)",
+    "url": "https://github.com/horsicq/Detect-It-Easy",
+    "category": "Malware Analysis & Sandboxes",
+    "purpose": "Identify packers, compilers, cryptors, and file formats across Windows, Linux, and macOS binaries",
+    "product_type": "Open source",
+    "formats": [
+      "JSON",
+      "TXT"
+    ],
+    "api_key": "None",
+    "free_limits": "Unlimited (local)",
+    "license": "MIT",
+    "commercial_use": "Yes",
+    "integrations": [
+      "CLI",
+      "Python",
+      "Sandbox pipelines"
+    ],
+    "self_hosted": true,
+    "featured": false
+  },
+  {
+    "name": "ClamAV",
+    "url": "https://www.clamav.net/",
+    "category": "Malware Analysis & Sandboxes",
+    "purpose": "Open-source antivirus engine supporting custom YARA and hash signatures",
+    "product_type": "Open source",
+    "formats": [
+      "CVD",
+      "YARA",
+      "HDB"
+    ],
+    "api_key": "None",
+    "free_limits": "Unlimited (self-hosted)",
+    "license": "GPL-2.0",
+    "commercial_use": "Yes",
+    "integrations": [
+      "Mail gateways",
+      "ICAP",
+      "Linux",
+      "Docker"
+    ],
+    "self_hosted": true,
+    "featured": false
+  },
+  {
+    "name": "VirusShare",
+    "url": "https://virusshare.com/",
+    "category": "Malware Analysis & Sandboxes",
+    "purpose": "Large community malware sample and hash archive for security researchers",
+    "product_type": "Research / API",
+    "formats": [
+      "JSON",
+      "TXT"
+    ],
+    "api_key": "Required (vetted account)",
+    "free_limits": "Free for vetted researchers",
+    "license": "Research archive",
+    "commercial_use": "Research only",
+    "integrations": [
+      "REST API",
+      "Cortex",
+      "IntelOwl"
+    ],
+    "self_hosted": false,
+    "featured": false
+  },
+  {
+    "name": "Qu1cksc0pe",
+    "url": "https://github.com/CYB3RMX/Qu1cksc0pe",
+    "category": "Malware Analysis & Sandboxes",
+    "purpose": "CLI static analysis tool for Windows, Linux, macOS, Android, and document malware",
+    "product_type": "Open source",
+    "formats": [
+      "TXT",
+      "JSON"
+    ],
+    "api_key": "Optional (VirusTotal)",
+    "free_limits": "Unlimited (local)",
+    "license": "GPL-3.0",
+    "commercial_use": "Yes",
+    "integrations": [
+      "YARA",
+      "VirusTotal",
+      "CLI"
+    ],
+    "self_hosted": true,
     "featured": false
   },
   {
@@ -335,12 +975,22 @@
     "category": "OSINT & Infrastructure Pivot",
     "purpose": "Automated OSINT reconnaissance across 200+ threat intel and DNS data sources",
     "product_type": "Open source",
-    "formats": ["JSON", "CSV", "GEXF"],
+    "formats": [
+      "JSON",
+      "CSV",
+      "GEXF"
+    ],
     "api_key": "Optional per module",
     "free_limits": "Unlimited (self-hosted)",
     "license": "MIT",
     "commercial_use": "Yes",
-    "integrations": ["Shodan", "VirusTotal", "AbuseIPDB", "OTX", "MISP"],
+    "integrations": [
+      "Shodan",
+      "VirusTotal",
+      "AbuseIPDB",
+      "OTX",
+      "MISP"
+    ],
     "self_hosted": true,
     "featured": false
   },
@@ -350,12 +1000,22 @@
     "category": "OSINT & Infrastructure Pivot",
     "purpose": "Link-analysis graph workspace for pivoting across domains, IPs, certs, and actors",
     "product_type": "Desktop / Enterprise",
-    "formats": ["CSV", "GraphML", "STIX"],
+    "formats": [
+      "CSV",
+      "GraphML",
+      "STIX"
+    ],
     "api_key": "Required per transform",
     "free_limits": "Community Edition (limited entities)",
     "license": "Proprietary",
     "commercial_use": "Paid only",
-    "integrations": ["MISP", "OpenCTI", "Shodan", "VirusTotal", "Recorded Future"],
+    "integrations": [
+      "MISP",
+      "OpenCTI",
+      "Shodan",
+      "VirusTotal",
+      "Recorded Future"
+    ],
     "self_hosted": true,
     "featured": false
   },
@@ -365,12 +1025,20 @@
     "category": "OSINT & Infrastructure Pivot",
     "purpose": "Attack surface mapping and passive/active subdomain and ASN enumeration",
     "product_type": "Open source",
-    "formats": ["JSON", "TXT"],
+    "formats": [
+      "JSON",
+      "TXT"
+    ],
     "api_key": "Optional per data source",
     "free_limits": "Unlimited (local)",
     "license": "Apache-2.0",
     "commercial_use": "Yes",
-    "integrations": ["VirusTotal", "SecurityTrails", "Shodan", "Censys"],
+    "integrations": [
+      "VirusTotal",
+      "SecurityTrails",
+      "Shodan",
+      "Censys"
+    ],
     "self_hosted": true,
     "featured": false
   },
@@ -380,12 +1048,19 @@
     "category": "OSINT & Infrastructure Pivot",
     "purpose": "Historical DNS, WHOIS, and associated domain lookups for infrastructure tracking",
     "product_type": "API / SaaS",
-    "formats": ["JSON"],
+    "formats": [
+      "JSON"
+    ],
     "api_key": "Required",
     "free_limits": "50 API queries/month",
     "license": "Proprietary",
     "commercial_use": "Paid only",
-    "integrations": ["Splunk", "OpenCTI", "Maltego", "Cortex"],
+    "integrations": [
+      "Splunk",
+      "OpenCTI",
+      "Maltego",
+      "Cortex"
+    ],
     "self_hosted": false,
     "featured": false
   },
@@ -395,12 +1070,21 @@
     "category": "OSINT & Infrastructure Pivot",
     "purpose": "Domain risk scoring, passive DNS, and WHOIS pivoting for adversary infrastructure",
     "product_type": "Enterprise / API",
-    "formats": ["JSON", "CSV"],
+    "formats": [
+      "JSON",
+      "CSV"
+    ],
     "api_key": "Required",
     "free_limits": "No free API tier",
     "license": "Proprietary",
     "commercial_use": "Paid only",
-    "integrations": ["Splunk", "Sentinel", "MISP", "OpenCTI", "XSOAR"],
+    "integrations": [
+      "Splunk",
+      "Sentinel",
+      "MISP",
+      "OpenCTI",
+      "XSOAR"
+    ],
     "self_hosted": false,
     "featured": false
   },
@@ -410,12 +1094,19 @@
     "category": "OSINT & Infrastructure Pivot",
     "purpose": "Passive DNS, SSL certificates, trackers, and host pairs (formerly RiskIQ PassiveTotal)",
     "product_type": "API / SaaS",
-    "formats": ["JSON"],
+    "formats": [
+      "JSON"
+    ],
     "api_key": "Required for API",
     "free_limits": "Free community web access",
     "license": "Proprietary",
     "commercial_use": "Paid for API",
-    "integrations": ["Microsoft Sentinel", "OpenCTI", "MISP", "Graph API"],
+    "integrations": [
+      "Microsoft Sentinel",
+      "OpenCTI",
+      "MISP",
+      "Graph API"
+    ],
     "self_hosted": false,
     "featured": false
   },
@@ -425,12 +1116,20 @@
     "category": "OSINT & Infrastructure Pivot",
     "purpose": "Pre-attack infrastructure fingerprinting using DNS, web content, and ASN patterns",
     "product_type": "API / SaaS",
-    "formats": ["JSON", "STIX"],
+    "formats": [
+      "JSON",
+      "STIX"
+    ],
     "api_key": "Required",
     "free_limits": "Community Edition available",
     "license": "Proprietary",
     "commercial_use": "Paid only",
-    "integrations": ["OpenCTI", "Splunk", "Sentinel", "XSOAR"],
+    "integrations": [
+      "OpenCTI",
+      "Splunk",
+      "Sentinel",
+      "XSOAR"
+    ],
     "self_hosted": false,
     "featured": false
   },
@@ -440,12 +1139,20 @@
     "category": "OSINT & Infrastructure Pivot",
     "purpose": "Passive DNS, virtual host, and HTTP response pivoting for threat hunting",
     "product_type": "API / SaaS",
-    "formats": ["JSON", "CSV"],
+    "formats": [
+      "JSON",
+      "CSV"
+    ],
     "api_key": "Required for API",
     "free_limits": "Free community tier",
     "license": "Proprietary",
     "commercial_use": "Paid for commercial API",
-    "integrations": ["OpenCTI", "MISP", "Maltego", "REST API"],
+    "integrations": [
+      "OpenCTI",
+      "MISP",
+      "Maltego",
+      "REST API"
+    ],
     "self_hosted": false,
     "featured": false
   },
@@ -455,12 +1162,20 @@
     "category": "OSINT & Infrastructure Pivot",
     "purpose": "Certificate Transparency log search for discovering newly issued phishing domains",
     "product_type": "Web / API",
-    "formats": ["JSON", "Atom", "PostgreSQL"],
+    "formats": [
+      "JSON",
+      "Atom",
+      "PostgreSQL"
+    ],
     "api_key": "None",
     "free_limits": "Rate-limited public access",
     "license": "Public service (Sectigo)",
     "commercial_use": "Yes",
-    "integrations": ["Amass", "SpiderFoot", "Custom scripts"],
+    "integrations": [
+      "Amass",
+      "SpiderFoot",
+      "Custom scripts"
+    ],
     "self_hosted": false,
     "featured": false
   },
@@ -470,12 +1185,20 @@
     "category": "OSINT & Infrastructure Pivot",
     "purpose": "CLI tool for gathering emails, subdomains, IPs, and URLs from public sources",
     "product_type": "Open source",
-    "formats": ["JSON", "XML"],
+    "formats": [
+      "JSON",
+      "XML"
+    ],
     "api_key": "Optional per source",
     "free_limits": "Unlimited (local)",
     "license": "GPL-2.0",
     "commercial_use": "Yes",
-    "integrations": ["Shodan", "Censys", "VirusTotal", "SecurityTrails"],
+    "integrations": [
+      "Shodan",
+      "Censys",
+      "VirusTotal",
+      "SecurityTrails"
+    ],
     "self_hosted": true,
     "featured": false
   },
@@ -485,13 +1208,199 @@
     "category": "OSINT & Infrastructure Pivot",
     "purpose": "Modular Python reconnaissance framework with marketplace data modules",
     "product_type": "Open source",
-    "formats": ["JSON", "CSV", "XML"],
+    "formats": [
+      "JSON",
+      "CSV",
+      "XML"
+    ],
     "api_key": "Optional per module",
     "free_limits": "Unlimited (local)",
     "license": "GPL-3.0",
     "commercial_use": "Yes",
-    "integrations": ["Shodan", "VirusTotal", "HIBP", "BuiltWith"],
+    "integrations": [
+      "Shodan",
+      "VirusTotal",
+      "HIBP",
+      "BuiltWith"
+    ],
     "self_hosted": true,
+    "featured": false
+  },
+  {
+    "name": "dnstwist",
+    "url": "https://github.com/elceef/dnstwist",
+    "category": "OSINT & Infrastructure Pivot",
+    "purpose": "Detect typosquatting, homograph phishing domains, and rogue MX records",
+    "product_type": "Open source",
+    "formats": [
+      "JSON",
+      "CSV",
+      "TXT"
+    ],
+    "api_key": "None",
+    "free_limits": "Unlimited (local)",
+    "license": "Apache-2.0",
+    "commercial_use": "Yes",
+    "integrations": [
+      "CLI",
+      "Cron",
+      "SIEM",
+      "SOAR"
+    ],
+    "self_hosted": true,
+    "featured": false
+  },
+  {
+    "name": "Subfinder",
+    "url": "https://github.com/projectdiscovery/subfinder",
+    "category": "OSINT & Infrastructure Pivot",
+    "purpose": "Fast passive subdomain discovery aggregating 50+ certificate and DNS providers",
+    "product_type": "Open source",
+    "formats": [
+      "JSON",
+      "TXT"
+    ],
+    "api_key": "Optional per provider",
+    "free_limits": "Unlimited (local)",
+    "license": "MIT",
+    "commercial_use": "Yes",
+    "integrations": [
+      "httpx",
+      "Nuclei",
+      "VirusTotal",
+      "Shodan"
+    ],
+    "self_hosted": true,
+    "featured": false
+  },
+  {
+    "name": "httpx",
+    "url": "https://github.com/projectdiscovery/httpx",
+    "category": "OSINT & Infrastructure Pivot",
+    "purpose": "Multi-purpose HTTP prober capturing titles, TLS fingerprints, JARM, and favicon hashes",
+    "product_type": "Open source",
+    "formats": [
+      "JSON",
+      "CSV",
+      "TXT"
+    ],
+    "api_key": "None",
+    "free_limits": "Unlimited (local)",
+    "license": "MIT",
+    "commercial_use": "Yes",
+    "integrations": [
+      "Subfinder",
+      "Nuclei",
+      "CI/CD"
+    ],
+    "self_hosted": true,
+    "featured": false
+  },
+  {
+    "name": "DNSDumpster",
+    "url": "https://dnsdumpster.com/",
+    "category": "OSINT & Infrastructure Pivot",
+    "purpose": "Passive DNS reconnaissance mapping subdomains, MX/TXT records, and ASN hosts",
+    "product_type": "Web / API",
+    "formats": [
+      "JSON",
+      "XLSX",
+      "Web"
+    ],
+    "api_key": "Required for API",
+    "free_limits": "Free web queries; limited free API",
+    "license": "Proprietary",
+    "commercial_use": "Paid for commercial API",
+    "integrations": [
+      "REST API",
+      "SpiderFoot"
+    ],
+    "self_hosted": false,
+    "featured": false
+  },
+  {
+    "name": "Hurricane Electric BGP Toolkit",
+    "url": "https://bgp.he.net/",
+    "category": "OSINT & Infrastructure Pivot",
+    "purpose": "ASN peering, IP prefix allocations, RPKI, and reverse DNS lookups",
+    "product_type": "Web",
+    "formats": [
+      "Web"
+    ],
+    "api_key": "None",
+    "free_limits": "Free web lookups",
+    "license": "Public service",
+    "commercial_use": "Yes (manual lookup)",
+    "integrations": [
+      "Browser",
+      "Analyst workflow"
+    ],
+    "self_hosted": false,
+    "featured": false
+  },
+  {
+    "name": "ViewDNS.info",
+    "url": "https://viewdns.info/",
+    "category": "OSINT & Infrastructure Pivot",
+    "purpose": "Reverse IP, reverse WHOIS, DNS history, and Chinese firewall checks",
+    "product_type": "Web / API",
+    "formats": [
+      "JSON",
+      "XML"
+    ],
+    "api_key": "Required for API",
+    "free_limits": "Free web tools; paid API",
+    "license": "Proprietary",
+    "commercial_use": "Paid for API",
+    "integrations": [
+      "REST API",
+      "Maltego"
+    ],
+    "self_hosted": false,
+    "featured": false
+  },
+  {
+    "name": "Intelligence X",
+    "url": "https://intelx.io/",
+    "category": "OSINT & Infrastructure Pivot",
+    "purpose": "Search engine for darknet sites, paste dumps, WHOIS records, and historical web archives",
+    "product_type": "API / SaaS",
+    "formats": [
+      "JSON",
+      "TXT"
+    ],
+    "api_key": "Required",
+    "free_limits": "Limited free searches",
+    "license": "Proprietary",
+    "commercial_use": "Paid only",
+    "integrations": [
+      "Maltego",
+      "MISP",
+      "OpenCTI",
+      "SpiderFoot"
+    ],
+    "self_hosted": false,
+    "featured": false
+  },
+  {
+    "name": "PublicWWW",
+    "url": "https://publicwww.com/",
+    "category": "OSINT & Infrastructure Pivot",
+    "purpose": "Search HTML, JavaScript, and analytics IDs across websites to link phishing kits and C2 lures",
+    "product_type": "Web / API",
+    "formats": [
+      "CSV",
+      "TXT"
+    ],
+    "api_key": "Required for API",
+    "free_limits": "Top results free on web",
+    "license": "Proprietary",
+    "commercial_use": "Paid for API",
+    "integrations": [
+      "REST API",
+      "Analyst pivoting"
+    ],
+    "self_hosted": false,
     "featured": false
   },
   {
@@ -500,12 +1409,22 @@
     "category": "Network & Detection Engineering",
     "purpose": "High-speed IDS/IPS and network security monitor with native IOC and rule matching",
     "product_type": "Open source",
-    "formats": ["EVE JSON", "PCAP", "Suricata rules"],
+    "formats": [
+      "EVE JSON",
+      "PCAP",
+      "Suricata rules"
+    ],
     "api_key": "None",
     "free_limits": "Unlimited (self-hosted)",
     "license": "GPL-2.0",
     "commercial_use": "Yes",
-    "integrations": ["MISP", "Elastic", "Splunk", "Emerging Threats", "Wazuh"],
+    "integrations": [
+      "MISP",
+      "Elastic",
+      "Splunk",
+      "Emerging Threats",
+      "Wazuh"
+    ],
     "self_hosted": true,
     "featured": false
   },
@@ -515,12 +1434,22 @@
     "category": "Network & Detection Engineering",
     "purpose": "Network traffic analyzer with a built-in Intel Framework for real-time IOC matching",
     "product_type": "Open source",
-    "formats": ["TSV", "JSON", "Zeek Intel"],
+    "formats": [
+      "TSV",
+      "JSON",
+      "Zeek Intel"
+    ],
     "api_key": "None",
     "free_limits": "Unlimited (self-hosted)",
     "license": "BSD-3-Clause",
     "commercial_use": "Yes",
-    "integrations": ["MISP", "OpenCTI", "Elastic", "Splunk", "Arkime"],
+    "integrations": [
+      "MISP",
+      "OpenCTI",
+      "Elastic",
+      "Splunk",
+      "Arkime"
+    ],
     "self_hosted": true,
     "featured": false
   },
@@ -530,12 +1459,20 @@
     "category": "Network & Detection Engineering",
     "purpose": "Large-scale full-packet capture indexing and search for retrospective IOC hunts",
     "product_type": "Open source",
-    "formats": ["PCAP", "JSON", "CSV"],
+    "formats": [
+      "PCAP",
+      "JSON",
+      "CSV"
+    ],
     "api_key": "None",
     "free_limits": "Unlimited (self-hosted)",
     "license": "Apache-2.0",
     "commercial_use": "Yes",
-    "integrations": ["Elasticsearch", "OpenSearch", "Wise (MISP/VT/OTX)"],
+    "integrations": [
+      "Elasticsearch",
+      "OpenSearch",
+      "Wise (MISP/VT/OTX)"
+    ],
     "self_hosted": true,
     "featured": false
   },
@@ -545,12 +1482,20 @@
     "category": "Network & Detection Engineering",
     "purpose": "Generic SIEM detection rule format translatable to Splunk, Elastic, Sentinel, and QRadar",
     "product_type": "Open source",
-    "formats": ["YAML"],
+    "formats": [
+      "YAML"
+    ],
     "api_key": "None",
     "free_limits": "Unlimited",
     "license": "DRL-1.1",
     "commercial_use": "Yes",
-    "integrations": ["Splunk", "Elastic", "Sentinel", "QRadar", "OpenCTI"],
+    "integrations": [
+      "Splunk",
+      "Elastic",
+      "Sentinel",
+      "QRadar",
+      "OpenCTI"
+    ],
     "self_hosted": true,
     "featured": false
   },
@@ -560,12 +1505,19 @@
     "category": "Network & Detection Engineering",
     "purpose": "Internet scan search engine covering HTTP responses, DNS, WHOIS, and TLS certs",
     "product_type": "API / SaaS",
-    "formats": ["JSON", "CSV"],
+    "formats": [
+      "JSON",
+      "CSV"
+    ],
     "api_key": "Required",
     "free_limits": "50 req/day",
     "license": "Proprietary",
     "commercial_use": "Paid only",
-    "integrations": ["Maltego", "Python SDK", "REST API"],
+    "integrations": [
+      "Maltego",
+      "Python SDK",
+      "REST API"
+    ],
     "self_hosted": false,
     "featured": false
   },
@@ -575,12 +1527,19 @@
     "category": "Network & Detection Engineering",
     "purpose": "Cyberspace asset search engine useful for mapping C2 panels and exposed services",
     "product_type": "API / SaaS",
-    "formats": ["JSON", "CSV"],
+    "formats": [
+      "JSON",
+      "CSV"
+    ],
     "api_key": "Required for API",
     "free_limits": "Limited web search",
     "license": "Proprietary",
     "commercial_use": "Paid only",
-    "integrations": ["REST API", "Nuclei", "Custom scripts"],
+    "integrations": [
+      "REST API",
+      "Nuclei",
+      "Custom scripts"
+    ],
     "self_hosted": false,
     "featured": false
   },
@@ -590,13 +1549,213 @@
     "category": "Network & Detection Engineering",
     "purpose": "Host and web component search engine for tracking exposed infrastructure",
     "product_type": "API / SaaS",
-    "formats": ["JSON"],
+    "formats": [
+      "JSON"
+    ],
     "api_key": "Required",
     "free_limits": "10,000 results/month (registered)",
     "license": "Proprietary",
     "commercial_use": "Paid only",
-    "integrations": ["REST API", "Python SDK", "Nuclei"],
+    "integrations": [
+      "REST API",
+      "Python SDK",
+      "Nuclei"
+    ],
     "self_hosted": false,
+    "featured": false
+  },
+  {
+    "name": "Snort",
+    "url": "https://www.snort.org/",
+    "category": "Network & Detection Engineering",
+    "purpose": "Open-source network IDS/IPS matching packet signatures and IP reputation lists",
+    "product_type": "Open source",
+    "formats": [
+      "Snort rules",
+      "JSON",
+      "PCAP"
+    ],
+    "api_key": "Optional (Oinkcode for subscriber rules)",
+    "free_limits": "Community rules unlimited",
+    "license": "GPL-2.0",
+    "commercial_use": "Yes",
+    "integrations": [
+      "Talos",
+      "pfSense",
+      "Splunk",
+      "Elastic"
+    ],
+    "self_hosted": true,
+    "featured": false
+  },
+  {
+    "name": "Wazuh",
+    "url": "https://wazuh.com/",
+    "category": "Network & Detection Engineering",
+    "purpose": "Open-source XDR and SIEM with built-in CDB IOC lists, VirusTotal, and AbuseIPDB integrations",
+    "product_type": "Open source",
+    "formats": [
+      "JSON",
+      "CDB lists"
+    ],
+    "api_key": "Self-managed",
+    "free_limits": "Unlimited (self-hosted)",
+    "license": "GPL-2.0",
+    "commercial_use": "Yes",
+    "integrations": [
+      "VirusTotal",
+      "AbuseIPDB",
+      "MISP",
+      "TheHive",
+      "Suricata"
+    ],
+    "self_hosted": true,
+    "featured": false
+  },
+  {
+    "name": "Velociraptor",
+    "url": "https://docs.velociraptor.app/",
+    "category": "Network & Detection Engineering",
+    "purpose": "Endpoint visibility and DFIR hunting tool running VQL queries and YARA scans across fleets",
+    "product_type": "Open source",
+    "formats": [
+      "JSON",
+      "CSV",
+      "VQL"
+    ],
+    "api_key": "Self-managed",
+    "free_limits": "Unlimited (self-hosted)",
+    "license": "AGPL-3.0",
+    "commercial_use": "Yes",
+    "integrations": [
+      "YARA",
+      "Sigma",
+      "MISP",
+      "Elastic",
+      "Splunk"
+    ],
+    "self_hosted": true,
+    "featured": false
+  },
+  {
+    "name": "osquery",
+    "url": "https://osquery.io/",
+    "category": "Network & Detection Engineering",
+    "purpose": "SQL-powered endpoint instrumentation for hunting processes, sockets, and persistence artifacts",
+    "product_type": "Open source",
+    "formats": [
+      "JSON",
+      "SQL"
+    ],
+    "api_key": "None",
+    "free_limits": "Unlimited (self-hosted)",
+    "license": "Apache-2.0 / GPL-2.0",
+    "commercial_use": "Yes",
+    "integrations": [
+      "Fleet",
+      "Wazuh",
+      "YARA",
+      "Elastic",
+      "Splunk"
+    ],
+    "self_hosted": true,
+    "featured": false
+  },
+  {
+    "name": "Security Onion",
+    "url": "https://securityonionsolutions.com/",
+    "category": "Network & Detection Engineering",
+    "purpose": "Turnkey Linux distribution bundling Suricata, Zeek, Elastic, Strelka, and CyberChef",
+    "product_type": "Open source",
+    "formats": [
+      "JSON",
+      "PCAP",
+      "Suricata",
+      "Zeek"
+    ],
+    "api_key": "Self-managed",
+    "free_limits": "Unlimited (self-hosted)",
+    "license": "Elastic-2.0 / Mixed OSS",
+    "commercial_use": "Yes (self-hosted)",
+    "integrations": [
+      "Suricata",
+      "Zeek",
+      "MISP",
+      "CyberChef"
+    ],
+    "self_hosted": true,
+    "featured": false
+  },
+  {
+    "name": "RITA (Real Intelligence Threat Analytics)",
+    "url": "https://github.com/activecm/rita",
+    "category": "Network & Detection Engineering",
+    "purpose": "Analyze Zeek logs to detect C2 beaconing, DNS tunneling, and long connections",
+    "product_type": "Open source",
+    "formats": [
+      "JSON",
+      "CSV",
+      "HTML"
+    ],
+    "api_key": "None",
+    "free_limits": "Unlimited (self-hosted)",
+    "license": "GPL-3.0",
+    "commercial_use": "Yes",
+    "integrations": [
+      "Zeek",
+      "MongoDB",
+      "ClickHouse"
+    ],
+    "self_hosted": true,
+    "featured": false
+  },
+  {
+    "name": "Malcolm",
+    "url": "https://malcolm.fyi/",
+    "category": "Network & Detection Engineering",
+    "purpose": "CISA-backed network traffic analysis appliance integrating Zeek, Suricata, Arkime, and OpenSearch",
+    "product_type": "Open source",
+    "formats": [
+      "PCAP",
+      "JSON",
+      "Zeek"
+    ],
+    "api_key": "Self-managed",
+    "free_limits": "Unlimited (self-hosted)",
+    "license": "BSD-3-Clause",
+    "commercial_use": "Yes",
+    "integrations": [
+      "Zeek",
+      "Suricata",
+      "Arkime",
+      "OpenSearch"
+    ],
+    "self_hosted": true,
+    "featured": false
+  },
+  {
+    "name": "JA4+ Network Fingerprinting",
+    "url": "https://github.com/FoxIO-LLC/ja4",
+    "category": "Network & Detection Engineering",
+    "purpose": "TLS, HTTP, SSH, and TCP fingerprinting suite for tracking C2 clients and malware traffic",
+    "product_type": "Open source",
+    "formats": [
+      "JSON",
+      "Wireshark",
+      "Zeek",
+      "Suricata"
+    ],
+    "api_key": "None",
+    "free_limits": "JA4 core BSD-3-Clause",
+    "license": "BSD-3-Clause / FoxIO License",
+    "commercial_use": "JA4 yes; JA4+ check license",
+    "integrations": [
+      "Zeek",
+      "Suricata",
+      "Wireshark",
+      "Cloudflare"
+    ],
+    "self_hosted": true,
     "featured": false
   },
   {
@@ -605,12 +1764,21 @@
     "category": "Vulnerability & Exploit Intelligence",
     "purpose": "Authoritative list of CVEs actively exploited in the wild with remediation due dates",
     "product_type": "Open Data / Feed",
-    "formats": ["JSON", "CSV"],
+    "formats": [
+      "JSON",
+      "CSV"
+    ],
     "api_key": "None",
     "free_limits": "Unlimited",
     "license": "Public Domain (US Gov)",
     "commercial_use": "Yes",
-    "integrations": ["OpenCTI", "MISP", "Nuclei", "Qualys", "Tenable"],
+    "integrations": [
+      "OpenCTI",
+      "MISP",
+      "Nuclei",
+      "Qualys",
+      "Tenable"
+    ],
     "self_hosted": false,
     "featured": true
   },
@@ -620,12 +1788,19 @@
     "category": "Vulnerability & Exploit Intelligence",
     "purpose": "US government CVE repository with CVSS scores, CPE matches, and CWE tags",
     "product_type": "Open Data / API",
-    "formats": ["JSON"],
+    "formats": [
+      "JSON"
+    ],
     "api_key": "Optional (higher rate limit)",
     "free_limits": "5 req/30s (no key), 50 req/30s (free key)",
     "license": "Public Domain (US Gov)",
     "commercial_use": "Yes",
-    "integrations": ["OpenCVE", "OpenCTI", "Dependency-Track", "Trivy"],
+    "integrations": [
+      "OpenCVE",
+      "OpenCTI",
+      "Dependency-Track",
+      "Trivy"
+    ],
     "self_hosted": false,
     "featured": false
   },
@@ -635,12 +1810,20 @@
     "category": "Vulnerability & Exploit Intelligence",
     "purpose": "Daily probability scores predicting whether a CVE will be exploited in the next 30 days",
     "product_type": "Open Data / API",
-    "formats": ["JSON", "CSV"],
+    "formats": [
+      "JSON",
+      "CSV"
+    ],
     "api_key": "None",
     "free_limits": "Unlimited",
     "license": "Open Data (FIRST)",
     "commercial_use": "Yes",
-    "integrations": ["OpenCTI", "DefectDojo", "Trivy", "Nuclei"],
+    "integrations": [
+      "OpenCTI",
+      "DefectDojo",
+      "Trivy",
+      "Nuclei"
+    ],
     "self_hosted": false,
     "featured": false
   },
@@ -650,12 +1833,18 @@
     "category": "Vulnerability & Exploit Intelligence",
     "purpose": "Distributed open-source vulnerability database across PyPI, npm, Go, Maven, and Linux",
     "product_type": "Open source / API",
-    "formats": ["JSON (OSV schema)"],
+    "formats": [
+      "JSON (OSV schema)"
+    ],
     "api_key": "None",
     "free_limits": "Unlimited",
     "license": "Apache-2.0 / CC-BY-4.0",
     "commercial_use": "Yes",
-    "integrations": ["osv-scanner", "GitHub Actions", "CI/CD"],
+    "integrations": [
+      "osv-scanner",
+      "GitHub Actions",
+      "CI/CD"
+    ],
     "self_hosted": true,
     "featured": false
   },
@@ -665,12 +1854,20 @@
     "category": "Vulnerability & Exploit Intelligence",
     "purpose": "Self-hosted CVE alerting platform tracking vendor and product subscriptions",
     "product_type": "Open source",
-    "formats": ["JSON", "Webhooks"],
+    "formats": [
+      "JSON",
+      "Webhooks"
+    ],
     "api_key": "Self-managed",
     "free_limits": "Unlimited (self-hosted)",
     "license": "BSD-3-Clause",
     "commercial_use": "Yes",
-    "integrations": ["Slack", "Email", "REST API", "NVD"],
+    "integrations": [
+      "Slack",
+      "Email",
+      "REST API",
+      "NVD"
+    ],
     "self_hosted": true,
     "featured": false
   },
@@ -680,12 +1877,19 @@
     "category": "Vulnerability & Exploit Intelligence",
     "purpose": "Exploit intelligence, initial access telemetry, and expanded KEV tracking",
     "product_type": "API / SaaS",
-    "formats": ["JSON"],
+    "formats": [
+      "JSON"
+    ],
     "api_key": "Required",
     "free_limits": "Free Community tier (NVD++, KEV)",
     "license": "Proprietary",
     "commercial_use": "Paid for commercial feeds",
-    "integrations": ["OpenCTI", "Splunk", "Sentinel", "REST API"],
+    "integrations": [
+      "OpenCTI",
+      "Splunk",
+      "Sentinel",
+      "REST API"
+    ],
     "self_hosted": false,
     "featured": false
   },
@@ -695,12 +1899,19 @@
     "category": "Vulnerability & Exploit Intelligence",
     "purpose": "Public archive of proof-of-concept exploits and vulnerable software papers",
     "product_type": "Open Data / CLI",
-    "formats": ["CSV", "Git"],
+    "formats": [
+      "CSV",
+      "Git"
+    ],
     "api_key": "None",
     "free_limits": "Unlimited",
     "license": "GPL-2.0 / Public Archive",
     "commercial_use": "Yes",
-    "integrations": ["SearchSploit", "Metasploit", "MISP"],
+    "integrations": [
+      "SearchSploit",
+      "Metasploit",
+      "MISP"
+    ],
     "self_hosted": true,
     "featured": false
   },
@@ -710,12 +1921,183 @@
     "category": "Vulnerability & Exploit Intelligence",
     "purpose": "Community YAML templates for detecting CVEs, misconfigurations, and exposed panels",
     "product_type": "Open source",
-    "formats": ["YAML", "JSON"],
+    "formats": [
+      "YAML",
+      "JSON"
+    ],
     "api_key": "None",
     "free_limits": "Unlimited",
     "license": "MIT",
     "commercial_use": "Yes",
-    "integrations": ["Nuclei", "GitHub Actions", "DefectDojo", "CI/CD"],
+    "integrations": [
+      "Nuclei",
+      "GitHub Actions",
+      "DefectDojo",
+      "CI/CD"
+    ],
+    "self_hosted": true,
+    "featured": false
+  },
+  {
+    "name": "Trivy",
+    "url": "https://trivy.dev/",
+    "category": "Vulnerability & Exploit Intelligence",
+    "purpose": "Scan container images, filesystems, git repos, and IaC against NVD, OSV, and vendor advisories",
+    "product_type": "Open source",
+    "formats": [
+      "JSON",
+      "SARIF",
+      "CycloneDX",
+      "SPDX"
+    ],
+    "api_key": "None",
+    "free_limits": "Unlimited (local)",
+    "license": "Apache-2.0",
+    "commercial_use": "Yes",
+    "integrations": [
+      "GitHub Actions",
+      "GitLab CI",
+      "Kubernetes",
+      "DefectDojo"
+    ],
+    "self_hosted": true,
+    "featured": false
+  },
+  {
+    "name": "Anchore Grype",
+    "url": "https://github.com/anchore/grype",
+    "category": "Vulnerability & Exploit Intelligence",
+    "purpose": "Vulnerability scanner for container images and SBOMs with CISA KEV and EPSS enrichment",
+    "product_type": "Open source",
+    "formats": [
+      "JSON",
+      "SARIF",
+      "Table"
+    ],
+    "api_key": "None",
+    "free_limits": "Unlimited (local)",
+    "license": "Apache-2.0",
+    "commercial_use": "Yes",
+    "integrations": [
+      "Syft",
+      "GitHub Actions",
+      "CI/CD"
+    ],
+    "self_hosted": true,
+    "featured": false
+  },
+  {
+    "name": "OWASP Dependency-Track",
+    "url": "https://dependencytrack.org/",
+    "category": "Vulnerability & Exploit Intelligence",
+    "purpose": "Continuous SBOM monitoring platform correlating components with NVD, OSV, GitHub, and EPSS",
+    "product_type": "Open source",
+    "formats": [
+      "CycloneDX",
+      "JSON",
+      "VEX"
+    ],
+    "api_key": "Self-managed",
+    "free_limits": "Unlimited (self-hosted)",
+    "license": "Apache-2.0",
+    "commercial_use": "Yes",
+    "integrations": [
+      "NVD",
+      "OSV",
+      "GitHub Advisories",
+      "EPSS",
+      "Jira"
+    ],
+    "self_hosted": true,
+    "featured": false
+  },
+  {
+    "name": "GitHub Advisory Database",
+    "url": "https://github.com/advisories",
+    "category": "Vulnerability & Exploit Intelligence",
+    "purpose": "Curated CVE and GHSA vulnerability feed covering npm, PyPI, Go, Maven, NuGet, and Rust",
+    "product_type": "Open Data / API",
+    "formats": [
+      "JSON (OSV)",
+      "GraphQL",
+      "REST"
+    ],
+    "api_key": "Optional (GitHub token for higher limits)",
+    "free_limits": "Public API free",
+    "license": "CC-BY-4.0",
+    "commercial_use": "Yes",
+    "integrations": [
+      "Dependabot",
+      "Trivy",
+      "OSV",
+      "Dependency-Track"
+    ],
+    "self_hosted": false,
+    "featured": false
+  },
+  {
+    "name": "AttackerKB",
+    "url": "https://attackerkb.com/",
+    "category": "Vulnerability & Exploit Intelligence",
+    "purpose": "Community assessments of CVE exploitability, attacker value, and real-world impact",
+    "product_type": "Web / API",
+    "formats": [
+      "JSON"
+    ],
+    "api_key": "Required for API",
+    "free_limits": "Free community access",
+    "license": "Proprietary (Rapid7)",
+    "commercial_use": "Yes (terms apply)",
+    "integrations": [
+      "REST API",
+      "OpenCTI"
+    ],
+    "self_hosted": false,
+    "featured": false
+  },
+  {
+    "name": "Vulners",
+    "url": "https://vulners.com/",
+    "category": "Vulnerability & Exploit Intelligence",
+    "purpose": "Aggregated vulnerability, exploit, and vendor advisory search engine with Linux audit API",
+    "product_type": "API / SaaS",
+    "formats": [
+      "JSON"
+    ],
+    "api_key": "Required",
+    "free_limits": "100 credits/month (Free)",
+    "license": "Proprietary",
+    "commercial_use": "Paid for commercial API",
+    "integrations": [
+      "Nmap",
+      "Burp",
+      "OpenCTI",
+      "Python SDK"
+    ],
+    "self_hosted": false,
+    "featured": false
+  },
+  {
+    "name": "Nuclei",
+    "url": "https://github.com/projectdiscovery/nuclei",
+    "category": "Vulnerability & Exploit Intelligence",
+    "purpose": "Fast YAML-based vulnerability and exposed-asset scanner powered by community templates",
+    "product_type": "Open source",
+    "formats": [
+      "JSON",
+      "SARIF",
+      "YAML"
+    ],
+    "api_key": "None",
+    "free_limits": "Unlimited (local)",
+    "license": "MIT",
+    "commercial_use": "Yes",
+    "integrations": [
+      "Subfinder",
+      "httpx",
+      "GitHub Actions",
+      "DefectDojo"
+    ],
     "self_hosted": true,
     "featured": false
   },
@@ -725,12 +2107,20 @@
     "category": "IOC Enrichment & Automation",
     "purpose": "Observable analysis and active response engine with 150+ threat intel analyzers",
     "product_type": "Open source",
-    "formats": ["JSON"],
+    "formats": [
+      "JSON"
+    ],
     "api_key": "Self-managed",
     "free_limits": "Unlimited (self-hosted)",
     "license": "AGPL-3.0",
     "commercial_use": "Yes",
-    "integrations": ["TheHive", "MISP", "VirusTotal", "AbuseIPDB", "GreyNoise"],
+    "integrations": [
+      "TheHive",
+      "MISP",
+      "VirusTotal",
+      "AbuseIPDB",
+      "GreyNoise"
+    ],
     "self_hosted": true,
     "featured": false
   },
@@ -740,12 +2130,22 @@
     "category": "IOC Enrichment & Automation",
     "purpose": "Open-source orchestration platform querying 150+ malware and threat intel analyzers at once",
     "product_type": "Open source",
-    "formats": ["JSON", "STIX", "MISP"],
+    "formats": [
+      "JSON",
+      "STIX",
+      "MISP"
+    ],
     "api_key": "Self-managed",
     "free_limits": "Unlimited (self-hosted)",
     "license": "AGPL-3.0",
     "commercial_use": "Yes",
-    "integrations": ["MISP", "OpenCTI", "TheHive", "VirusTotal", "Shodan"],
+    "integrations": [
+      "MISP",
+      "OpenCTI",
+      "TheHive",
+      "VirusTotal",
+      "Shodan"
+    ],
     "self_hosted": true,
     "featured": false
   },
@@ -755,12 +2155,22 @@
     "category": "IOC Enrichment & Automation",
     "purpose": "Interactive matrix for mapping adversary TTPs, detection coverage, and threat profiles",
     "product_type": "Open source",
-    "formats": ["JSON", "STIX", "SVG", "XLSX"],
+    "formats": [
+      "JSON",
+      "STIX",
+      "SVG",
+      "XLSX"
+    ],
     "api_key": "None",
     "free_limits": "Unlimited",
     "license": "Apache-2.0",
     "commercial_use": "Yes",
-    "integrations": ["OpenCTI", "MISP", "Sigma", "Sentinel"],
+    "integrations": [
+      "OpenCTI",
+      "MISP",
+      "Sigma",
+      "Sentinel"
+    ],
     "self_hosted": true,
     "featured": false
   },
@@ -770,12 +2180,21 @@
     "category": "IOC Enrichment & Automation",
     "purpose": "Browser-based toolkit for decoding payloads, defanging IOCs, and extracting indicators",
     "product_type": "Open source",
-    "formats": ["TXT", "JSON", "Hex", "Base64"],
+    "formats": [
+      "TXT",
+      "JSON",
+      "Hex",
+      "Base64"
+    ],
     "api_key": "None",
     "free_limits": "Unlimited (runs client-side)",
     "license": "Apache-2.0",
     "commercial_use": "Yes",
-    "integrations": ["Browser", "Docker", "Node.js"],
+    "integrations": [
+      "Browser",
+      "Docker",
+      "Node.js"
+    ],
     "self_hosted": true,
     "featured": false
   },
@@ -785,12 +2204,140 @@
     "category": "IOC Enrichment & Automation",
     "purpose": "Python library and CLI for extracting and refanging defanged IPs, URLs, and hashes from reports",
     "product_type": "Open source",
-    "formats": ["TXT", "JSON"],
+    "formats": [
+      "TXT",
+      "JSON"
+    ],
     "api_key": "None",
     "free_limits": "Unlimited (local)",
     "license": "GPL-2.0",
     "commercial_use": "Yes",
-    "integrations": ["Python", "CLI", "MISP"],
+    "integrations": [
+      "Python",
+      "CLI",
+      "MISP"
+    ],
+    "self_hosted": true,
+    "featured": false
+  },
+  {
+    "name": "TheHive",
+    "url": "https://strangebee.com/thehive/",
+    "category": "IOC Enrichment & Automation",
+    "purpose": "Security incident response and case management platform tightly coupled with MISP and Cortex",
+    "product_type": "Source-available / Enterprise",
+    "formats": [
+      "JSON",
+      "MISP"
+    ],
+    "api_key": "Self-managed",
+    "free_limits": "Community / trial tiers",
+    "license": "Proprietary (v5)",
+    "commercial_use": "Paid license",
+    "integrations": [
+      "Cortex",
+      "MISP",
+      "OpenCTI",
+      "Wazuh",
+      "Splunk"
+    ],
+    "self_hosted": true,
+    "featured": false
+  },
+  {
+    "name": "DFIR-IRIS",
+    "url": "https://www.dfir-iris.org/",
+    "category": "IOC Enrichment & Automation",
+    "purpose": "Open-source collaborative incident response platform with IOC tracking and MISP/VT modules",
+    "product_type": "Open source",
+    "formats": [
+      "JSON",
+      "CSV",
+      "MISP"
+    ],
+    "api_key": "Self-managed",
+    "free_limits": "Unlimited (self-hosted)",
+    "license": "LGPL-3.0",
+    "commercial_use": "Yes",
+    "integrations": [
+      "MISP",
+      "VirusTotal",
+      "IntelOwl",
+      "Yeti",
+      "Velociraptor"
+    ],
+    "self_hosted": true,
+    "featured": false
+  },
+  {
+    "name": "Timesketch",
+    "url": "https://timesketch.org/",
+    "category": "IOC Enrichment & Automation",
+    "purpose": "Open-source forensic timeline analysis tool with automated Sigma and Yeti IOC tagging",
+    "product_type": "Open source",
+    "formats": [
+      "JSONL",
+      "CSV",
+      "Plaso"
+    ],
+    "api_key": "Self-managed",
+    "free_limits": "Unlimited (self-hosted)",
+    "license": "Apache-2.0",
+    "commercial_use": "Yes",
+    "integrations": [
+      "Yeti",
+      "Sigma",
+      "OpenSearch",
+      "DFIR-IRIS"
+    ],
+    "self_hosted": true,
+    "featured": false
+  },
+  {
+    "name": "Shuffle SOAR",
+    "url": "https://shuffler.io/",
+    "category": "IOC Enrichment & Automation",
+    "purpose": "Open-source security orchestration platform automating IOC enrichment and firewall blocking",
+    "product_type": "Open source",
+    "formats": [
+      "JSON",
+      "OpenAPI"
+    ],
+    "api_key": "Self-managed",
+    "free_limits": "Unlimited (self-hosted)",
+    "license": "AGPL-3.0",
+    "commercial_use": "Yes",
+    "integrations": [
+      "MISP",
+      "TheHive",
+      "Wazuh",
+      "VirusTotal",
+      "AbuseIPDB"
+    ],
+    "self_hosted": true,
+    "featured": false
+  },
+  {
+    "name": "Tines",
+    "url": "https://www.tines.com/",
+    "category": "IOC Enrichment & Automation",
+    "purpose": "No-code security automation workflows for IOC triage, phishing response, and alert enrichment",
+    "product_type": "SaaS / Self-hosted",
+    "formats": [
+      "JSON",
+      "Webhooks"
+    ],
+    "api_key": "Required",
+    "free_limits": "Community Edition (3 active stories)",
+    "license": "Proprietary",
+    "commercial_use": "Yes (tier limits)",
+    "integrations": [
+      "VirusTotal",
+      "GreyNoise",
+      "CrowdStrike",
+      "Splunk",
+      "Slack"
+    ],
     "self_hosted": true,
     "featured": false
   },
@@ -800,12 +2347,19 @@
     "category": "Credential & Leak Intelligence",
     "purpose": "Check exposed corporate domains, email addresses, and stealer-log credentials",
     "product_type": "API / SaaS",
-    "formats": ["JSON"],
+    "formats": [
+      "JSON"
+    ],
     "api_key": "Required for API",
     "free_limits": "Free web checks; paid API",
     "license": "Proprietary",
     "commercial_use": "Paid API",
-    "integrations": ["Splunk", "Cortex", "SpiderFoot", "REST API"],
+    "integrations": [
+      "Splunk",
+      "Cortex",
+      "SpiderFoot",
+      "REST API"
+    ],
     "self_hosted": false,
     "featured": false
   },
@@ -815,12 +2369,19 @@
     "category": "Credential & Leak Intelligence",
     "purpose": "Infostealer telemetry identifying compromised employee and customer endpoints",
     "product_type": "API / SaaS",
-    "formats": ["JSON"],
+    "formats": [
+      "JSON"
+    ],
     "api_key": "Optional (free domain check)",
     "free_limits": "Free domain exposure lookup API",
     "license": "Proprietary",
     "commercial_use": "Paid for full telemetry",
-    "integrations": ["OpenCTI", "Splunk", "Sentinel", "REST API"],
+    "integrations": [
+      "OpenCTI",
+      "Splunk",
+      "Sentinel",
+      "REST API"
+    ],
     "self_hosted": false,
     "featured": false
   },
@@ -830,13 +2391,62 @@
     "category": "Credential & Leak Intelligence",
     "purpose": "Open-source framework for analyzing leaks from pastes, Telegram, Tor, and dark web crawls",
     "product_type": "Open source",
-    "formats": ["JSON", "MISP"],
+    "formats": [
+      "JSON",
+      "MISP"
+    ],
     "api_key": "Self-managed",
     "free_limits": "Unlimited (self-hosted)",
     "license": "AGPL-3.0",
     "commercial_use": "Yes",
-    "integrations": ["MISP", "Tor", "YARA", "TheHive"],
+    "integrations": [
+      "MISP",
+      "Tor",
+      "YARA",
+      "TheHive"
+    ],
     "self_hosted": true,
+    "featured": false
+  },
+  {
+    "name": "DeHashed",
+    "url": "https://dehashed.com/",
+    "category": "Credential & Leak Intelligence",
+    "purpose": "Search leaked credential databases by domain, email, username, IP, or password hash",
+    "product_type": "API / SaaS",
+    "formats": [
+      "JSON"
+    ],
+    "api_key": "Required",
+    "free_limits": "No free API tier",
+    "license": "Proprietary",
+    "commercial_use": "Paid only",
+    "integrations": [
+      "REST API",
+      "SpiderFoot",
+      "Maltego"
+    ],
+    "self_hosted": false,
+    "featured": false
+  },
+  {
+    "name": "OSINT Industries",
+    "url": "https://osint.industries/",
+    "category": "Credential & Leak Intelligence",
+    "purpose": "Cross-platform account and email exposure lookups for fraud and threat investigations",
+    "product_type": "API / SaaS",
+    "formats": [
+      "JSON"
+    ],
+    "api_key": "Required",
+    "free_limits": "Paid credits",
+    "license": "Proprietary",
+    "commercial_use": "Paid only",
+    "integrations": [
+      "REST API",
+      "Maltego"
+    ],
+    "self_hosted": false,
     "featured": false
   }
 ]

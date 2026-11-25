@@ -3,7 +3,7 @@
 A directory of threat intelligence tools, platforms, APIs, and feeds for security engineers, SOC analysts, and system administrators. Each entry lists supported data formats (JSON, CSV, STIX, TAXII, MISP), API key requirements, free tier limits, commercial use terms, integrations, and self-hosting options.
 
 <!-- START:STATS -->
-Catalog size: 56 threat intelligence tools, 18 threat intelligence platforms, and 52 threat intelligence feeds (51/52 feeds reachable as of 2026-11-25 16:58 UTC).
+Catalog size: 106 threat intelligence tools, 18 threat intelligence platforms, and 52 threat intelligence feeds (51/52 feeds reachable as of 2026-11-25 16:58 UTC).
 <!-- END:STATS -->
 
 ## Quick comparison of popular threat intelligence tools
@@ -148,6 +148,16 @@ Every tool listed below is grouped by its primary job. Commercial use reflects t
 | [Spur](https://spur.us/) | API / SaaS | Identify residential proxies, VPNs, Tor exits, and anonymization infrastructure | JSON | Required | Limited web lookups | Paid only | No |
 | [Criminal IP](https://www.criminalip.io/) | API / SaaS | IP scoring, domain phishing detection, and exposed banner search | JSON | Required | 50 credits/month | Paid only | No |
 | [IPQualityScore](https://www.ipqualityscore.com/) | API / SaaS | Proxy, VPN, botnet, and malicious URL reputation scoring | JSON, CSV | Required | 5,000 lookups/month | Yes (tier limits) | No |
+| [CrowdSec CTI](https://www.crowdsec.net/cyber-threat-intelligence) | API / SaaS | Crowdsourced IP behavior intelligence gathered from global CrowdSec sensors | JSON | Required | 50 queries/day (Community) | Paid for commercial API | No |
+| [Maltiverse](https://maltiverse.com/) | API / SaaS | Open IOC search engine scoring IPs, hostnames, URLs, and file hashes | JSON, STIX, MISP | Required for API | 100 req/day (Community) | Paid for commercial API | No |
+| [IPinfo](https://ipinfo.io/) | API / SaaS | IP geolocation, ASN ownership, privacy/VPN detection, and abuse contacts | JSON, CSV, MMDB | Required | 50,000 req/month | Yes (tier limits) | No |
+| [Team Cymru Scout](https://www.team-cymru.com/pure-signal-scout) | Enterprise / API | NetFlow-backed IP, ASN, and passive DNS context for threat hunting | JSON | Required | Free IP-to-ASN DNS/WHOIS; Scout paid | Paid only | No |
+| [Onyphe](https://www.onyphe.io/) | API / SaaS | Cyber defense search engine correlating internet scans with threat lists | JSON, CSV | Required | Limited web lookups | Paid only | No |
+| [LeakIX](https://leakix.net/) | API / SaaS | Index exposed databases, open services, and leaked configs across IPv4 | JSON | Optional (higher limits with key) | Rate-limited community API | Paid for commercial API | No |
+| [RIPEstat](https://stat.ripe.net/) | Open Data / API | BGP routing, RPKI, ASN prefix, and abuse contact lookups from RIPE NCC | JSON | None | Unlimited (fair use) | Yes | No |
+| [Spamhaus Lookup](https://check.spamhaus.org/) | DNSBL / API | Check IP and domain listings across SBL, XBL, PBL, DBL, and ZRD zones | DNS, JSON | Optional (DQS free key) | Free for non-commercial low volume | Paid (DQS commercial) | No |
+| [Scamalytics](https://scamalytics.com/ip) | API / SaaS | IP fraud scoring for proxy, datacenter, and residential abuse detection | JSON | Required for API | 5,000 queries/month | Yes (tier limits) | No |
+| [CyberGordon](https://cybergordon.com/) | Web / SaaS | Bulk enrichment of up to 100 IPs, domains, or hashes across 15+ public engines | CSV, Web | None (web) | Free web queries | Yes (web tier) | No |
 
 ### Malware Analysis & Sandboxes
 
@@ -163,6 +173,16 @@ Every tool listed below is grouped by its primary job. Commercial use reflects t
 | [Malpedia](https://malpedia.caad.fkie.fraunhofer.de/) | Research / API | Curated malware family encyclopedia, unpacked samples, YARA rules, and actor links | JSON, YARA, BibTeX | Required (vetted accounts for samples) | Public metadata and API free | Metadata yes; samples restricted | No |
 | [UnpacMe](https://www.unpac.me/) | API / SaaS | Automated malware unpacking service returning decrypted payloads and YARA hits | JSON | Required for API | Limited public uploads | Paid only | No |
 | [Intezer Analyze](https://analyze.intezer.com/) | API / SaaS | Genetic code-reuse analysis to attribute malware binaries to known families | JSON | Required | Community tier with daily cap | Paid only | No |
+| [Mandiant Capa](https://github.com/mandiant/capa) | Open source | Identify malware capabilities in PE, ELF, and .NET binaries mapped to MITRE ATT&CK | JSON, YAML rules | None | Unlimited (local) | Yes | Yes |
+| [Mandiant FLOSS](https://github.com/mandiant/flare-floss) | Open source | Automatically deobfuscate stack strings and encoded C2 strings from malware binaries | JSON, TXT | None | Unlimited (local) | Yes | Yes |
+| [Ghidra](https://ghidra-sre.org/) | Open source | Open-source reverse engineering suite with decompiler for static malware analysis | Binaries, JSON, Python/Java scripts | None | Unlimited (local) | Yes | Yes |
+| [Rizin](https://rizin.re/) | Open source | Scriptable reverse engineering and binary analysis framework (with Cutter GUI) | JSON, Binaries | None | Unlimited (local) | Yes | Yes |
+| [DRAKVUF Sandbox](https://github.com/CERT-Polska/drakvuf-sandbox) | Open source | Agentless Xen-based malware sandbox resistant to VM-evasion techniques | JSON, PCAP | Self-managed | Unlimited (self-hosted) | Yes | Yes |
+| [MWDB (CERT.pl)](https://github.com/CERT-Polska/mwdb-core) | Open source | Self-hosted malware repository for tracking samples, static configs, and family relationships | JSON, MISP | Self-managed | Unlimited (self-hosted) | Yes | Yes |
+| [Detect It Easy (DIE)](https://github.com/horsicq/Detect-It-Easy) | Open source | Identify packers, compilers, cryptors, and file formats across Windows, Linux, and macOS binaries | JSON, TXT | None | Unlimited (local) | Yes | Yes |
+| [ClamAV](https://www.clamav.net/) | Open source | Open-source antivirus engine supporting custom YARA and hash signatures | CVD, YARA, HDB | None | Unlimited (self-hosted) | Yes | Yes |
+| [VirusShare](https://virusshare.com/) | Research / API | Large community malware sample and hash archive for security researchers | JSON, TXT | Required (vetted account) | Free for vetted researchers | Research only | No |
+| [Qu1cksc0pe](https://github.com/CYB3RMX/Qu1cksc0pe) | Open source | CLI static analysis tool for Windows, Linux, macOS, Android, and document malware | TXT, JSON | Optional (VirusTotal) | Unlimited (local) | Yes | Yes |
 
 ### OSINT & Infrastructure Pivot
 
@@ -179,6 +199,14 @@ Every tool listed below is grouped by its primary job. Commercial use reflects t
 | [crt.sh](https://crt.sh/) | Web / API | Certificate Transparency log search for discovering newly issued phishing domains | JSON, Atom, PostgreSQL | None | Rate-limited public access | Yes | No |
 | [theHarvester](https://github.com/laramies/theHarvester) | Open source | CLI tool for gathering emails, subdomains, IPs, and URLs from public sources | JSON, XML | Optional per source | Unlimited (local) | Yes | Yes |
 | [Recon-ng](https://github.com/lanmaster53/recon-ng) | Open source | Modular Python reconnaissance framework with marketplace data modules | JSON, CSV, XML | Optional per module | Unlimited (local) | Yes | Yes |
+| [dnstwist](https://github.com/elceef/dnstwist) | Open source | Detect typosquatting, homograph phishing domains, and rogue MX records | JSON, CSV, TXT | None | Unlimited (local) | Yes | Yes |
+| [Subfinder](https://github.com/projectdiscovery/subfinder) | Open source | Fast passive subdomain discovery aggregating 50+ certificate and DNS providers | JSON, TXT | Optional per provider | Unlimited (local) | Yes | Yes |
+| [httpx](https://github.com/projectdiscovery/httpx) | Open source | Multi-purpose HTTP prober capturing titles, TLS fingerprints, JARM, and favicon hashes | JSON, CSV, TXT | None | Unlimited (local) | Yes | Yes |
+| [DNSDumpster](https://dnsdumpster.com/) | Web / API | Passive DNS reconnaissance mapping subdomains, MX/TXT records, and ASN hosts | JSON, XLSX, Web | Required for API | Free web queries; limited free API | Paid for commercial API | No |
+| [Hurricane Electric BGP Toolkit](https://bgp.he.net/) | Web | ASN peering, IP prefix allocations, RPKI, and reverse DNS lookups | Web | None | Free web lookups | Yes (manual lookup) | No |
+| [ViewDNS.info](https://viewdns.info/) | Web / API | Reverse IP, reverse WHOIS, DNS history, and Chinese firewall checks | JSON, XML | Required for API | Free web tools; paid API | Paid for API | No |
+| [Intelligence X](https://intelx.io/) | API / SaaS | Search engine for darknet sites, paste dumps, WHOIS records, and historical web archives | JSON, TXT | Required | Limited free searches | Paid only | No |
+| [PublicWWW](https://publicwww.com/) | Web / API | Search HTML, JavaScript, and analytics IDs across websites to link phishing kits and C2 lures | CSV, TXT | Required for API | Top results free on web | Paid for API | No |
 
 ### Network & Detection Engineering
 
@@ -191,6 +219,14 @@ Every tool listed below is grouped by its primary job. Commercial use reflects t
 | [Netlas](https://netlas.io/) | API / SaaS | Internet scan search engine covering HTTP responses, DNS, WHOIS, and TLS certs | JSON, CSV | Required | 50 req/day | Paid only | No |
 | [FOFA](https://en.fofa.info/) | API / SaaS | Cyberspace asset search engine useful for mapping C2 panels and exposed services | JSON, CSV | Required for API | Limited web search | Paid only | No |
 | [ZoomEye](https://www.zoomeye.ai/) | API / SaaS | Host and web component search engine for tracking exposed infrastructure | JSON | Required | 10,000 results/month (registered) | Paid only | No |
+| [Snort](https://www.snort.org/) | Open source | Open-source network IDS/IPS matching packet signatures and IP reputation lists | Snort rules, JSON, PCAP | Optional (Oinkcode for subscriber rules) | Community rules unlimited | Yes | Yes |
+| [Wazuh](https://wazuh.com/) | Open source | Open-source XDR and SIEM with built-in CDB IOC lists, VirusTotal, and AbuseIPDB integrations | JSON, CDB lists | Self-managed | Unlimited (self-hosted) | Yes | Yes |
+| [Velociraptor](https://docs.velociraptor.app/) | Open source | Endpoint visibility and DFIR hunting tool running VQL queries and YARA scans across fleets | JSON, CSV, VQL | Self-managed | Unlimited (self-hosted) | Yes | Yes |
+| [osquery](https://osquery.io/) | Open source | SQL-powered endpoint instrumentation for hunting processes, sockets, and persistence artifacts | JSON, SQL | None | Unlimited (self-hosted) | Yes | Yes |
+| [Security Onion](https://securityonionsolutions.com/) | Open source | Turnkey Linux distribution bundling Suricata, Zeek, Elastic, Strelka, and CyberChef | JSON, PCAP, Suricata | Self-managed | Unlimited (self-hosted) | Yes (self-hosted) | Yes |
+| [RITA (Real Intelligence Threat Analytics)](https://github.com/activecm/rita) | Open source | Analyze Zeek logs to detect C2 beaconing, DNS tunneling, and long connections | JSON, CSV, HTML | None | Unlimited (self-hosted) | Yes | Yes |
+| [Malcolm](https://malcolm.fyi/) | Open source | CISA-backed network traffic analysis appliance integrating Zeek, Suricata, Arkime, and OpenSearch | PCAP, JSON, Zeek | Self-managed | Unlimited (self-hosted) | Yes | Yes |
+| [JA4+ Network Fingerprinting](https://github.com/FoxIO-LLC/ja4) | Open source | TLS, HTTP, SSH, and TCP fingerprinting suite for tracking C2 clients and malware traffic | JSON, Wireshark, Zeek | None | JA4 core BSD-3-Clause | JA4 yes; JA4+ check license | Yes |
 
 ### Vulnerability & Exploit Intelligence
 
@@ -204,6 +240,13 @@ Every tool listed below is grouped by its primary job. Commercial use reflects t
 | [VulnCheck](https://vulncheck.com/) | API / SaaS | Exploit intelligence, initial access telemetry, and expanded KEV tracking | JSON | Required | Free Community tier (NVD++, KEV) | Paid for commercial feeds | No |
 | [Exploit-DB](https://www.exploit-db.com/) | Open Data / CLI | Public archive of proof-of-concept exploits and vulnerable software papers | CSV, Git | None | Unlimited | Yes | Yes |
 | [Nuclei Templates](https://github.com/projectdiscovery/nuclei-templates) | Open source | Community YAML templates for detecting CVEs, misconfigurations, and exposed panels | YAML, JSON | None | Unlimited | Yes | Yes |
+| [Trivy](https://trivy.dev/) | Open source | Scan container images, filesystems, git repos, and IaC against NVD, OSV, and vendor advisories | JSON, SARIF, CycloneDX | None | Unlimited (local) | Yes | Yes |
+| [Anchore Grype](https://github.com/anchore/grype) | Open source | Vulnerability scanner for container images and SBOMs with CISA KEV and EPSS enrichment | JSON, SARIF, Table | None | Unlimited (local) | Yes | Yes |
+| [OWASP Dependency-Track](https://dependencytrack.org/) | Open source | Continuous SBOM monitoring platform correlating components with NVD, OSV, GitHub, and EPSS | CycloneDX, JSON, VEX | Self-managed | Unlimited (self-hosted) | Yes | Yes |
+| [GitHub Advisory Database](https://github.com/advisories) | Open Data / API | Curated CVE and GHSA vulnerability feed covering npm, PyPI, Go, Maven, NuGet, and Rust | JSON (OSV), GraphQL, REST | Optional (GitHub token for higher limits) | Public API free | Yes | No |
+| [AttackerKB](https://attackerkb.com/) | Web / API | Community assessments of CVE exploitability, attacker value, and real-world impact | JSON | Required for API | Free community access | Yes (terms apply) | No |
+| [Vulners](https://vulners.com/) | API / SaaS | Aggregated vulnerability, exploit, and vendor advisory search engine with Linux audit API | JSON | Required | 100 credits/month (Free) | Paid for commercial API | No |
+| [Nuclei](https://github.com/projectdiscovery/nuclei) | Open source | Fast YAML-based vulnerability and exposed-asset scanner powered by community templates | JSON, SARIF, YAML | None | Unlimited (local) | Yes | Yes |
 
 ### IOC Enrichment & Automation
 
@@ -214,6 +257,11 @@ Every tool listed below is grouped by its primary job. Commercial use reflects t
 | [MITRE ATT&CK Navigator](https://mitre-attack.github.io/attack-navigator/) | Open source | Interactive matrix for mapping adversary TTPs, detection coverage, and threat profiles | JSON, STIX, SVG | None | Unlimited | Yes | Yes |
 | [CyberChef](https://gchq.github.io/CyberChef/) | Open source | Browser-based toolkit for decoding payloads, defanging IOCs, and extracting indicators | TXT, JSON, Hex | None | Unlimited (runs client-side) | Yes | Yes |
 | [iocextract](https://github.com/InQuest/iocextract) | Open source | Python library and CLI for extracting and refanging defanged IPs, URLs, and hashes from reports | TXT, JSON | None | Unlimited (local) | Yes | Yes |
+| [TheHive](https://strangebee.com/thehive/) | Source-available / Enterprise | Security incident response and case management platform tightly coupled with MISP and Cortex | JSON, MISP | Self-managed | Community / trial tiers | Paid license | Yes |
+| [DFIR-IRIS](https://www.dfir-iris.org/) | Open source | Open-source collaborative incident response platform with IOC tracking and MISP/VT modules | JSON, CSV, MISP | Self-managed | Unlimited (self-hosted) | Yes | Yes |
+| [Timesketch](https://timesketch.org/) | Open source | Open-source forensic timeline analysis tool with automated Sigma and Yeti IOC tagging | JSONL, CSV, Plaso | Self-managed | Unlimited (self-hosted) | Yes | Yes |
+| [Shuffle SOAR](https://shuffler.io/) | Open source | Open-source security orchestration platform automating IOC enrichment and firewall blocking | JSON, OpenAPI | Self-managed | Unlimited (self-hosted) | Yes | Yes |
+| [Tines](https://www.tines.com/) | SaaS / Self-hosted | No-code security automation workflows for IOC triage, phishing response, and alert enrichment | JSON, Webhooks | Required | Community Edition (3 active stories) | Yes (tier limits) | Yes |
 
 ### Credential & Leak Intelligence
 
@@ -222,6 +270,8 @@ Every tool listed below is grouped by its primary job. Commercial use reflects t
 | [Have I Been Pwned](https://haveibeenpwned.com/) | API / SaaS | Check exposed corporate domains, email addresses, and stealer-log credentials | JSON | Required for API | Free web checks; paid API | Paid API | No |
 | [Hudson Rock Cavalier](https://www.hudsonrock.com/) | API / SaaS | Infostealer telemetry identifying compromised employee and customer endpoints | JSON | Optional (free domain check) | Free domain exposure lookup API | Paid for full telemetry | No |
 | [AIL Project](https://github.com/ail-project/ail-framework) | Open source | Open-source framework for analyzing leaks from pastes, Telegram, Tor, and dark web crawls | JSON, MISP | Self-managed | Unlimited (self-hosted) | Yes | Yes |
+| [DeHashed](https://dehashed.com/) | API / SaaS | Search leaked credential databases by domain, email, username, IP, or password hash | JSON | Required | No free API tier | Paid only | No |
+| [OSINT Industries](https://osint.industries/) | API / SaaS | Cross-platform account and email exposure lookups for fraud and threat investigations | JSON | Required | Paid credits | Paid only | No |
 <!-- END:TOOLS -->
 
 ## Threat intelligence feeds by category

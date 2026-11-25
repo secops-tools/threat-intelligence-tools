@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="google-site-verification" content="HqgfQrEQATXaycciOAu8GzuJP8BSRHtaR1JrgBtnApU" />
+  <title>Best Threat Intelligence Platforms (TIP): Open Source &amp; Enterprise</title>
+  <meta name="description" content="Compare 18 threat intelligence platforms including MISP, OpenCTI, Yeti, Recorded Future, Mandiant, and CrowdStrike by STIX/TAXII support, license, and integrations." />
+  <link rel="canonical" href="https://secops-tools.github.io/threat-intelligence-tools/platforms.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Best Threat Intelligence Platforms (TIP): Open Source &amp; Enterprise" />
+  <meta property="og:description" content="Compare 18 threat intelligence platforms including MISP, OpenCTI, Yeti, Recorded Future, Mandiant, and CrowdStrike by STIX/TAXII support, license, and integrations." />
+  <meta property="og:url" content="https://secops-tools.github.io/threat-intelligence-tools/platforms.html" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Best Threat Intelligence Platforms (TIP): Open Source & Enterprise",
+  "description": "Compare 18 threat intelligence platforms including MISP, OpenCTI, Yeti, Recorded Future, Mandiant, and CrowdStrike by STIX/TAXII support, license, and integrations.",
+  "url": "https://secops-tools.github.io/threat-intelligence-tools/platforms.html",
+  "isPartOf": {
+    "@type": "SoftwareSourceCode",
+    "name": "threat-intelligence-tools",
+    "codeRepository": "https://github.com/secops-tools/threat-intelligence-tools",
+    "programmingLanguage": "Python",
+    "license": "https://opensource.org/licenses/MIT"
+  }
+}
+  </script>
+  <style>
+    :root {
+      --bg: #0b1017;
+      --surface: #121923;
+      --surface-alt: #161f2c;
+      --border: #243042;
+      --text: #e6edf3;
+      --muted: #93a3b8;
+      --accent: #38bdf8;
+      --green: #34d399;
+      --amber: #fbbf24;
+      --red: #f87171;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1240px; margin: 0 auto; padding: 32px 20px 64px; }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 24px;
+      margin-bottom: 28px;
+    }
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .eyebrow {
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .nav {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+    .nav a.active {
+      color: var(--text);
+      font-weight: 600;
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(28px, 4vw, 38px);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+    .lead {
+      margin: 0 0 20px;
+      max-width: 820px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+    .stat {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+    .stat-val {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .stat-lbl {
+      font-size: 13px;
+      color: var(--muted);
+    }
+    section { margin-top: 40px; }
+    h2 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      letter-spacing: -0.01em;
+    }
+    .section-note {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 14px;
+      max-width: 820px;
+    }
+    .controls {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+    input[type="search"], select {
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 9px 12px;
+      font-size: 14px;
+    }
+    input[type="search"] { min-width: 260px; flex: 1; max-width: 420px; }
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--surface);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+    th, td {
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface-alt);
+      color: var(--muted);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: rgba(255, 255, 255, 0.02); }
+    .sub {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12.5px;
+      background: rgba(255, 255, 255, 0.06);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .badge-online { background: rgba(52, 211, 153, 0.15); color: var(--green); }
+    .badge-auth { background: rgba(251, 191, 36, 0.15); color: var(--amber); }
+    .badge-offline { background: rgba(248, 113, 113, 0.15); color: var(--red); }
+    .cli-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 12px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+    }
+    .card h3 { margin: 0 0 6px; font-size: 15px; }
+    .card p { margin: 0 0 10px; font-size: 13.5px; color: var(--muted); }
+    footer {
+      margin-top: 56px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="top-bar">
+        <div class="eyebrow">secops-tools / threat-intelligence-tools</div>
+        <nav class="nav">
+          <a href="./">All tools</a>
+          <a href="feeds.html">Threat feeds</a>
+          <a href="platforms.html" class="active">TIP platforms</a>
+          <a href="https://github.com/secops-tools/threat-intelligence-tools" target="_blank" rel="noopener noreferrer">GitHub repository</a>
+        </nav>
+      </div>
+      <h1>Best Threat Intelligence Platforms (Open Source &amp; Enterprise)</h1>
+      <p class="lead">
+        Side-by-side comparison of 18 threat intelligence platforms (TIPs): 7 open-source options you can self-host and 11 enterprise platforms with closed-source collection and vendor SLAs.
+      </p>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-val">7</div>
+          <div class="stat-lbl">Open-source platforms</div>
+        </div>
+        <div class="stat">
+          <div class="stat-val">11</div>
+          <div class="stat-lbl">Commercial / enterprise platforms</div>
+        </div>
+        <div class="stat">
+          <div class="stat-val">12</div>
+          <div class="stat-lbl">Support self-hosting</div>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <h2>Platform comparison</h2>
+      <p class="section-note">
+        Filter by deployment model, STIX/TAXII support, or SIEM integration.
+      </p>
+      <div class="controls">
+        <input id="platform-search" type="search" placeholder="Filter platforms by name, format, license, or integration..." />
+        <select id="platform-type">
+          <option value="">All platform types</option>
+          <option value="open-source">Open source</option>
+          <option value="enterprise">Enterprise / Commercial</option>
+        </select>
+        <select id="platform-selfhosted">
+          <option value="">Any hosting model</option>
+          <option value="yes">Self-hosted only</option>
+          <option value="no">Cloud / SaaS only</option>
+        </select>
+      </div>
+      <div class="table-wrap">
+        <table id="platforms-table">
+          <thead>
+            <tr>
+              <th>Platform</th>
+              <th>Type</th>
+              <th>Purpose</th>
+              <th>Formats</th>
+              <th>License</th>
+              <th>Commercial use</th>
+              <th>Self-hosted</th>
+              <th>Integrations</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-category="open-source" data-selfhosted="yes" data-search="misp open source ioc storage, automated correlation, and threat sharing across soc teams and isacs json csv stix taxii misp yara suricata agpl-3.0 yes opencti thehive splunk elastic qradar sentinel"><td><a href="https://www.misp-project.org/" target="_blank" rel="noopener noreferrer">MISP</a></td><td>Open source</td><td>IOC storage, automated correlation, and threat sharing across SOC teams and ISACs</td><td>JSON, CSV, STIX, TAXII</td><td>AGPL-3.0</td><td>Yes</td><td>Yes</td><td>OpenCTI, TheHive, Splunk, Elastic</td></tr>
+<tr data-category="open-source" data-selfhosted="yes" data-search="opencti open source stix 2.1 knowledge graph connecting indicators, threat actors, campaigns, and mitre att&amp;ck stix taxii json csv apache-2.0 (ee modules commercial) yes misp splunk elastic sentinel crowdstrike thehive"><td><a href="https://www.opencti.io/" target="_blank" rel="noopener noreferrer">OpenCTI</a></td><td>Open source</td><td>STIX 2.1 knowledge graph connecting indicators, threat actors, campaigns, and MITRE ATT&amp;CK</td><td>STIX, TAXII, JSON, CSV</td><td>Apache-2.0 (EE modules commercial)</td><td>Yes</td><td>Yes</td><td>MISP, Splunk, Elastic, Sentinel</td></tr>
+<tr data-category="open-source" data-selfhosted="yes" data-search="yeti open source lightweight observable and threat intelligence repository built for fast enrichment and analytics json csv stix misp apache-2.0 yes misp timesketch dfir-iris virustotal"><td><a href="https://yeti-platform.io/" target="_blank" rel="noopener noreferrer">Yeti</a></td><td>Open source</td><td>Lightweight observable and threat intelligence repository built for fast enrichment and analytics</td><td>JSON, CSV, STIX, MISP</td><td>Apache-2.0</td><td>Yes</td><td>Yes</td><td>MISP, Timesketch, DFIR-IRIS, VirusTotal</td></tr>
+<tr data-category="open-source" data-selfhosted="yes" data-search="collective intelligence framework (cifv4) open source high-speed ioc ingestion, deduplication, and firewall/dns blocklist generation json csv stix bind snort mpl-2.0 yes snort suricata bro/zeek bind firewall"><td><a href="https://github.com/csirtgadgets/bearded-avenger" target="_blank" rel="noopener noreferrer">Collective Intelligence Framework (CIFv4)</a></td><td>Open source</td><td>High-speed IOC ingestion, deduplication, and firewall/DNS blocklist generation</td><td>JSON, CSV, STIX, Bind</td><td>MPL-2.0</td><td>Yes</td><td>Yes</td><td>Snort, Suricata, Bro/Zeek, BIND</td></tr>
+<tr data-category="open-source" data-selfhosted="yes" data-search="threatingestor open source modular pipeline that pulls iocs from rss, github, and feeds into misp, csv, or siems csv json misp gpl-2.0 yes misp threatkb sqlite sqs"><td><a href="https://github.com/InQuest/ThreatIngestor" target="_blank" rel="noopener noreferrer">ThreatIngestor</a></td><td>Open source</td><td>Modular pipeline that pulls IOCs from RSS, GitHub, and feeds into MISP, CSV, or SIEMs</td><td>CSV, JSON, MISP</td><td>GPL-2.0</td><td>Yes</td><td>Yes</td><td>MISP, ThreatKB, SQLite, SQS</td></tr>
+<tr data-category="open-source" data-selfhosted="yes" data-search="opentaxii open source python taxii 1.x server implementation for hosting and sharing stix feeds stix taxii bsd-3-clause yes misp splunk qradar taxii clients"><td><a href="https://github.com/eclecticiq/OpenTAXII" target="_blank" rel="noopener noreferrer">OpenTAXII</a></td><td>Open source</td><td>Python TAXII 1.x server implementation for hosting and sharing STIX feeds</td><td>STIX, TAXII</td><td>BSD-3-Clause</td><td>Yes</td><td>Yes</td><td>MISP, Splunk, QRadar, TAXII clients</td></tr>
+<tr data-category="open-source" data-selfhosted="yes" data-search="oasis medallion open source reference taxii 2.1 server backed by mongodb or memory for distributing stix 2.1 bundles stix taxii json bsd-3-clause yes opencti taxii 2.1 clients sentinel"><td><a href="https://github.com/oasis-open/cti-taxii-server" target="_blank" rel="noopener noreferrer">OASIS Medallion</a></td><td>Open source</td><td>Reference TAXII 2.1 server backed by MongoDB or memory for distributing STIX 2.1 bundles</td><td>STIX, TAXII, JSON</td><td>BSD-3-Clause</td><td>Yes</td><td>Yes</td><td>OpenCTI, TAXII 2.1 clients, Sentinel</td></tr>
+<tr data-category="enterprise" data-selfhosted="no" data-search="recorded future enterprise real-time intelligence graph combining open web, dark web, technical feeds, and analyst reports json csv stix taxii proprietary paid only splunk sentinel qradar crowdstrike servicenow xsoar"><td><a href="https://www.recordedfuture.com/" target="_blank" rel="noopener noreferrer">Recorded Future</a></td><td>Enterprise</td><td>Real-time intelligence graph combining open web, dark web, technical feeds, and analyst reports</td><td>JSON, CSV, STIX, TAXII</td><td>Proprietary</td><td>Paid only</td><td>No</td><td>Splunk, Sentinel, QRadar, CrowdStrike</td></tr>
+<tr data-category="enterprise" data-selfhosted="no" data-search="google threat intelligence (mandiant) enterprise frontline incident response intelligence paired with virustotal telemetry and actor tracking json stix taxii proprietary paid only google secops splunk sentinel opencti misp"><td><a href="https://cloud.google.com/security/products/threat-intelligence" target="_blank" rel="noopener noreferrer">Google Threat Intelligence (Mandiant)</a></td><td>Enterprise</td><td>Frontline incident response intelligence paired with VirusTotal telemetry and actor tracking</td><td>JSON, STIX, TAXII</td><td>Proprietary</td><td>Paid only</td><td>No</td><td>Google SecOps, Splunk, Sentinel, OpenCTI</td></tr>
+<tr data-category="enterprise" data-selfhosted="no" data-search="crowdstrike falcon intelligence enterprise automated edr-linked indicator feeds, malware sandbox, and nation-state adversary profiles json stix taxii csv yara snort proprietary paid only crowdstrike falcon splunk sentinel opencti xsoar"><td><a href="https://www.crowdstrike.com/products/threat-intelligence/" target="_blank" rel="noopener noreferrer">CrowdStrike Falcon Intelligence</a></td><td>Enterprise</td><td>Automated EDR-linked indicator feeds, malware sandbox, and nation-state adversary profiles</td><td>JSON, STIX, TAXII, CSV</td><td>Proprietary</td><td>Paid only</td><td>No</td><td>CrowdStrike Falcon, Splunk, Sentinel, OpenCTI</td></tr>
+<tr data-category="enterprise" data-selfhosted="yes" data-search="threatconnect enterprise combined tip and soar platform with cal telemetry scoring and risk quantification json csv stix taxii proprietary paid only splunk qradar sentinel crowdstrike palo alto"><td><a href="https://threatconnect.com/" target="_blank" rel="noopener noreferrer">ThreatConnect</a></td><td>Enterprise</td><td>Combined TIP and SOAR platform with CAL telemetry scoring and risk quantification</td><td>JSON, CSV, STIX, TAXII</td><td>Proprietary</td><td>Paid only</td><td>Yes</td><td>Splunk, QRadar, Sentinel, CrowdStrike</td></tr>
+<tr data-category="enterprise" data-selfhosted="yes" data-search="anomali threatstream enterprise high-volume feed aggregation, ioc lifecycle management, and siem/firewall distribution json csv stix taxii proprietary paid only splunk qradar sentinel elastic palo alto"><td><a href="https://www.anomali.com/products/threatstream" target="_blank" rel="noopener noreferrer">Anomali ThreatStream</a></td><td>Enterprise</td><td>High-volume feed aggregation, IOC lifecycle management, and SIEM/firewall distribution</td><td>JSON, CSV, STIX, TAXII</td><td>Proprietary</td><td>Paid only</td><td>Yes</td><td>Splunk, QRadar, Sentinel, Elastic</td></tr>
+<tr data-category="enterprise" data-selfhosted="yes" data-search="eclecticiq intelligence center enterprise stix-native analyst workbench built for government certs, isacs, and mature cti teams stix taxii json csv proprietary paid only splunk qradar sentinel misp elastic"><td><a href="https://www.eclecticiq.com/" target="_blank" rel="noopener noreferrer">EclecticIQ Intelligence Center</a></td><td>Enterprise</td><td>STIX-native analyst workbench built for government CERTs, ISACs, and mature CTI teams</td><td>STIX, TAXII, JSON, CSV</td><td>Proprietary</td><td>Paid only</td><td>Yes</td><td>Splunk, QRadar, Sentinel, MISP</td></tr>
+<tr data-category="enterprise" data-selfhosted="yes" data-search="threatq (threatquotient) enterprise data-driven tip with custom scoring policies and bidirectional orchestration json csv stix taxii proprietary paid only splunk qradar crowdstrike servicenow xsoar"><td><a href="https://www.threatq.com/" target="_blank" rel="noopener noreferrer">ThreatQ (ThreatQuotient)</a></td><td>Enterprise</td><td>Data-driven TIP with custom scoring policies and bidirectional orchestration</td><td>JSON, CSV, STIX, TAXII</td><td>Proprietary</td><td>Paid only</td><td>Yes</td><td>Splunk, QRadar, CrowdStrike, ServiceNow</td></tr>
+<tr data-category="enterprise" data-selfhosted="no" data-search="flashpoint ignite enterprise closed-source cybercrime forums, illicit messaging channels, and vulnerability intelligence json csv stix taxii proprietary paid only splunk sentinel opencti misp threatconnect"><td><a href="https://flashpoint.io/" target="_blank" rel="noopener noreferrer">Flashpoint Ignite</a></td><td>Enterprise</td><td>Closed-source cybercrime forums, illicit messaging channels, and vulnerability intelligence</td><td>JSON, CSV, STIX, TAXII</td><td>Proprietary</td><td>Paid only</td><td>No</td><td>Splunk, Sentinel, OpenCTI, MISP</td></tr>
+<tr data-category="enterprise" data-selfhosted="no" data-search="intel 471 titan enterprise adversary-focused cybercrime, malware tracker, and underground intelligence json stix taxii yara proprietary paid only opencti misp splunk sentinel xsoar"><td><a href="https://intel471.com/" target="_blank" rel="noopener noreferrer">Intel 471 TITAN</a></td><td>Enterprise</td><td>Adversary-focused cybercrime, malware tracker, and underground intelligence</td><td>JSON, STIX, TAXII, YARA</td><td>Proprietary</td><td>Paid only</td><td>No</td><td>OpenCTI, MISP, Splunk, Sentinel</td></tr>
+<tr data-category="enterprise" data-selfhosted="no" data-search="socradar enterprise / freemium external attack surface monitoring, brand protection, and dark web threat feeds json csv stix taxii proprietary paid for enterprise splunk sentinel qradar wazuh thehive"><td><a href="https://socradar.io/" target="_blank" rel="noopener noreferrer">SOCRadar</a></td><td>Enterprise / Freemium</td><td>External attack surface monitoring, brand protection, and dark web threat feeds</td><td>JSON, CSV, STIX, TAXII</td><td>Proprietary</td><td>Paid for enterprise</td><td>No</td><td>Splunk, Sentinel, QRadar, Wazuh</td></tr>
+<tr data-category="enterprise" data-selfhosted="yes" data-search="cyware intel exchange enterprise automated stix/taxii threat sharing, confidence scoring, and isac/isao collaboration stix taxii json csv proprietary paid only splunk qradar sentinel crowdstrike palo alto"><td><a href="https://www.cyware.com/" target="_blank" rel="noopener noreferrer">Cyware Intel Exchange</a></td><td>Enterprise</td><td>Automated STIX/TAXII threat sharing, confidence scoring, and ISAC/ISAO collaboration</td><td>STIX, TAXII, JSON, CSV</td><td>Proprietary</td><td>Paid only</td><td>Yes</td><td>Splunk, QRadar, Sentinel, CrowdStrike</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <footer>
+      <div>MIT License. Data and automation scripts maintained at <a href="https://github.com/secops-tools/threat-intelligence-tools">secops-tools/threat-intelligence-tools</a>.</div>
+      <div>Last feed sync: 2026-11-25 16:58 UTC</div>
+    </footer>
+  </div>
+
+  <script>
+    function wireFilter(searchId, catId, selfHostedId, tableId) {
+      const searchEl = document.getElementById(searchId);
+      const catEl = catId ? document.getElementById(catId) : null;
+      const hostEl = selfHostedId ? document.getElementById(selfHostedId) : null;
+      const tableEl = document.getElementById(tableId);
+      if (!searchEl || !tableEl) return;
+      const rows = Array.from(tableEl.querySelectorAll("tbody tr"));
+      function apply() {
+        const q = (searchEl.value || "").trim().toLowerCase();
+        const cat = catEl ? catEl.value : "";
+        const host = hostEl ? hostEl.value : "";
+        for (const row of rows) {
+          const okSearch = !q || (row.dataset.search || "").includes(q);
+          const okCat = !cat || row.dataset.category === cat;
+          const okHost = !host || row.dataset.selfhosted === host;
+          row.style.display = (okSearch && okCat && okHost) ? "" : "none";
+        }
+      }
+      searchEl.addEventListener("input", apply);
+      if (catEl) catEl.addEventListener("change", apply);
+      if (hostEl) hostEl.addEventListener("change", apply);
+    }
+    wireFilter("feed-search", "feed-cat", null, "feeds-table");
+    wireFilter("tool-search", "tool-cat", "tool-selfhosted", "tools-table");
+    wireFilter("platform-search", "platform-type", "platform-selfhosted", "platforms-table");
+  </script>
+
+</body>
+</html>
