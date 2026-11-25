@@ -1,6 +1,6 @@
 # Contributing
 
-Pull requests that add active threat intelligence tools, platforms, or public feeds are welcome. Edit the JSON source files in `data/` rather than modifying generated tables in `README.md` by hand.
+Pull requests that add active threat intelligence tools, platforms, or public feeds are welcome. Edit the JSON source files in `data/` and regenerate `README.md` with `scripts/update-readme.py`; do not edit the generated tables directly.
 
 ## Adding an entry
 

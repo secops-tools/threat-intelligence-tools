@@ -1,6 +1,6 @@
 # Nginx access log monitoring and IP blocking
 
-This guide shows how to check Nginx access logs against public threat intelligence feeds and optionally block high-confidence C2 and botnet IPs.
+Use `scripts/check-logs.py` to match Nginx access logs against public threat intelligence feeds, then optionally block high-confidence C2 and botnet IPs.
 
 ## 1. Check Nginx logs on demand
 

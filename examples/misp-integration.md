@@ -1,15 +1,15 @@
 # MISP feed ingestion and export automation
 
-[MISP](https://www.misp-project.org/) ships with built-in feed management for abuse.ch, CIRCL OSINT, DigitalSide, and custom CSV or text lists. This guide covers enabling reliable public feeds and converting local IOC lists into STIX 2.1 or CSV for import.
+[MISP](https://www.misp-project.org/) ships with built-in feed management for abuse.ch, CIRCL OSINT, DigitalSide, and custom CSV or text lists.
 
 ## 1. Enable default public feeds in MISP
 
 In the MISP web interface, open **Sync Actions > List Feeds** and click **Load default feed metadata**. Good low-noise starting feeds include:
 
 - CIRCL OSINT Feed (`https://www.circl.lu/doc/misp/feed-osint/`)
-- DigitalSide Threat-Intel OSINT Feed (`https://osint.digitalside.it/Threat-Intel/digitalside-misp-feed/`)
-- ThreatFox recent IOCs (`https://threatfox.abuse.ch/export/csv/recent/`)
-- URLhaus recent malicious URLs (`https://urlhaus.abuse.ch/downloads/csv_recent/`)
+- DigitalSide Threat-Intel OSINT Feed (`https://raw.githubusercontent.com/davidonzo/Threat-Intel/master/lists/latestips.txt`)
+- ThreatFox (via `https://threatfox.abuse.ch/` with a free Auth-Key)
+- URLhaus (via `https://urlhaus.abuse.ch/` with a free Auth-Key)
 
 Enable caching on each feed before enabling full event ingestion so you can test correlation volume without filling the MISP database with noisy attributes.
 

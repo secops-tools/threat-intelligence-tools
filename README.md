@@ -1,6 +1,6 @@
 # Best Threat Intelligence Tools, Platforms & Feeds
 
-A directory of threat intelligence tools, threat intelligence platforms, APIs, and threat intelligence feeds for security engineers, SOC analysts, and system administrators. Each entry lists supported data formats (JSON, CSV, STIX, TAXII, MISP), API key requirements, free tier limits, commercial use terms, integrations, and self-hosting options.
+A directory of threat intelligence tools, platforms, APIs, and feeds for security engineers, SOC analysts, and system administrators. Each entry lists supported data formats (JSON, CSV, STIX, TAXII, MISP), API key requirements, free tier limits, commercial use terms, integrations, and self-hosting options.
 
 <!-- START:STATS -->
 Catalog size: 56 threat intelligence tools, 18 threat intelligence platforms, and 52 threat intelligence feeds (51/52 feeds reachable as of 2026-11-25 16:58 UTC).
@@ -8,7 +8,7 @@ Catalog size: 56 threat intelligence tools, 18 threat intelligence platforms, an
 
 ## Quick comparison of popular threat intelligence tools
 
-This table covers the core tools and feeds most teams start with when checking IPs, domains, URLs, and malware hashes.
+Most teams start with these tools and feeds when checking IPs, domains, URLs, and malware hashes.
 
 <!-- START:FEATURED -->
 | Tool / Source | Purpose | Product type | Formats | API key | Self-hosted |
@@ -102,7 +102,7 @@ Endpoint reachability does not prove that indicators inside a feed are fresh or 
 
 ## Threat intelligence platforms
 
-Open-source threat intelligence platforms fit teams that want local IOC storage, correlation, and sharing without per-seat licensing. Commercial platforms add closed-source collection, analyst reporting, and vendor SLAs.
+Open-source threat intelligence platforms handle local IOC storage and correlation without per-seat licensing. Commercial platforms add closed-source collection, analyst reporting, and vendor SLAs.
 
 <!-- START:PLATFORMS -->
 | Platform | Type | Purpose | Formats | License | Commercial use | Self-hosted | Integrations |
@@ -347,8 +347,6 @@ export NVD_API_KEY="your_key"
 ```
 
 ## Integration examples
-
-Practical setup guides for wiring these feeds and scripts into existing infrastructure:
 
 - [Nginx access log monitoring and IP blocking](examples/nginx-monitoring.md)
 - [Linux server SSH and syslog threat checks](examples/linux-monitoring.md)
