@@ -3,7 +3,7 @@
 A directory of threat intelligence tools, platforms, APIs, and feeds for security engineers, SOC analysts, and system administrators. Each entry lists supported data formats (JSON, CSV, STIX, TAXII, MISP), API key requirements, free tier limits, commercial use terms, integrations, and self-hosting options.
 
 <!-- START:STATS -->
-Catalog size: 106 threat intelligence tools, 18 threat intelligence platforms, and 52 threat intelligence feeds (51/52 feeds reachable as of 2026-11-25 16:58 UTC).
+Catalog size: 106 threat intelligence tools, 18 threat intelligence platforms, and 52 threat intelligence feeds (52/52 feeds reachable as of 2026-11-25 17:21 UTC).
 <!-- END:STATS -->
 
 ## Quick comparison of popular threat intelligence tools
@@ -46,58 +46,58 @@ Endpoint reachability does not prove that indicators inside a feed are fresh or 
 <!-- START:FEED_STATUS -->
 | Feed | Status | Response | Last-Modified header | Format check | Formats | API key |
 | --- | --- | --- | --- | --- | --- | --- |
-| [ThreatFox (abuse.ch)](https://threatfox.abuse.ch/) | Online | 435 ms | - | HTML page | JSON, CSV, STIX | None (exports) / Free key (API) |
-| [URLhaus (abuse.ch)](https://urlhaus.abuse.ch/) | Online | 382 ms | - | HTML page | CSV, TXT, RPZ | None (exports) / Free key (API) |
-| [MalwareBazaar Recent (abuse.ch)](https://bazaar.abuse.ch/) | Online | 410 ms | - | HTML page | CSV, JSON, TXT | None (exports) / Free key (API) |
-| [Feodo Tracker IP Blocklist (abuse.ch)](https://feodotracker.abuse.ch/) | Online | 318 ms | 2026-06-30 04:53 UTC | OK (1+ rows) | TXT, CSV, JSON | None |
-| [SSL Blacklist (abuse.ch)](https://sslbl.abuse.ch/) | Online | 342 ms | 2026-06-30 04:53 UTC | Header only | TXT, CSV, Suricata | None |
-| [AlienVault OTX](https://otx.alienvault.com/) | Online (Auth/Rate-Limit) | 475 ms | - | HTTP 403 | JSON, CSV, STIX | Required (free) |
-| [AbuseIPDB Blacklist](https://www.abuseipdb.com/) | Online (Auth/Rate-Limit) | 193 ms | - | HTTP 403 | JSON, TXT | Required (free tier) |
-| [Spamhaus DROP](https://www.spamhaus.org/blocklists/do-not-route-or-peer/) | Online | 312 ms | 2026-11-25 13:24 UTC | OK (1737+ rows) | TXT, JSON | None |
-| [Spamhaus DROPv6](https://www.spamhaus.org/blocklists/do-not-route-or-peer/) | Online | 232 ms | 2026-11-20 09:32 UTC | OK (90+ rows) | TXT, JSON | None |
-| [Emerging Threats Compromised IPs](https://rules.emergingthreats.net/) | Online | 646 ms | 2026-11-24 21:00 UTC | OK (575+ rows) | TXT | None |
-| [CINSscore CI Army Badguys](https://cinsscore.com/) | Online | 1158 ms | 2026-11-25 16:04 UTC | OK (4829+ rows) | TXT | None |
-| [Blocklist.de All Attackers](https://www.blocklist.de/en/export.html) | Online | 259 ms | 2026-11-25 16:36 UTC | OK (4492+ rows) | TXT | None |
-| [Blocklist.de SSH Brute Force](https://www.blocklist.de/en/export.html) | Online | 274 ms | 2026-11-25 16:56 UTC | OK (4552+ rows) | TXT | None |
-| [Blocklist.de Apache / Web Attackers](https://www.blocklist.de/en/export.html) | Online | 251 ms | 2026-11-25 16:36 UTC | OK (4487+ rows) | TXT | None |
-| [FireHOL Level 1](https://iplists.firehol.org/) | Online | 357 ms | - | OK (4115+ rows) | TXT (netset) | None |
-| [FireHOL Level 2](https://iplists.firehol.org/) | Online | 309 ms | - | OK (4693+ rows) | TXT (netset) | None |
-| [FireHOL Level 3](https://iplists.firehol.org/) | Online | 247 ms | - | OK (4725+ rows) | TXT (netset) | None |
-| [SANS ISC DShield Top Attackers](https://www.dshield.org/) | Online | 106 ms | 2026-11-25 15:44 UTC | OK (20+ rows) | TXT | None |
-| [GreenSnow IP Blocklist](https://greensnow.co/) | Online | 3184 ms | 2026-11-25 16:57 UTC | OK (2174+ rows) | TXT | None |
-| [Binary Defense Artillery Banlist](https://www.binarydefense.com/) | Online | 2449 ms | 2026-11-24 23:57 UTC | OK (462+ rows) | TXT | None |
-| [IPsum (Level 3+ Aggregated)](https://github.com/stamparm/ipsum) | Online | 392 ms | - | OK (4657+ rows) | TXT | None |
-| [Tor Project Bulk Exit List](https://check.torproject.org/) | Offline | 10034 ms | - | Timeout | TXT | None |
-| [Cisco Talos IP Blacklist](https://talosintelligence.com/) | Online (Auth/Rate-Limit) | 171 ms | - | HTTP 403 | TXT | None |
-| [StopForumSpam Toxic IPs (7d)](https://www.stopforumspam.com/) | Online | 356 ms | - | OK (4776+ rows) | TXT | None |
-| [DigitalSide Threat-Intel IPs](https://osint.digitalside.it/) | Online | 355 ms | - | OK (4398+ rows) | TXT, CSV, MISP | None |
-| [DigitalSide Threat-Intel Domains](https://osint.digitalside.it/) | Online | 290 ms | - | OK (133+ rows) | TXT, CSV, MISP | None |
-| [DigitalSide Threat-Intel URLs](https://osint.digitalside.it/) | Online | 416 ms | - | OK (1968+ rows) | TXT, CSV, MISP | None |
-| [OpenPhish Community Feed](https://openphish.com/) | Online | 570 ms | - | OK (300+ rows) | TXT | None |
-| [PhishTank Verified Phishing](https://phishtank.org/) | Online (Auth/Rate-Limit) | 238 ms | - | HTTP 403 | JSON, CSV, XML | Optional (free key recommended) |
-| [CERT.pl Phishing Warning List](https://cert.pl/en/warning-list/) | Online | 548 ms | 2026-11-25 16:55 UTC | OK (3097+ rows) | TXT, JSON, CSV | None |
-| [Phishing.Database Active Domains](https://github.com/Phishing-Database/Phishing.Database) | Online | 380 ms | - | OK (2325+ rows) | TXT | None |
-| [Phishing Army Blocklist](https://phishing.army/) | Online | 317 ms | 2026-11-25 14:00 UTC | OK (2958+ rows) | TXT | None |
-| [HaGeZi Threat Intelligence Feeds (Mini)](https://github.com/hagezi/dns-blocklists) | Online | 383 ms | - | OK (2222+ rows) | TXT, RPZ, Hosts | None |
-| [StevenBlack Malware & Adware Hosts](https://github.com/StevenBlack/hosts) | Online | 309 ms | - | OK (2116+ rows) | Hosts, TXT | None |
-| [ThreatView.io Malicious Domains](https://threatview.io/) | Online | 519 ms | 2026-11-25 03:06 UTC | OK (4017+ rows) | TXT | None |
-| [ThreatView.io High-Confidence IPs](https://threatview.io/) | Online | 369 ms | 2026-11-25 03:06 UTC | OK (4497+ rows) | TXT | None |
-| [ThreatView.io Malware MD5 Hashes](https://threatview.io/) | Online | 525 ms | 2026-11-25 03:06 UTC | OK (1986+ rows) | TXT | None |
-| [Malicious IP (romainmarcoux 40k)](https://github.com/romainmarcoux/malicious-ip) | Online | 268 ms | - | OK (4468+ rows) | TXT | None |
-| [CIRCL OSINT MISP Feed](https://www.circl.lu/doc/misp/feed-osint/) | Online | 504 ms | 2026-11-25 10:18 UTC | JSON stream | MISP JSON | None |
-| [Botvrij.eu IOC Lists](https://www.botvrij.eu/) | Online | 171 ms | 2026-02-03 07:58 UTC | OK (4+ rows) | TXT, MISP JSON | None |
-| [TweetFeed Live IOCs](https://tweetfeed.live/) | Online | 210 ms | 2026-11-25 16:45 UTC | JSON stream | JSON, CSV | None |
-| [CISA Known Exploited Vulnerabilities](https://www.cisa.gov/known-exploited-vulnerabilities-catalog) | Online | 316 ms | 2026-11-25 14:22 UTC | JSON stream | JSON, CSV | None |
-| [FIRST EPSS Probability Feed](https://www.first.org/epss/) | Online | 284 ms | - | Valid JSON | JSON, CSV | None |
-| [NIST NVD CVE API 2.0](https://nvd.nist.gov/developers/vulnerabilities) | Online | 563 ms | - | Valid JSON | JSON | Optional (higher quota) |
-| [OSV.dev Vulnerability API](https://osv.dev/) | Online | 599 ms | - | Valid JSON | JSON | None |
-| [Shodan InternetDB API](https://internetdb.shodan.io/) | Online | 397 ms | 2026-11-25 12:32 UTC | Valid JSON | JSON | None |
-| [GreyNoise Community API](https://docs.greynoise.io/reference/get_v3-community-ip) | Online (Auth/Rate-Limit) | 587 ms | - | HTTP 401 | JSON | Optional (free key for 50/wk) |
-| [Ransomware.live Victims API](https://www.ransomware.live/) | Online | 430 ms | - | JSON stream | JSON, RSS | None (public endpoints) |
-| [MITRE ATT&CK Enterprise STIX](https://attack.mitre.org/) | Online | 367 ms | - | Valid JSON | STIX, JSON | None |
-| [Malpedia Public API](https://malpedia.caad.fkie.fraunhofer.de/) | Online | 483 ms | - | Valid JSON | JSON, YARA | None (metadata) / Vetted (samples) |
-| [YARAify (abuse.ch)](https://yaraify.abuse.ch/) | Online | 272 ms | - | HTML page | JSON, YARA | Free Auth-Key for API |
-| [Proofpoint Emerging Threats Open Rules](https://rules.emergingthreats.net/open/) | Online | 548 ms | 2026-11-24 21:01 UTC | OK (1+ rows) | Suricata, Snort | None |
+| [ThreatFox (abuse.ch)](https://threatfox.abuse.ch/) | Online | 274 ms | - | HTML page | JSON, CSV, STIX | None (exports) / Free key (API) |
+| [URLhaus (abuse.ch)](https://urlhaus.abuse.ch/) | Online | 262 ms | - | HTML page | CSV, TXT, RPZ | None (exports) / Free key (API) |
+| [MalwareBazaar Recent (abuse.ch)](https://bazaar.abuse.ch/) | Online | 270 ms | - | HTML page | CSV, JSON, TXT | None (exports) / Free key (API) |
+| [Feodo Tracker IP Blocklist (abuse.ch)](https://feodotracker.abuse.ch/) | Online | 103 ms | 2026-06-30 04:53 UTC | OK (1+ rows) | TXT, CSV, JSON | None |
+| [SSL Blacklist (abuse.ch)](https://sslbl.abuse.ch/) | Online | 258 ms | 2026-06-30 04:53 UTC | Header only | TXT, CSV, Suricata | None |
+| [AlienVault OTX](https://otx.alienvault.com/) | Online (Auth/Rate-Limit) | 185 ms | - | HTTP 403 | JSON, CSV, STIX | Required (free) |
+| [AbuseIPDB Blacklist](https://www.abuseipdb.com/) | Online (Auth/Rate-Limit) | 99 ms | - | HTTP 403 | JSON, TXT | Required (free tier) |
+| [Spamhaus DROP](https://www.spamhaus.org/blocklists/do-not-route-or-peer/) | Online | 90 ms | 2026-11-25 13:24 UTC | OK (1737+ rows) | TXT, JSON | None |
+| [Spamhaus DROPv6](https://www.spamhaus.org/blocklists/do-not-route-or-peer/) | Online | 92 ms | 2026-11-20 09:32 UTC | OK (90+ rows) | TXT, JSON | None |
+| [Emerging Threats Compromised IPs](https://rules.emergingthreats.net/) | Online | 349 ms | 2026-11-24 21:00 UTC | OK (575+ rows) | TXT | None |
+| [CINSscore CI Army Badguys](https://cinsscore.com/) | Online | 281 ms | 2026-11-25 17:04 UTC | OK (4830+ rows) | TXT | None |
+| [Blocklist.de All Attackers](https://www.blocklist.de/en/export.html) | Online | 146 ms | 2026-11-25 17:12 UTC | OK (4491+ rows) | TXT | None |
+| [Blocklist.de SSH Brute Force](https://www.blocklist.de/en/export.html) | Online | 39 ms | 2026-11-25 17:12 UTC | OK (4552+ rows) | TXT | None |
+| [Blocklist.de Apache / Web Attackers](https://www.blocklist.de/en/export.html) | Online | 60 ms | 2026-11-25 17:12 UTC | OK (4487+ rows) | TXT | None |
+| [FireHOL Level 1](https://iplists.firehol.org/) | Online | 35 ms | - | OK (4115+ rows) | TXT (netset) | None |
+| [FireHOL Level 2](https://iplists.firehol.org/) | Online | 31 ms | - | OK (4693+ rows) | TXT (netset) | None |
+| [FireHOL Level 3](https://iplists.firehol.org/) | Online | 30 ms | - | OK (4725+ rows) | TXT (netset) | None |
+| [SANS ISC DShield Top Attackers](https://www.dshield.org/) | Online | 69 ms | 2026-11-25 16:44 UTC | OK (20+ rows) | TXT | None |
+| [GreenSnow IP Blocklist](https://greensnow.co/) | Online | 2207 ms | 2026-11-25 17:21 UTC | OK (2191+ rows) | TXT | None |
+| [Binary Defense Artillery Banlist](https://www.binarydefense.com/) | Online | 617 ms | 2026-11-24 23:57 UTC | OK (462+ rows) | TXT | None |
+| [IPsum (Level 3+ Aggregated)](https://github.com/stamparm/ipsum) | Online | 27 ms | - | OK (4657+ rows) | TXT | None |
+| [Tor Project Bulk Exit List](https://check.torproject.org/) | Online | 618 ms | 2026-11-25 16:46 UTC | OK (1256+ rows) | TXT | None |
+| [Cisco Talos IP Blacklist](https://talosintelligence.com/) | Online (Auth/Rate-Limit) | 72 ms | - | HTTP 403 | TXT | None |
+| [StopForumSpam Toxic IPs (7d)](https://www.stopforumspam.com/) | Online | 28 ms | - | OK (4776+ rows) | TXT | None |
+| [DigitalSide Threat-Intel IPs](https://osint.digitalside.it/) | Online | 153 ms | - | OK (4398+ rows) | TXT, CSV, MISP | None |
+| [DigitalSide Threat-Intel Domains](https://osint.digitalside.it/) | Online | 165 ms | - | OK (133+ rows) | TXT, CSV, MISP | None |
+| [DigitalSide Threat-Intel URLs](https://osint.digitalside.it/) | Online | 124 ms | - | OK (1968+ rows) | TXT, CSV, MISP | None |
+| [OpenPhish Community Feed](https://openphish.com/) | Online | 680 ms | - | OK (300+ rows) | TXT | None |
+| [PhishTank Verified Phishing](https://phishtank.org/) | Online | 498 ms | - | HTML page | JSON, CSV, XML | Optional (free key recommended) |
+| [CERT.pl Phishing Warning List](https://cert.pl/en/warning-list/) | Online | 867 ms | 2026-11-25 17:20 UTC | OK (3097+ rows) | TXT, JSON, CSV | None |
+| [Phishing.Database Active Domains](https://github.com/Phishing-Database/Phishing.Database) | Online | 25 ms | - | OK (2325+ rows) | TXT | None |
+| [Phishing Army Blocklist](https://phishing.army/) | Online | 309 ms | 2026-11-25 17:00 UTC | OK (2955+ rows) | TXT | None |
+| [HaGeZi Threat Intelligence Feeds (Mini)](https://github.com/hagezi/dns-blocklists) | Online | 120 ms | - | OK (2222+ rows) | TXT, RPZ, Hosts | None |
+| [StevenBlack Malware & Adware Hosts](https://github.com/StevenBlack/hosts) | Online | 34 ms | - | OK (2116+ rows) | Hosts, TXT | None |
+| [ThreatView.io Malicious Domains](https://threatview.io/) | Online | 822 ms | 2026-11-25 03:06 UTC | OK (4017+ rows) | TXT | None |
+| [ThreatView.io High-Confidence IPs](https://threatview.io/) | Online | 798 ms | 2026-11-25 03:06 UTC | OK (4497+ rows) | TXT | None |
+| [ThreatView.io Malware MD5 Hashes](https://threatview.io/) | Online | 795 ms | 2026-11-25 03:06 UTC | OK (1986+ rows) | TXT | None |
+| [Malicious IP (romainmarcoux 40k)](https://github.com/romainmarcoux/malicious-ip) | Online | 27 ms | - | OK (4468+ rows) | TXT | None |
+| [CIRCL OSINT MISP Feed](https://www.circl.lu/doc/misp/feed-osint/) | Online | 970 ms | 2026-11-25 10:18 UTC | JSON stream | MISP JSON | None |
+| [Botvrij.eu IOC Lists](https://www.botvrij.eu/) | Online | 82 ms | 2026-02-03 07:58 UTC | OK (4+ rows) | TXT, MISP JSON | None |
+| [TweetFeed Live IOCs](https://tweetfeed.live/) | Online | 118 ms | 2026-11-25 16:45 UTC | JSON stream | JSON, CSV | None |
+| [CISA Known Exploited Vulnerabilities](https://www.cisa.gov/known-exploited-vulnerabilities-catalog) | Online | 226 ms | 2026-11-25 14:22 UTC | JSON stream | JSON, CSV | None |
+| [FIRST EPSS Probability Feed](https://www.first.org/epss/) | Online | 143 ms | - | Valid JSON | JSON, CSV | None |
+| [NIST NVD CVE API 2.0](https://nvd.nist.gov/developers/vulnerabilities) | Online | 188 ms | - | Valid JSON | JSON | Optional (higher quota) |
+| [OSV.dev Vulnerability API](https://osv.dev/) | Online | 117 ms | - | Valid JSON | JSON | None |
+| [Shodan InternetDB API](https://internetdb.shodan.io/) | Online | 40 ms | 2026-11-25 10:30 UTC | Valid JSON | JSON | None |
+| [GreyNoise Community API](https://docs.greynoise.io/reference/get_v3-community-ip) | Online (Auth/Rate-Limit) | 331 ms | - | HTTP 401 | JSON | Optional (free key for 50/wk) |
+| [Ransomware.live Victims API](https://www.ransomware.live/) | Online | 772 ms | - | JSON stream | JSON, RSS | None (public endpoints) |
+| [MITRE ATT&CK Enterprise STIX](https://attack.mitre.org/) | Online | 73 ms | - | Valid JSON | STIX, JSON | None |
+| [Malpedia Public API](https://malpedia.caad.fkie.fraunhofer.de/) | Online | 1482 ms | - | Valid JSON | JSON, YARA | None (metadata) / Vetted (samples) |
+| [YARAify (abuse.ch)](https://yaraify.abuse.ch/) | Online | 224 ms | - | HTML page | JSON, YARA | Free Auth-Key for API |
+| [Proofpoint Emerging Threats Open Rules](https://rules.emergingthreats.net/open/) | Online | 334 ms | 2026-11-24 21:01 UTC | OK (1+ rows) | Suricata, Snort | None |
 <!-- END:FEED_STATUS -->
 
 ## Threat intelligence platforms
