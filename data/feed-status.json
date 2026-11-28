@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-11-27 15:56 UTC",
-  "checked_date": "2026-11-27",
+  "checked_at": "2026-11-28 14:53 UTC",
+  "checked_date": "2026-11-28",
   "total": 52,
   "online": 52,
   "offline": 0,
@@ -11,7 +11,7 @@
       "check_url": "https://threatfox.abuse.ch/",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 278,
+      "response_ms": 250,
       "last_modified": null,
       "format_check": "HTML page",
       "error": null
@@ -22,7 +22,7 @@
       "check_url": "https://urlhaus.abuse.ch/",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 254,
+      "response_ms": 257,
       "last_modified": null,
       "format_check": "HTML page",
       "error": null
@@ -33,7 +33,7 @@
       "check_url": "https://bazaar.abuse.ch/",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 463,
+      "response_ms": 234,
       "last_modified": null,
       "format_check": "HTML page",
       "error": null
@@ -44,7 +44,7 @@
       "check_url": "https://feodotracker.abuse.ch/downloads/ipblocklist_recommended.txt",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 133,
+      "response_ms": 167,
       "last_modified": "2026-06-30 04:53 UTC",
       "format_check": "OK (1+ rows)",
       "error": null
@@ -55,7 +55,7 @@
       "check_url": "https://sslbl.abuse.ch/blacklist/sslipblacklist.txt",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 170,
+      "response_ms": 191,
       "last_modified": "2026-06-30 04:53 UTC",
       "format_check": "Header only",
       "error": null
@@ -66,7 +66,7 @@
       "check_url": "https://otx.alienvault.com/api/v1/pulses/subscribed",
       "status": "Online (Auth/Rate-Limit)",
       "http_status": 403,
-      "response_ms": 5046,
+      "response_ms": 138,
       "last_modified": null,
       "format_check": "HTTP 403",
       "error": null
@@ -77,7 +77,7 @@
       "check_url": "https://www.abuseipdb.com/",
       "status": "Online (Auth/Rate-Limit)",
       "http_status": 403,
-      "response_ms": 39,
+      "response_ms": 82,
       "last_modified": null,
       "format_check": "HTTP 403",
       "error": null
@@ -88,9 +88,9 @@
       "check_url": "https://www.spamhaus.org/drop/drop.txt",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 101,
-      "last_modified": "2026-11-25 13:24 UTC",
-      "format_check": "OK (1737+ rows)",
+      "response_ms": 81,
+      "last_modified": "2026-11-28 12:09 UTC",
+      "format_check": "OK (1727+ rows)",
       "error": null
     },
     {
@@ -99,7 +99,7 @@
       "check_url": "https://www.spamhaus.org/drop/dropv6.txt",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 109,
+      "response_ms": 69,
       "last_modified": "2026-11-20 09:32 UTC",
       "format_check": "OK (90+ rows)",
       "error": null
@@ -110,9 +110,9 @@
       "check_url": "https://rules.emergingthreats.net/blockrules/compromised-ips.txt",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 107,
-      "last_modified": "2026-11-26 21:27 UTC",
-      "format_check": "OK (578+ rows)",
+      "response_ms": 141,
+      "last_modified": "2026-11-27 21:25 UTC",
+      "format_check": "OK (577+ rows)",
       "error": null
     },
     {
@@ -121,9 +121,9 @@
       "check_url": "https://cinsscore.com/list/ci-badguys.txt",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 181,
-      "last_modified": "2026-11-27 15:04 UTC",
-      "format_check": "OK (4830+ rows)",
+      "response_ms": 218,
+      "last_modified": "2026-11-28 14:04 UTC",
+      "format_check": "OK (4831+ rows)",
       "error": null
     },
     {
@@ -132,9 +132,9 @@
       "check_url": "https://lists.blocklist.de/lists/all.txt",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 187,
-      "last_modified": "2026-11-27 15:48 UTC",
-      "format_check": "OK (4482+ rows)",
+      "response_ms": 168,
+      "last_modified": "2026-11-28 14:48 UTC",
+      "format_check": "OK (4485+ rows)",
       "error": null
     },
     {
@@ -143,9 +143,9 @@
       "check_url": "https://lists.blocklist.de/lists/ssh.txt",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 140,
-      "last_modified": "2026-11-27 15:48 UTC",
-      "format_check": "Empty response",
+      "response_ms": 102,
+      "last_modified": "2026-11-28 14:48 UTC",
+      "format_check": "OK (4155+ rows)",
       "error": null
     },
     {
@@ -154,9 +154,9 @@
       "check_url": "https://lists.blocklist.de/lists/apache.txt",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 124,
-      "last_modified": "2026-11-27 15:37 UTC",
-      "format_check": "OK (4359+ rows)",
+      "response_ms": 94,
+      "last_modified": "2026-11-28 14:42 UTC",
+      "format_check": "OK (4382+ rows)",
       "error": null
     },
     {
@@ -165,7 +165,7 @@
       "check_url": "https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 15,
+      "response_ms": 31,
       "last_modified": null,
       "format_check": "OK (4115+ rows)",
       "error": null
@@ -176,9 +176,9 @@
       "check_url": "https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level2.netset",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 15,
+      "response_ms": 26,
       "last_modified": null,
-      "format_check": "OK (4722+ rows)",
+      "format_check": "OK (4725+ rows)",
       "error": null
     },
     {
@@ -187,9 +187,9 @@
       "check_url": "https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level3.netset",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 12,
+      "response_ms": 31,
       "last_modified": null,
-      "format_check": "OK (4724+ rows)",
+      "format_check": "OK (4731+ rows)",
       "error": null
     },
     {
@@ -198,8 +198,8 @@
       "check_url": "https://feeds.dshield.org/block.txt",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 67,
-      "last_modified": "2026-11-27 15:29 UTC",
+      "response_ms": 221,
+      "last_modified": "2026-11-28 14:44 UTC",
       "format_check": "OK (20+ rows)",
       "error": null
     },
@@ -209,9 +209,9 @@
       "check_url": "https://blocklist.greensnow.co/greensnow.txt",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 598,
-      "last_modified": "2026-11-27 15:56 UTC",
-      "format_check": "OK (2169+ rows)",
+      "response_ms": 556,
+      "last_modified": "2026-11-28 14:53 UTC",
+      "format_check": "OK (2313+ rows)",
       "error": null
     },
     {
@@ -220,9 +220,9 @@
       "check_url": "https://www.binarydefense.com/banlist.txt",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 318,
-      "last_modified": "2026-11-26 23:58 UTC",
-      "format_check": "OK (954+ rows)",
+      "response_ms": 225,
+      "last_modified": "2026-11-27 23:58 UTC",
+      "format_check": "OK (1286+ rows)",
       "error": null
     },
     {
@@ -231,9 +231,9 @@
       "check_url": "https://raw.githubusercontent.com/stamparm/ipsum/master/levels/3.txt",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 13,
+      "response_ms": 31,
       "last_modified": null,
-      "format_check": "OK (4639+ rows)",
+      "format_check": "OK (4645+ rows)",
       "error": null
     },
     {
@@ -242,9 +242,9 @@
       "check_url": "https://check.torproject.org/torbulkexitlist",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 854,
-      "last_modified": "2026-11-27 15:47 UTC",
-      "format_check": "OK (1262+ rows)",
+      "response_ms": 447,
+      "last_modified": "2026-11-28 14:47 UTC",
+      "format_check": "OK (1263+ rows)",
       "error": null
     },
     {
@@ -253,7 +253,7 @@
       "check_url": "https://www.talosintelligence.com/documents/ip-blacklist",
       "status": "Online (Auth/Rate-Limit)",
       "http_status": 403,
-      "response_ms": 79,
+      "response_ms": 76,
       "last_modified": null,
       "format_check": "HTTP 403",
       "error": null
@@ -264,9 +264,9 @@
       "check_url": "https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/stopforumspam_7d.ipset",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 97,
+      "response_ms": 58,
       "last_modified": null,
-      "format_check": "OK (4785+ rows)",
+      "format_check": "OK (4781+ rows)",
       "error": null
     },
     {
@@ -275,7 +275,7 @@
       "check_url": "https://raw.githubusercontent.com/davidonzo/Threat-Intel/master/lists/latestips.txt",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 84,
+      "response_ms": 68,
       "last_modified": null,
       "format_check": "OK (4398+ rows)",
       "error": null
@@ -286,7 +286,7 @@
       "check_url": "https://raw.githubusercontent.com/davidonzo/Threat-Intel/master/lists/latestdomains.txt",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 64,
+      "response_ms": 57,
       "last_modified": null,
       "format_check": "OK (133+ rows)",
       "error": null
@@ -297,7 +297,7 @@
       "check_url": "https://raw.githubusercontent.com/davidonzo/Threat-Intel/master/lists/latesturls.txt",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 133,
+      "response_ms": 86,
       "last_modified": null,
       "format_check": "OK (1968+ rows)",
       "error": null
@@ -308,7 +308,7 @@
       "check_url": "https://openphish.com/feed.txt",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 527,
+      "response_ms": 454,
       "last_modified": null,
       "format_check": "OK (300+ rows)",
       "error": null
@@ -319,7 +319,7 @@
       "check_url": "https://phishtank.org/",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 180,
+      "response_ms": 285,
       "last_modified": null,
       "format_check": "HTML page",
       "error": null
@@ -330,9 +330,9 @@
       "check_url": "https://hole.cert.pl/domains/v2/domains.txt",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 795,
-      "last_modified": "2026-11-27 15:55 UTC",
-      "format_check": "OK (3095+ rows)",
+      "response_ms": 558,
+      "last_modified": "2026-11-28 14:50 UTC",
+      "format_check": "OK (3094+ rows)",
       "error": null
     },
     {
@@ -341,7 +341,7 @@
       "check_url": "https://raw.githubusercontent.com/Phishing-Database/Phishing.Database/master/phishing-domains-ACTIVE.txt",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 11,
+      "response_ms": 38,
       "last_modified": null,
       "format_check": "OK (2325+ rows)",
       "error": null
@@ -352,9 +352,9 @@
       "check_url": "https://phishing.army/download/phishing_army_blocklist.txt",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 266,
-      "last_modified": "2026-11-27 14:00 UTC",
-      "format_check": "OK (2930+ rows)",
+      "response_ms": 379,
+      "last_modified": "2026-11-28 14:01 UTC",
+      "format_check": "OK (2935+ rows)",
       "error": null
     },
     {
@@ -363,9 +363,9 @@
       "check_url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/tif.mini-onlydomains.txt",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 117,
+      "response_ms": 56,
       "last_modified": null,
-      "format_check": "OK (2334+ rows)",
+      "format_check": "OK (2305+ rows)",
       "error": null
     },
     {
@@ -374,7 +374,7 @@
       "check_url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 14,
+      "response_ms": 33,
       "last_modified": null,
       "format_check": "OK (2116+ rows)",
       "error": null
@@ -385,8 +385,8 @@
       "check_url": "https://threatview.io/Downloads/DOMAIN-High-Confidence-Feed.txt",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 603,
-      "last_modified": "2026-11-27 02:59 UTC",
+      "response_ms": 544,
+      "last_modified": "2026-11-28 02:59 UTC",
       "format_check": "OK (4016+ rows)",
       "error": null
     },
@@ -396,9 +396,9 @@
       "check_url": "https://threatview.io/Downloads/IP-High-Confidence-Feed.txt",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 614,
-      "last_modified": "2026-11-27 02:59 UTC",
-      "format_check": "OK (4495+ rows)",
+      "response_ms": 529,
+      "last_modified": "2026-11-28 02:59 UTC",
+      "format_check": "OK (4485+ rows)",
       "error": null
     },
     {
@@ -407,9 +407,9 @@
       "check_url": "https://threatview.io/Downloads/MD5-HASH-ALL.txt",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 340,
-      "last_modified": "2026-11-27 02:59 UTC",
-      "format_check": "OK (80+ rows)",
+      "response_ms": 342,
+      "last_modified": "2026-11-28 02:59 UTC",
+      "format_check": "OK (48+ rows)",
       "error": null
     },
     {
@@ -418,7 +418,7 @@
       "check_url": "https://raw.githubusercontent.com/romainmarcoux/malicious-ip/main/full-40k.txt",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 13,
+      "response_ms": 28,
       "last_modified": null,
       "format_check": "OK (4470+ rows)",
       "error": null
@@ -429,8 +429,8 @@
       "check_url": "https://www.circl.lu/doc/misp/feed-osint/manifest.json",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 800,
-      "last_modified": "2026-11-27 13:36 UTC",
+      "response_ms": 1917,
+      "last_modified": "2026-11-28 10:42 UTC",
       "format_check": "JSON stream",
       "error": null
     },
@@ -440,7 +440,7 @@
       "check_url": "https://www.botvrij.eu/data/ioclist.ip-dst.raw",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 262,
+      "response_ms": 81,
       "last_modified": "2026-02-03 07:58 UTC",
       "format_check": "OK (4+ rows)",
       "error": null
@@ -451,8 +451,8 @@
       "check_url": "https://api.tweetfeed.live/v1/today",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 289,
-      "last_modified": "2026-11-27 14:45 UTC",
+      "response_ms": 257,
+      "last_modified": "2026-11-28 14:30 UTC",
       "format_check": "Valid JSON",
       "error": null
     },
@@ -462,8 +462,8 @@
       "check_url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 205,
-      "last_modified": "2026-11-25 19:48 UTC",
+      "response_ms": 304,
+      "last_modified": "2026-11-27 18:03 UTC",
       "format_check": "JSON stream",
       "error": null
     },
@@ -473,7 +473,7 @@
       "check_url": "https://api.first.org/data/v1/epss?cve=CVE-2024-3094",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 422,
+      "response_ms": 247,
       "last_modified": null,
       "format_check": "Valid JSON",
       "error": null
@@ -484,7 +484,7 @@
       "check_url": "https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=1",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 88,
+      "response_ms": 67,
       "last_modified": null,
       "format_check": "Valid JSON",
       "error": null
@@ -495,7 +495,7 @@
       "check_url": "https://api.osv.dev/v1/vulns/GHSA-jfh8-c2jp-5v3q",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 189,
+      "response_ms": 81,
       "last_modified": null,
       "format_check": "Valid JSON",
       "error": null
@@ -506,8 +506,8 @@
       "check_url": "https://internetdb.shodan.io/1.1.1.1",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 84,
-      "last_modified": "2026-11-27 10:55 UTC",
+      "response_ms": 37,
+      "last_modified": "2026-11-28 02:30 UTC",
       "format_check": "Valid JSON",
       "error": null
     },
@@ -517,7 +517,7 @@
       "check_url": "https://api.greynoise.io/ping",
       "status": "Online (Auth/Rate-Limit)",
       "http_status": 401,
-      "response_ms": 218,
+      "response_ms": 87,
       "last_modified": null,
       "format_check": "HTTP 401",
       "error": null
@@ -528,7 +528,7 @@
       "check_url": "https://api.ransomware.live/v2/recentvictims",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 637,
+      "response_ms": 471,
       "last_modified": null,
       "format_check": "JSON stream",
       "error": null
@@ -539,7 +539,7 @@
       "check_url": "https://raw.githubusercontent.com/mitre-attack/attack-stix-data/master/index.json",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 97,
+      "response_ms": 58,
       "last_modified": null,
       "format_check": "Valid JSON",
       "error": null
@@ -550,7 +550,7 @@
       "check_url": "https://malpedia.caad.fkie.fraunhofer.de/api/get/version",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 13250,
+      "response_ms": 11960,
       "last_modified": null,
       "format_check": "Valid JSON",
       "error": null
@@ -561,7 +561,7 @@
       "check_url": "https://yaraify.abuse.ch/",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 184,
+      "response_ms": 289,
       "last_modified": null,
       "format_check": "HTML page",
       "error": null
@@ -572,8 +572,8 @@
       "check_url": "https://rules.emergingthreats.net/open/suricata-7.0.3/version.txt",
       "status": "Online",
       "http_status": 200,
-      "response_ms": 141,
-      "last_modified": "2026-11-26 21:27 UTC",
+      "response_ms": 106,
+      "last_modified": "2026-11-27 21:25 UTC",
       "format_check": "OK (1+ rows)",
       "error": null
     }
